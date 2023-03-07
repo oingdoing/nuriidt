@@ -1,0 +1,98 @@
+// * -------------------------------
+// * Common
+// * -------------------------------
+html {
+  font-size: 0.8px;
+}
+body {
+  // min-width: $min-width;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000;
+  letter-spacing: -0.02em;
+}
+body.is-hidden {
+  overflow: hidden;
+}
+.app {
+  overflow: hidden;
+}
+
+// * -------------------------------
+// * A11y Hidden
+// * -------------------------------
+.a11y-hidden {
+  @include a11y-hidden;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='time'],
+input[type='month'],
+input[type='week'] {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+//Placeholder
+:-ms-input-placeholder {
+  color: #888888;
+} /* Internet Explorer 10-11 */
+::-ms-input-placeholder {
+  color: #888888;
+} /* Microsoft Edge */
+::placeholder {
+  color: #888888;
+  opacity: 1;
+  text-align: left;
+} /* Chrome, Firefox, Opera, Safari 10.1+ */
+textarea:-ms-input-placeholder {
+  font-size: inherit;
+  color: #888888;
+} /* Internet Explorer 10-11 */
+textarea::-ms-input-placeholder {
+  font-size: inherit;
+  color: #888888;
+} /* Microsoft Edge */
+textarea::placeholder {
+  font-size: inherit;
+  color: #888888;
+  opacity: 1;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  // background-color: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+textarea::-webkit-scrollbar-track {
+  box-shadow: none;
+  background-color: #ddd;
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 3px;
+  right: 20px;
+}

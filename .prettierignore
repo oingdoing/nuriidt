@@ -1,0 +1,6 @@
+**/.git
+**/resources/assets/common/lib/
+**/resources/assets/images/**/*.handlebars
+# **/resources/assets/js/**/*.js
+# **/*.md
+

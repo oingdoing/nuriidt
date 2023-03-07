@@ -1,0 +1,51 @@
+block variables
+
+<!DOCTYPE html>
+html(lang="ko")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=1600")
+		//- SEO
+		title #{seoTitle} | 누리IDT고문헌한자시스템
+		meta(name="Description", CONTENT="")
+		link(rel="canonical", href="https://campus.hyundai.com/")
+
+		//- OPEN GRAPH
+		meta(property="og:type", content="website")
+		meta(property="og:url", content="")
+		meta(property="og:title", content="")
+		meta(property="og:image", content="/image/og/og.png")
+		meta(property="og:description", content="")
+		//- meta(property="og:site_name", content="Nuri IDT ")
+		meta(property="og:locale", content="ko_KR")
+
+		block headCSS
+			link(rel="stylesheet", href='/static/css/ui.css')
+		//- 		link(rel="stylesheet", href='/css/template/template10/pc/swiper.min.css')
+		//- 		link(rel="stylesheet", href='/css/template/template10/pc/jquery-ui.min.css')
+		//- 		link(rel="stylesheet", href='/css/template/template10/pc/ui__white.css')
+		block headJS
+			link(rel="stylesheet", href='/static/js/ui.js')
+		//- 		script(src="/js/ui22/current-device.min.js")
+		//- 		script(src="/js/ui22/jquery-3.6.0.min.js")
+		//- 		script(src="/js/ui22/jquery-ui.min.js")
+		//- 		script(src="/js/ui22/gsap.min.js")
+		//- 		script(src="/js/ui22/swiper.4.5.1.min.js")
+
+	body
+		.app
+		
+			include ../__includes/app-header.pug
+
+			.app-container
+					div.app-content
+							block content
+
+			include ../__includes/app-footer.pug
+		
+		//- block modals
+		//- 	include ../__template/template__modal.pug
+
+		block bodyJS
+				script(src='/js/ui22/ui.js')

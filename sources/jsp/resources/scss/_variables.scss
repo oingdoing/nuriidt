@@ -1,0 +1,45 @@
+//Device
+$breakpoint-small-desktop: 1440px;
+$breakpoint-big-desktop: 1921px;
+
+$sqrt_2: 1.41421356237;
+
+// SIZE (xl > lg > md > sm > xs)
+$heading-xl: 28rem;
+$heading-lg: 24rem;
+$heading-md: 20rem;
+$heading-sm: 18rem;
+
+$text-lg: 18rem;
+$text-md: 16rem;
+$text-sm: 14rem;
+$text-xs: 12rem;
+
+// COLOR
+$primary-red: #a72b2a;
+$primary-brown: #746661;
+$dim-color: rgba(0, 0, 0, 0.6);
+$line-color: #333;
+$line-color02: #999;
+$line-color03: #ccc;
+$color-bg: #f6f6f6;
+$color-font: #000;
+$color-font02: #666;
+$color-font03: #999;
+$color-font04: #fff;
+$placeholder: #666666;
+
+// z-index Level
+$level10: 1;
+$level20: 10; //activated element (select)
+$level30: 50; //Tooltip
+$level40: 100; //App-header
+$level50: 150; //Skip-nav
+$level60: 200; //btn-top(globalnetwork)
+$level70: 250; //All-Menu
+$level80: 300; //Layered(Page)
+$level90: 350; //Layered(Notice)
+$level100: 400; //Cookie Information
+
+// Easing
+$easing: cubic-bezier(0.52, 0.16, 0.24, 1);

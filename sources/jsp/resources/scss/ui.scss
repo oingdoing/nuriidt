@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+//Common
+@import 'variables';
+@import 'reset';
+@import 'normalize';
+// @import './common/mixin';
+@import 'fonts';
+//Sprite
+@import 'sprite';
+
+//KR Common
+// @import './kr/common/common'; //html,body, (custom) scroll, skip navigation
+// @import './kr/common/components'; //button 등 Components
+@import 'layout'; //Layout
+// @import './kr/common/layered'; //layered (Page, Notice, 기타)
+
+//KR Pages
+// @import './kr/main'; //Main
+// @import './kr/business/**/*.scss'; //Business
+// @import './kr/company/**/*.scss'; //Company
+// @import './kr/esg/**/*.scss'; //ESG
+// @import './kr/pr-center/**/*.scss'; //PR CENTER
+// @import './kr/service/**/*.scss'; //Service
+// @import './kr/util/**/*.scss'; //Util

@@ -1,0 +1,7 @@
+/node_modules
+/dist
+/build
+.DS_Store
+# .vscode/settings.json
+sources/front/static/pc/scss/sprite
+sources/front/static/mobile/scss/sprite

@@ -202,7 +202,7 @@ body {
     height: 100%;
 }
 #container {
-    padding-top: 82px;
+    padding-top: 52px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -343,9 +343,6 @@ body {
     background: #000;
     color: #fff;
 }
-#root_tree > li > a + ul {
-    /* display: none; */
-}
 
 .close:before {
     content: '';
@@ -453,15 +450,4 @@ body {
     display: none;
     color: #fff;
     margin-top: 30px;
-}
-.progress-container {
-    position: absolute;
-    top:44px;
-    left:0;
-    width: 320px;
-    padding:10px;
-}
-.progress-rate,
-.progress-current {
-    color:green;
 }

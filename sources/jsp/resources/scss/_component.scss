@@ -1,3 +1,16 @@
+h1 {
+  font-size: $heading-xl;
+}
+h2 {
+  font-size: $heading-lg;
+}
+h3 {
+  font-size: $heading-md;
+}
+h4 {
+  font-size: $heading-sm;
+}
+
 [class^='icon'] {
   display: inline-block;
 }

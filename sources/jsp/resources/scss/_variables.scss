@@ -5,9 +5,9 @@ $breakpoint-big-desktop: 1921px;
 $sqrt_2: 1.41421356237;
 
 // SIZE (xl > lg > md > sm > xs)
-$heading-xl: 28rem;
-$heading-lg: 24rem;
-$heading-md: 20rem;
+$heading-xl: 58rem;
+$heading-lg: 42rem;
+$heading-md: 28rem;
 $heading-sm: 18rem;
 
 $text-lg: 18rem;
@@ -16,18 +16,21 @@ $text-sm: 14rem;
 $text-xs: 12rem;
 
 // COLOR
-$primary-red: #a72b2a;
-$primary-brown: #746661;
-$dim-color: rgba(0, 0, 0, 0.6);
-$line-color: #333;
-$line-color02: #999;
+$primary-green: #06711e;
+$primary-ltgreen: #509d5f;
+$primary-htgreen: #dff1dc;
+$primary-red: #bf0000;
+$dim-color: rgba(0, 0, 0, 0.8);
+$line-color: #bbbbbb;
+$line-color02: #ababab;
 $line-color03: #ccc;
-$color-bg: #f6f6f6;
+$color-bg: #f4f4f4;
 $color-font: #000;
-$color-font02: #666;
-$color-font03: #999;
-$color-font04: #fff;
-$placeholder: #666666;
+$color-font02: #222;
+$color-font03: #333;
+$color-font04: #999;
+$placeholder: #999999;
+$color-white: #fff;
 
 // z-index Level
 $level10: 1;

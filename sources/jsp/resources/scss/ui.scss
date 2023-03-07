@@ -4,7 +4,8 @@
 @import 'variables';
 @import 'reset';
 @import 'normalize';
-// @import './common/mixin';
+@import 'mixin';
+@import 'old-school';
 @import 'fonts';
 //Sprite
 @import 'sprite';

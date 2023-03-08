@@ -234,3 +234,6 @@ body.is-hidden {
 .app {
   overflow: hidden;
 }
+input[type='text']:focus {
+  outline: none;
+}

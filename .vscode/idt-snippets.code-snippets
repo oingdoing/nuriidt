@@ -1,0 +1,65 @@
+{
+  // Solid Button
+  "btn solid": {
+    "scope": "jade, pug",
+    "prefix": "btn solid",
+    "body": ["button.solid-button(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "Solid button"
+  },
+  "btn solid lg": {
+    "scope": "jade, pug",
+    "prefix": "btn solid lg",
+    "body": ["button.solid-button--lg(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "Solid button Large"
+  },
+  "btn solid md": {
+    "scope": "jade, pug",
+    "prefix": "btn solid md",
+    "body": ["button.solid-button--md(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "Solid button Medium"
+  },
+  "btn solid sm": {
+    "scope": "jade, pug",
+    "prefix": "btn solid sm",
+    "body": ["button.solid-button--sm(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "Solid button Small"
+  },
+  // Line Button
+  "btn line": {
+    "scope": "jade, pug",
+    "prefix": "btn line",
+    "body": ["button.line-button(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "line button"
+  },
+  "btn line lg": {
+    "scope": "jade, pug",
+    "prefix": "btn line lg",
+    "body": ["button.line-button--lg(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "line button Large"
+  },
+  "btn line md": {
+    "scope": "jade, pug",
+    "prefix": "btn line md",
+    "body": ["button.line-button--md(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "line button Medium"
+  },
+  "btn line sm": {
+    "scope": "jade, pug",
+    "prefix": "btn line sm",
+    "body": ["button.line-button--sm(type='button', theme='')", "\tspan.button-content 버튼이름"],
+    "description": "line button Small"
+  },
+  // Input
+  "input text": {
+    "scope": "jade, pug",
+    "prefix": "btinput text",
+    "body": ["span.form-selector", "\tinput#checkbox01(type='checkbox')", "\t\tlabel(for='checkbox01')"],
+    "description": "line button"
+  },
+  "checkbox": {
+    "scope": "jade, pug",
+    "prefix": "btn line",
+    "body": ["span.form-text", "\tspan.form-input-content", "\t\tinput(type='text, placeholder='Placeholder Text)"],
+    "description": "checkbox"
+  }
+}

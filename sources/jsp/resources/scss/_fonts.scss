@@ -1,0 +1,27 @@
+// * -------------------------------
+// * Web Font
+// * -------------------------------
+@font-face {
+  font-family: 'nnsuqre';
+  font-style: normal;
+  font-weight: 100;
+  src: local('※'), url($fontPath + 'NanumSquareL.woff') format('woff'), url($fontPath + 'NanumSqureL.eot') format('eot');
+}
+@font-face {
+  font-family: 'nnsuqre';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'), url($fontPath + 'NanumSquareR.woff') format('woff'), url($fontPath + 'NanumSqureR.eot') format('eot');
+}
+@font-face {
+  font-family: 'nnsuqre';
+  font-style: normal;
+  font-weight: 600;
+  src: local('※'), url($fontPath + 'NanumSquareB.woff') format('woff'), url($fontPath + 'NanumSqureB.eot') format('eot');
+}
+@font-face {
+  font-family: 'nnsuqre';
+  font-style: normal;
+  font-weight: 800;
+  src: local('※'), url($fontPath + 'NanumSquareEB.woff') format('woff'), url($fontPath + 'NanumSqureEB.eot') format('eot');
+}

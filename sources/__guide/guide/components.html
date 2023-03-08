@@ -8,9 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/front/static/common/favicons/favicon.ico" />
     <link rel="stylesheet" href="/__guide/resources/jquery-ui.min.css" />
     <link rel="stylesheet" href="/__guide/resources/a11y-dark.min.css" />
-    <link rel="stylesheet" href="/__guide/resources/reset.css" />
     <link rel="stylesheet" href="/__guide/resources/guide.css" />
-    <link rel="stylesheet" href="/__guide/resources/old-school.css" />
+    <link rel="stylesheet" href="/static/css/ui.css" />
     <script src="/__guide/resources/jquery-3.6.0.min.js"></script>
     <script src="/__guide/resources/jquery-ui.min.js"></script>
     <script src="/__guide/resources/highlight.min.js"></script>
@@ -80,38 +79,180 @@
             <h4 class="h4">h4: 고문헌한자시스템</h4>
             <br />
             <br />
-            <p class="b1">B1: 고문헌한자시스템</p>
-            <p class="b1-bold">B1 Bold: 고문헌한자시스템</p>
-            <p class="b2">B2: 고문헌한자시스템</p>
-            <p class="b2-medium">B2 Medium: 고문헌한자시스템</p>
-            <p class="b3">B3: 고문헌한자시스템</p>
-            <p class="b3-medium">B3 Medium: 고문헌한자시스템</p>
-            <p class="b4">B4: 고문헌한자시스템</p>
-            <p class="b4-medium">B4 Medium: 고문헌한자시스템</p>
+            <p class="p1">B1: 고문헌한자시스템</p>
+            <p class="p1-bold">B1 Bold: 고문헌한자시스템</p>
+            <p class="p2">B2: 고문헌한자시스템</p>
+            <p class="p2-medium">B2 Medium: 고문헌한자시스템</p>
+            <p class="p3">B3: 고문헌한자시스템</p>
+            <p class="p3-medium">B3 Medium: 고문헌한자시스템</p>
+            <p class="p4">B4: 고문헌한자시스템</p>
+            <p class="p4-medium">B4 Medium: 고문헌한자시스템</p>
           </dd>
         </dl>
       </div>
       <hr />
-      <div class="box">
+      <!-- <div class="box">
         <h2>Text</h2>
         <dl class="flex-dl">
           <dt class="no-code"></dt>
           <dd style="width: 100%">
             <pre>
-                            <code>
-                                @mixin text($size: 16px, $lh: 1.6, $weight: 400) {
-                                    font-size: $size;
-                                    line-height: $lh;
-                                    font-weight: $weight;
-                                }
+              <code>
+                  @mixin text($size: 16px, $lh: 1.6, $weight: 400) {
+                      font-size: $size;
+                      line-height: $lh;
+                      font-weight: $weight;
+                  }
 
-                                @include text; //기본 폰트
-                            </code>
-                        </pre>
+                  @include text; //기본 폰트
+              </code>
+          </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr /> -->
+      <div class="box">
+        <h2>Form Input</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            round타입
+            <pre><code class="hljs go">span.form-text<span class="hljs-built_in">.t01</span></code></pre>
+          </dd>
+          <dd data-description="Default" style="padding: 30px">
+            <span class="form-text">
+              <span class="form-input-content">
+                <input type="text" placeholder="Placeholder Text" />
+              </span>
+            </span>
+            <br />
+            <br />
+            <span class="form-text">
+              <span class="form-input-content">
+                <input type="text" value="Placeholder Text" />
+              </span>
+            </span>
+            <br />
+            <br />
+            <span class="form-text t01">
+              <span class="form-input-content">
+                <input type="text" placeholder="Placeholder Text" />
+              </span>
+            </span>
           </dd>
         </dl>
       </div>
       <hr />
+      <div class="box">
+        <h2>Solid & Line Button</h2>
+        <dl class="flex-dl">
+          <!-- <dt class="no-code"></dt>
+          <dd class="guide-description">
+            round타입
+            <pre><code class="hljs go">span.form-text<span class="hljs-built_in">.t01</span></code></pre>
+          </dd> -->
+          <dd data-description="Size" style="padding: 30px">
+            <button type="button" class="solid-button--lg">
+              <span class="button-content">solid-button--lg</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="solid-button--md">
+              <span class="button-content">solid-button--md</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="solid-button--sm">
+              <span class="button-content">solid-button--sm</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="solid-button--md is-disabled">
+              <span class="button-content">.is-disabled</span>
+            </button>
+          </dd>
+          <dd data-description="Color" style="padding: 30px; background-color: #999">
+            <button type="button" class="solid-button" data-theme="ltgreen">
+              <span class="button-content">theme="ltgreen"</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="solid-button" data-theme="white">
+              <span class="button-content">theme="ltgreen"</span>
+            </button>
+          </dd>
+          <dd data-description="Round" style="padding: 30px">
+            <button type="button" class="solid-button" data-round="sm">
+              <span class="button-content">round="sm"</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="solid-button" data-round="md">
+              <span class="button-content">round="md"</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="solid-button" data-round="lg">
+              <span class="button-content">round="lg"</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="solid-button" data-round="xl">
+              <span class="button-content">round="xl"</span>
+            </button>
+          </dd>
+          <dd data-description="Line" style="padding: 30px; background-color: #d4d4d4">
+            <button type="button" class="line-button--sm" data-theme="green" data-round="sm">
+              <span class="button-content">로그인</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="line-button--md" data-theme="white">
+              <span class="button-content">개인정보처리방침</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="line-button--lg" data-theme="grey">
+              <span class="button-content">도움말</span>
+            </button>
+            <br />
+            <br />
+            <button type="button" class="line-button" data-theme="green" data-bg="bg">
+              <span class="button-content"> data-bg="bg"</span>
+            </button>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>ICON</h2>
+        <dl class="flex-dl">
+          <dd data-description="" style="width: 100%; padding: 30px; background-color: #d4d4d4">
+            <i class="icon-app-header__ci"></i>
+            <i class="icon-app-footer__ci"></i>
+            <i class="icon-file-img"></i>
+            <i class="icon-css-tooltip"></i>
+            <i class="icon-css-close__circle"></i>
+            <i class="icon-css-close"></i>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>Checkbox</h2>
+        <dl class="flex-dl">
+          <dd data-description="" style="width: 100%; padding: 30px">
+            <span class="form-selector">
+              <input type="checkbox" id="checkbox01" checked />
+              <label for="checkbox01">세그먼트 표시</label>
+            </span>
+            <span class="form-selector">
+              <input type="checkbox" id="checkbox01" />
+              <label for="checkbox01">세그먼트 표시</label>
+            </span>
+          </dd>
+        </dl>
+      </div>
     </div>
 
     <!-- <script src="/js/ui22/ui.js"></script> -->

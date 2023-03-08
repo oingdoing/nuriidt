@@ -5,14 +5,15 @@
 @import 'reset';
 @import 'normalize';
 @import 'mixin';
+@import 'fonts';
 @import 'old-school';
 @import 'fonts';
 //Sprite
 @import 'sprite';
 
 //KR Common
-// @import './kr/common/common'; //html,body, (custom) scroll, skip navigation
-// @import './kr/common/components'; //button 등 Components
+@import 'common'; //html,body, (custom) scroll, skip navigation
+@import 'components'; //button 등 Components
 @import 'layout'; //Layout
 // @import './kr/common/layered'; //layered (Page, Notice, 기타)
 

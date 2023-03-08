@@ -246,7 +246,7 @@ const compile = {
     let opts = {
       spritesmith: function (options, sprite, icons) {
         options.cssName = `${sprite}.scss`;
-        // options.cssSpritesheetName = sprite;
+        options.cssSpritesheetName = sprite;
         // options.imgPath = `../images/sprite/en/${options.imgName}`;
         options.padding = 10;
         options.cssVarMap = function (sp) {

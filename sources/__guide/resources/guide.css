@@ -1,6 +1,10 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 
+html {
+  font-size: 0.8px;
+}
+
 body.guide {
   background-color: #333;
 }

@@ -1,33 +1,14 @@
-[class^='icon-'] {
-  display: inline-block;
-  flex-shrink: 0;
-  background-image: url(../images/sprite.png);
-  background-repeat: no-repeat;
-  background-size: 226px 74px;
-  white-space: nowrap;
-  text-indent: 200%;
-  overflow: hidden;
-  vertical-align: middle;
-}
+  [class^=icon-] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite.png); background-repeat: no-repeat; background-size:226px
+  74px; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  [class^='icon-sprite'] {
-    background-image: url(../images/sprite@2x.png);
-  }
-}
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { [class^=icon-sprite] { background-image: url(../images/sprite@2x.png); } }
 
-.icon-app-footer__ci {
-  width: 120px;
-  height: 44px;
-  background-position: 0px -30px;
-}
-.icon-app-header__ci {
-  width: 226px;
-  height: 20px;
-  background-position: 0px 0px;
-}
-.icon-file-img {
-  width: 32px;
-  height: 28px;
-  background-position: -130px -30px;
-}
+  .icon-app-footer__ci{ width:120px; height:44px; background-position:
+  0px
+  -30px; }
+  .icon-app-header__ci{ width:226px; height:20px; background-position:
+  0px
+  0px; }
+  .icon-file-img{ width:32px; height:28px; background-position:
+  -130px
+  -30px; }

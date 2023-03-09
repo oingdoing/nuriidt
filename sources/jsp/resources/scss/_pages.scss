@@ -1,0 +1,105 @@
+// * -------------------------------
+// * Main
+// * -------------------------------
+
+.app-main {
+  &__tit {
+    @include backImg(main__visual);
+    height: 240px;
+    padding-top: 50px;
+    text-align: center;
+    color: $color-white;
+    h1 {
+      margin-bottom: 24px;
+    }
+  }
+  &__service {
+    padding: 50px 0;
+    > div {
+      border-radius: 15px;
+    }
+    &-box {
+      @include grid-justify;
+      grid-template-columns: 1fr 1fr;
+      align-content: stretch;
+      justify-content: stretch;
+      grid-gap: 20px;
+      margin: 20px 0;
+      > div {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        border-radius: 15px;
+        background-color: $color-bg;
+      }
+      .button-link {
+        margin-top: 20px;
+      }
+      .app-content-desc {
+        margin-top: 12px;
+      }
+    }
+    .main-item {
+      position: relative;
+      padding: 50px;
+      border: 2px solid $primary-green;
+      border-radius: 15px;
+      overflow: hidden;
+      .app-content-tit {
+        color: $primary-green;
+      }
+      .app-content-desc {
+        margin-top: 16px;
+      }
+      .button-link {
+        margin-top: 25px;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 410px;
+        height: 410px;
+        border-radius: 50%;
+        background-color: $primary-htgreen;
+      }
+
+      @media screen and (max-width: $bp-tab) {
+        &::before {
+          width: 370px;
+          height: 370px;
+        }
+      }
+    }
+    &-ocr {
+      &::before {
+        right: -54px;
+        bottom: -97px;
+      }
+      figure {
+        position: absolute;
+        right: 47px;
+        bottom: 26px;
+      }
+      @media screen and (max-width: $bp-tab) {
+        figure {
+          right: 17px;
+          bottom: 16px;
+          transform: scale(0.8);
+        }
+      }
+    }
+    &-img {
+      text-align: right;
+      &::before {
+        left: -30px;
+        bottom: -98px;
+      }
+      figure {
+        position: absolute;
+        left: 77px;
+        bottom: 55px;
+      }
+    }
+  }
+}

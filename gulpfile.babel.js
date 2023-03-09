@@ -54,10 +54,9 @@ const DIR = {
 const ROUTES_INIT = () => {
   ROUTES = {
     SRC: {
-      COMMON: DIR.SRC + '/jsp/resources/common/**/*.*',
       GUIDE: DIR.SRC + '/__guide/**/*.*',
+      FONT: DIR.SRC + '/jsp/resources/fonts/*.*',
       IMG: DIR.SRC + '/jsp/resources/images',
-      // VIDEO: DIR.SRC + '/jsp/resources/videos',
       CSS: DIR.SRC + '/jsp/resources/scss',
       JS: DIR.SRC + '/jsp/resources/js/',
       SPRITE: DIR.SRC + '/jsp/resources/images/sprite/',
@@ -69,8 +68,8 @@ const ROUTES_INIT = () => {
       ],
     },
     DIST: {
-      COMMON: STATE,
       GUIDE: STATE + '/__guide/',
+      FONT: STATE + '/static/fonts/',
       IMG: STATE + '/static/images',
       CSS: STATE + '/static/css/',
       JS: STATE + '/static/js',
@@ -103,11 +102,11 @@ const move = {
   //     .pipe(gulp.dest(dest))
   //     .pipe(browserSync.reload({ stream: true }));
   // },
-  common(src, dest) {
+  font(src, dest) {
     return gulp
       .src(src)
       .pipe(changed(dest, { hasChanged: changed.compareContents }))
-      .pipe(debug({ title: 'MOVE COMMON:' }))
+      .pipe(debug({ title: 'MOVE FONT:' }))
       .pipe(gulp.dest(dest))
       .pipe(browserSync.reload({ stream: true }));
   },
@@ -284,7 +283,7 @@ const live = {
     let watcher = {
       image: gulp.watch(ROUTES.SRC.IMG, moveImageDist),
       // video: gulp.watch(ROUTES.SRC.VIDEO, moveVideoDist),
-      common: gulp.watch(ROUTES.SRC.COMMON, moveCommonDist),
+      font: gulp.watch(ROUTES.SRC.FONT, moveFontDist),
       guide: gulp.watch(ROUTES.SRC.GUIDE, moveGuideDist),
       pug: gulp.watch(
         [
@@ -319,7 +318,7 @@ const live = {
 const clean = () => del([STATE]);
 const moveImageDist = () => move.image(ROUTES.SRC.IMG, ROUTES.DIST.IMG);
 // const moveVideoDist = () => move.video(ROUTES.SRC.VIDEO, ROUTES.DIST.VIDEO);
-const moveCommonDist = () => move.common(ROUTES.SRC.COMMON, ROUTES.DIST.COMMON);
+const moveFontDist = () => move.font(ROUTES.SRC.FONT, ROUTES.DIST.FONT);
 const moveGuideDist = () => move.guide(ROUTES.SRC.GUIDE, ROUTES.DIST.GUIDE);
 
 // const compilePugToDist = () => compile.pug(ROUTES.SRC.PUG, ROUTES.DIST.PUG);
@@ -361,8 +360,7 @@ const improve = {
 const resetDist = gulp.series([clean]);
 const moveFileDist = gulp.parallel([
   moveImageDist,
-  // moveVideoDist,
-  moveCommonDist,
+  moveFontDist,
   moveGuideDist,
 ]);
 const compileDist = gulp.series([
@@ -378,6 +376,7 @@ const buildLight = gulp.series([resetDist, distTask]);
 const buildHtmlValidation = gulp.series([
   resetDist,
   moveGuideDist,
+  moveFontDist,
   compile.pug,
   improveValidation,
 ]);

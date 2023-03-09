@@ -26,7 +26,7 @@
 // * -------------------------------
 @mixin h1 {
   font-size: 58px;
-  line-height: 66px;
+  line-height: 65px;
   font-weight: 800;
 }
 @mixin h2 {
@@ -144,45 +144,25 @@
 }
 
 // * -------------------------------
-// * ICON
+// * align
 // * -------------------------------
-
-// X 닫기 버튼
-@mixin iconCancel($size: 24px, $thick: 2px, $color: #000, $padding: 0, $display: inline-block, $position: relative) {
-  position: $position;
-  display: $display;
-  width: $size + $padding * 2;
-  height: $size + $padding * 2;
-  background-color: transparent;
-  border: none;
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc($size * $sqrt_2 - $thick);
-    height: $thick;
-    background-color: $color;
-  }
-
-  &:before {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  &:after {
-    transform: translate(-50%, -50%) rotate(135deg);
-  }
-  & > span {
-    overflow: hidden;
-    display: block;
-    text-indent: 100%;
-    white-space: nowrap;
-  }
+@mixin flex-justify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin grid-justify {
+  display: grid;
+  place-items: flex-start;
+  place-content: space-between;
 }
 
-@mixin col($flex: 0 0 auto) {
-  flex: 0 0 calc(100% / ($gridColumn / $flex));
-}
-@mixin colWidth($width) {
-  max-width: calc(100% / ($gridColumn / $width));
+// * -------------------------------
+// * img
+// * -------------------------------
+@mixin backImg($img) {
+  background-image: url('../images/common/' + $img + '.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

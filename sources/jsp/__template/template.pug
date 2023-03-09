@@ -24,14 +24,8 @@ html(lang="ko")
 			link(rel="stylesheet", href='/static/css/ui.css')
 		//- 		link(rel="stylesheet", href='/css/template/template10/pc/swiper.min.css')
 		//- 		link(rel="stylesheet", href='/css/template/template10/pc/jquery-ui.min.css')
-		//- 		link(rel="stylesheet", href='/css/template/template10/pc/ui__white.css')
 		block headJS
-			link(rel="stylesheet", href='/static/js/ui.js')
-		//- 		script(src="/js/ui22/current-device.min.js")
-		//- 		script(src="/js/ui22/jquery-3.6.0.min.js")
-		//- 		script(src="/js/ui22/jquery-ui.min.js")
-		//- 		script(src="/js/ui22/gsap.min.js")
-		//- 		script(src="/js/ui22/swiper.4.5.1.min.js")
+			//- link(rel="stylesheet", href='/static/js/ui.js')
 
 	body
 		.app
@@ -39,7 +33,7 @@ html(lang="ko")
 			include ../__includes/app-header.pug
 
 			.app-container
-					div.app-content
+					main.app-content
 							block content
 
 			include ../__includes/app-footer.pug
@@ -48,4 +42,4 @@ html(lang="ko")
 		//- 	include ../__template/template__modal.pug
 
 		block bodyJS
-				script(src='/js/ui22/ui.js')
+			link(rel="stylesheet", href='/static/js/ui.js')

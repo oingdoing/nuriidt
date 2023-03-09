@@ -1,10 +1,17 @@
-input(type="checkbox", id="menu-state", class="menu-state") 
 header(class="app-header") 
 	.app-header-content
-		.content-header
-			a(href="javascript:;", class="app-header-ci") 
+		.app-header-ci
+			a(href="javascript:;", class="ci") 
 				i.icon-app-header__ci
 				span.a11y-hidden 누리IDT 고문헌한자시스템
-		.util-header
-			button.line-button--sm(type='button', theme='')
-				span.button-content 버튼이름
+		.app-header-util
+			button.line-button--sm(type='button', data-theme='green', data-round="sm")
+				span.button-content 로그인
+			button.line-button--sm(type='button', data-theme='green', data-round="sm")
+				span.button-content 회원가입
+			span.button-unit
+				button.solid-button--xs(type='button', data-theme='green', data-round="sm")
+					span.button-content 가격정책
+				button.solid-button--xs(type='button', data-theme='green', data-round="sm")
+					span.button-content FAQ
+		include app-nav.pug

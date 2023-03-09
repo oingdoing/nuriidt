@@ -1,6 +1,8 @@
 //Device
-$breakpoint-small-desktop: 1440px;
-$breakpoint-big-desktop: 1921px;
+$bp-pc: 1440px;
+$bp-nb: 1439px;
+$bp-tab: 1023px;
+$bp-mob: 768px;
 
 $sqrt_2: 1.41421356237;
 
@@ -46,6 +48,7 @@ $level80: 300; //Layered(Page)
 $level90: 350; //Layered(Notice)
 $level100: 400; //Cookie Information
 
+// $bp-3rd: 768px;
 // Easing
 $easing: cubic-bezier(0.52, 0.16, 0.24, 1);
 

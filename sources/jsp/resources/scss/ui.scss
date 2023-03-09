@@ -1,13 +1,12 @@
 @charset "utf-8";
 
 //Common
-@import 'variables';
-@import 'reset';
-@import 'normalize';
 @import 'mixin';
-@import 'fonts';
+@import 'variables';
 @import 'old-school';
 @import 'fonts';
+@import 'reset';
+@import 'normalize';
 //Sprite
 @import 'sprite';
 
@@ -15,13 +14,6 @@
 @import 'common'; //html,body, (custom) scroll, skip navigation
 @import 'components'; //button 등 Components
 @import 'layout'; //Layout
-// @import './kr/common/layered'; //layered (Page, Notice, 기타)
 
-//KR Pages
-// @import './kr/main'; //Main
-// @import './kr/business/**/*.scss'; //Business
-// @import './kr/company/**/*.scss'; //Company
-// @import './kr/esg/**/*.scss'; //ESG
-// @import './kr/pr-center/**/*.scss'; //PR CENTER
-// @import './kr/service/**/*.scss'; //Service
-// @import './kr/util/**/*.scss'; //Util
+// Pages
+@import 'pages'; //Layout

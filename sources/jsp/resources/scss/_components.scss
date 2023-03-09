@@ -1,14 +1,14 @@
 h1 {
-  font-size: $heading-xl;
+  @include h1;
 }
 h2 {
-  font-size: $heading-lg;
+  @include h2;
 }
 h3 {
-  font-size: $heading-md;
+  @include h3;
 }
 h4 {
-  font-size: $heading-sm;
+  @include h4;
 }
 
 // * -------------------------------
@@ -107,11 +107,14 @@ h4 {
 // * -------------------------------
 // * BUTTON
 // * -------------------------------
+[role='button'] + [role='button'],
+[type='button'] + [type='button'] {
+  margin-left: 10px;
+}
 .solid-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
   padding: 10px 15px;
   background-color: $line-color;
   color: $color-white;
@@ -130,6 +133,12 @@ h4 {
     @extend .solid-button;
     @include p3-medium;
     padding: 8px 10px;
+  }
+  &--xs {
+    @extend .solid-button;
+    font-size: $text-md;
+    line-height: 18px;
+    padding: 6px 15px;
   }
   // color
   &[data-theme='ltgreen'] {

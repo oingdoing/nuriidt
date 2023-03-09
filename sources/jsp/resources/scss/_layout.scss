@@ -1,3 +1,17 @@
+.app {
+  position: relative;
+  width: 100%;
+  min-width: $bp-pc;
+  padding-top: 58px; //header
+  padding-bottom: 90px; //footer
+  min-height: 100vh;
+}
+@media screen and (max-width: $bp-nb) {
+  .app {
+    min-width: auto;
+  }
+}
+
 .app-header {
   position: fixed;
   top: 0;
@@ -5,6 +19,144 @@
   z-index: $level20;
   width: 100%;
   height: 58px;
-  padding: 15px;
+  padding: 0 15px;
   background-color: $color-white;
+  &-content {
+    position: relative;
+    max-width: $bp-pc;
+    @include flex-justify;
+    margin: 0 auto;
+  }
+  &-ci {
+    .ci {
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 0;
+    }
+  }
+  &-util {
+    padding: 15px 0;
+    .button-unit {
+      margin-left: 10px;
+      .solid-button--xs:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .solid-button--xs:last-child {
+        position: relative;
+        margin-left: -6px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        &::before {
+          position: absolute;
+          top: 7px;
+          left: 0;
+          content: '';
+          display: block;
+          width: 1px;
+          height: 13px;
+          background-color: #fff;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+.app-nav {
+  @media screen and (min-width: $bp-tab) {
+    display: none;
+  }
+}
+
+.app-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 90px;
+  background-color: $primary-green;
+  &-content {
+    @include flex-justify;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  &__address p {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  &__address {
+    @include p3;
+    color: #fff;
+  }
+  @media screen and (max-width: $bp-tab) {
+    padding: 0 20px;
+    &__address {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.app-section {
+  width: 100%;
+  &-content {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+.app-content {
+  &-tit {
+    @include h2;
+    line-height: 48px;
+    position: relative;
+    &.t01 {
+      @include h3;
+    }
+  }
+  &-desc {
+    @include p1;
+    position: relative;
+  }
+}
+@media screen and (max-width: $bp-nb) {
+  .app-content {
+    > .app-section {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    &-tit {
+      @include h3;
+      line-height: 42px;
+    }
+    &-desc {
+      @include p2;
+    }
+  }
+}
+@media screen and (max-width: $bp-tab) {
+  .app-content {
+    > .app-section {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    &-tit,
+    &-tit.t01 {
+      font-size: 24px;
+      line-height: 42px;
+    }
+    &-desc {
+      @include p2;
+    }
+  }
 }

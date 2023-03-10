@@ -20,6 +20,20 @@
     clear: both;
   }
 }
+// * -------------------------------
+// * A11y
+// * -------------------------------
+@mixin a11y-hidden {
+  //Element 숨김
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  border: 0;
+}
 
 // * -------------------------------
 // * Heading Tag
@@ -67,13 +81,11 @@
   font-weight: 400;
 }
 @mixin p2-medium {
-  font-size: 18px;
-  line-height: 26px;
+  @include p2;
   font-weight: 700;
 }
 @mixin p2-bold {
-  font-size: 18px;
-  line-height: 26px;
+  @include p2;
   font-weight: 800;
 }
 
@@ -102,6 +114,14 @@
   font-size: 14px;
   line-height: 28px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  @mixin p2 {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+  }
 }
 
 // * -------------------------------
@@ -155,6 +175,13 @@
   display: grid;
   place-items: flex-start;
   place-content: space-between;
+}
+@mixin grid-col2 {
+  display: grid;
+  place-items: flex-start;
+  place-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 // * -------------------------------

@@ -5,7 +5,7 @@ html(lang="ko")
 	head
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
-		meta(name="viewport", content="width=1600")
+		meta(name="viewport", content="width=device-width")
 		//- SEO
 		title #{seoTitle} | 누리IDT고문헌한자시스템
 		meta(name="Description", CONTENT="")
@@ -25,7 +25,7 @@ html(lang="ko")
 		//- 		link(rel="stylesheet", href='/css/template/template10/pc/swiper.min.css')
 		//- 		link(rel="stylesheet", href='/css/template/template10/pc/jquery-ui.min.css')
 		block headJS
-			//- link(rel="stylesheet", href='/static/js/ui.js')
+			link(rel="stylesheet", href='/static/js/ui.js')
 
 	body
 		.app
@@ -42,4 +42,4 @@ html(lang="ko")
 		//- 	include ../__template/template__modal.pug
 
 		block bodyJS
-			link(rel="stylesheet", href='/static/js/ui.js')
+			//- link(rel="stylesheet", href='/static/js/ui.js')

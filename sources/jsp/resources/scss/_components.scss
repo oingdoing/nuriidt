@@ -112,6 +112,7 @@ h4 {
   margin-left: 10px;
 }
 .solid-button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -119,6 +120,9 @@ h4 {
   background-color: $line-color;
   color: $color-white;
   background-color: $primary-green;
+  @media screen and (max-width: $bp-mob) {
+    padding: 6px 10px;
+  }
   // size
   &--lg {
     @extend .solid-button;
@@ -128,6 +132,9 @@ h4 {
   &--md {
     @extend .solid-button;
     @include p2-medium;
+    @media screen and (max-width: $bp-mob) {
+      @include p4-medium;
+    }
   }
   &--sm {
     @extend .solid-button;
@@ -155,6 +162,7 @@ h4 {
   }
 }
 .line-button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -171,6 +179,9 @@ h4 {
     @extend .line-button;
     @include p2;
     padding: 5px 15px;
+    @media screen and (max-width: $bp-mob) {
+      @include p4-medium;
+    }
   }
   &--sm {
     @extend .line-button;
@@ -287,5 +298,14 @@ h4 {
     margin: 6px auto;
     width: 1px;
     height: 17px;
+  }
+}
+.info-msg {
+  @include p3;
+  color: $color-font04;
+  margin-top: 6px;
+  @media screen and (max-width: $bp-mob) {
+    @include p4;
+    line-height: 22px;
   }
 }

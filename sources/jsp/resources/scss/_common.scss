@@ -21,6 +21,21 @@ body.is-hidden {
 .a11y-hidden {
   @include a11y-hidden;
 }
+span.br {
+  display: inline-block;
+}
+span.hide {
+  display: inline-block;
+  @media screen and (max-width: $bp-tab) {
+    display: none;
+  }
+}
+br.web {
+  display: block;
+  @media screen and (max-width: $bp-tab) {
+    display: none;
+  }
+}
 
 input[type='text'],
 input[type='password'],
@@ -44,55 +59,54 @@ input[type='text']:focus {
 
 //Placeholder
 :-ms-input-placeholder {
-  color: #888888;
+  color: $primary-ltgreen;
 } /* Internet Explorer 10-11 */
 ::-ms-input-placeholder {
-  color: #888888;
+  color: $primary-ltgreen;
 } /* Microsoft Edge */
 ::placeholder {
-  color: #888888;
+  color: $primary-ltgreen;
   opacity: 1;
   text-align: left;
 } /* Chrome, Firefox, Opera, Safari 10.1+ */
 textarea:-ms-input-placeholder {
   font-size: inherit;
-  color: #888888;
+  color: $primary-ltgreen;
 } /* Internet Explorer 10-11 */
 textarea::-ms-input-placeholder {
   font-size: inherit;
-  color: #888888;
+  color: $primary-ltgreen;
 } /* Microsoft Edge */
 textarea::placeholder {
   font-size: inherit;
-  color: #888888;
+  color: $primary-ltgreen;
   opacity: 1;
 }
 
 /* ScrollBar */
 ::-webkit-scrollbar-track {
-  background-color: #f4f4f4;
+  background-color: #e7e7e7;
   border-radius: 3px;
 }
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  // background-color: #eee;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: $primary-ltgreen;
   border-radius: 3px;
 }
 textarea::-webkit-scrollbar-track {
   box-shadow: none;
-  background-color: #ddd;
+  background-color: #e7e7e7;
 }
 textarea::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background-color: #fff;
+  background-color: #e7e7e7;
 }
 textarea::-webkit-scrollbar-thumb {
-  background-color: #b8b8b8;
+  background-color: $primary-ltgreen;
   border-radius: 3px;
   right: 20px;
 }

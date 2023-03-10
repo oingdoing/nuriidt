@@ -12,9 +12,23 @@
     h1 {
       margin-bottom: 24px;
     }
+    @media screen and (max-width: $bp-mob) {
+      height: 245px;
+      padding-top: 40px;
+      h1 {
+        @include h3;
+      }
+      p {
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
   }
   &__service {
     padding: 50px 0;
+    @media screen and (max-width: $bp-mob) {
+      padding: 20px 0;
+    }
     > div {
       border-radius: 15px;
     }
@@ -25,15 +39,60 @@
       justify-content: stretch;
       grid-gap: 20px;
       margin: 20px 0;
+      @media screen and (max-width: $bp-mob) {
+        display: block;
+      }
       > div {
         width: 100%;
         height: 100%;
         padding: 50px;
         border-radius: 15px;
         background-color: $color-bg;
+        @media screen and (max-width: $bp-mob) {
+          padding: 25px 20px;
+          @include clfix;
+          .app-content-tit.t01 {
+            text-align: left;
+          }
+          + div {
+            margin-top: 10px;
+          }
+        }
       }
       .button-link {
+        float: right;
+        position: relative;
         margin-top: 20px;
+        font-size: 14px;
+        &:not(.is-disabled) {
+          padding-right: 50px;
+          color: $primary-green;
+          background: none;
+        }
+        &:not(.is-disabled)::before {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          content: '';
+          display: block;
+          width: 30px;
+          height: 2px;
+          background-color: $primary-green;
+        }
+        &:not(.is-disabled)::after {
+          position: absolute;
+          top: 50%;
+          margin-top: -5px;
+          right: 0;
+          content: '';
+          display: block;
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+          border-right: 2px solid $primary-green;
+          border-bottom: 2px solid $primary-green;
+          transform: rotate(-45deg);
+        }
       }
       .app-content-desc {
         margin-top: 12px;
@@ -45,8 +104,17 @@
       border: 2px solid $primary-green;
       border-radius: 15px;
       overflow: hidden;
+      @media screen and (max-width: $bp-tab) {
+        padding: 20px;
+        &::before {
+          width: 370px;
+          height: 370px;
+        }
+      }
+      overflow: hidden;
       .app-content-tit {
         color: $primary-green;
+        line-height: 1.4;
       }
       .app-content-desc {
         margin-top: 16px;
@@ -63,11 +131,15 @@
         border-radius: 50%;
         background-color: $primary-htgreen;
       }
-
-      @media screen and (max-width: $bp-tab) {
+      @media screen and (max-width: $bp-mob) {
+        padding: 20px;
         &::before {
-          width: 370px;
-          height: 370px;
+          width: 294px;
+          height: 294px;
+          opacity: 0.5;
+        }
+        figure {
+          opacity: 0.5;
         }
       }
     }
@@ -82,10 +154,14 @@
         bottom: 26px;
       }
       @media screen and (max-width: $bp-tab) {
+        &::before {
+          right: -95px;
+          bottom: -102px;
+        }
         figure {
-          right: 17px;
-          bottom: 16px;
-          transform: scale(0.8);
+          width: 127px;
+          right: 8px;
+          bottom: 10px;
         }
       }
     }
@@ -99,6 +175,19 @@
         position: absolute;
         left: 77px;
         bottom: 55px;
+      }
+      @media screen and (max-width: $bp-mob) {
+        text-align: left;
+        &::before {
+          right: -95px;
+          bottom: -102px;
+        }
+        figure {
+          width: 147px;
+          left: auto;
+          right: 0;
+          bottom: 20px;
+        }
       }
     }
   }

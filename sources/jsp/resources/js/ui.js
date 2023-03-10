@@ -1,18 +1,24 @@
-let $nav = $('.app-neav');
-console.log('testttt');
+let $body = $('body');
+let $nav = $('.app-nav');
 
 $(function () {
-  nav.init();
-  console.log('test');
+  navFunction.init();
 });
 
-const nav = {
+const navFunction = {
   init: function () {
-    nav.open();
+    navFunction.open();
   },
   open: function () {
     $nav.on('click', '.btn-menu', function () {
-      $(this).toggleClass('is-active');
+      var chkNav = $nav.hasClass('is-active');
+      if (!chkNav) {
+        $nav.addClass('is-active');
+        $body.addClass('is-hidden');
+      } else {
+        $nav.removeClass('is-active');
+        $body.removeClass('is-hidden');
+      }
     });
   },
 };

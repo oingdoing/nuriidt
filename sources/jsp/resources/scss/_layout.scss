@@ -89,6 +89,7 @@
   }
 }
 .app-nav {
+  display: none;
   &::before {
     position: fixed;
     top: 0;
@@ -128,6 +129,7 @@
     right: 0;
     z-index: $level40;
     width: 100%;
+    display: block;
   }
   .btn-menu {
     position: absolute;

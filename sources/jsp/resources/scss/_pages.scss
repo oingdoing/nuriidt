@@ -14,7 +14,7 @@
     }
     @media screen and (max-width: $bp-mob) {
       height: 245px;
-      padding-top: 40px;
+      // padding-top: 40px;
       h1 {
         @include h3;
       }

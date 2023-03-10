@@ -1,4 +1,4 @@
-extends /__template/template.pug
+extends ./__template/template.pug
 
 block variables
 	- var seoTitle = 'Main'
@@ -26,7 +26,7 @@ block content
 				a.button-link.solid-button--md(role='button', data-theme='green')
 					span.button-content 서비스 바로가기
 				figure 
-					img(src="/static/images/common/main-img-icon__ocr.png", alt="")
+					img(src="./static/images/common/main-img-icon__ocr.png", alt="")
 			.app-main__service-box
 				.app-main__service-charactor
 					.app-content-tit.t01 한자 자형 검색 서비스
@@ -51,9 +51,8 @@ block content
 						span.hide 본 서비스에서 활용되는 누리한자 입력기는
 						br.web
 						| 한자 자형을 보고 연상되는 한글의 자음, 모음, 
-						span.br 기호를 결합하여
-						br.web
-						| 간편하게 한자를
+						span.br 기호를 결합하여&nbsp;
+						span.br 간편하게 한자를
 						span.br 입력할 수 있는 프로그램입니다.
 					a.button-link.solid-button--md.is-disabled(role='button')
 						.button-content 서비스 오픈 예정
@@ -63,14 +62,15 @@ block content
 					span.hide 본 서비스는 디지털 텍스트가 없어도
 					span.br 사용자가 
 					br.web
-					| 보유한 이미지에 한자 OCR 기술을
+					| 보유한 이미지에 한자 OCR 기술을 
 					span.br 적용하여 
 					br.web
-					| 이미지 속의 단어를 검색
+					span.br 이미지 속의 단어를 검색
 					span.br 활용할 수 있도록 해주는 검색 서비스입니다.
-					p.info-msg ※ 본 서비스는 서울대학교 규장각한국학연구원의 과학문헌 자료를 적용하였습니다.
+					p.info-msg ※ 본 서비스는 서울대학교 규장각한국학연구원의
+						span.br 과학문헌 자료를 적용하였습니다.
 				a.button-link.solid-button--md(role='button', data-theme='green')
 					.button-content 서비스 바로가기
 				figure 
-					img(src="/static/images/common/main-img-icon__search.png", alt="")
+					img(src="./static/images/common/main-img-icon__search.png", alt="")
 

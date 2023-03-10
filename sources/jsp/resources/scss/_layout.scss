@@ -96,19 +96,20 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    transition: background opacity 0.5s;
   }
   &-content {
     position: relative;
     right: -100%;
+    float: right;
     display: block;
     content: '';
     width: calc(100% - 75px);
     max-width: 384px;
-    margin-left: 75px;
     height: 100%;
     padding-top: 50px;
     background-color: #fff;
+    transition: right 0.3s ease;
     &::before {
       content: '';
       position: absolute;
@@ -125,14 +126,13 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 100%;
     z-index: $level40;
     width: 100%;
     display: block;
   }
   .btn-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding: 16px 20px;
@@ -162,9 +162,11 @@
     }
   }
   &.is-active {
+    left: 0;
     &::before {
       content: '';
       display: block;
+      background-color: rgba(0, 0, 0, 0.7);
     }
     .app-nav-content {
       right: 0;
@@ -336,6 +338,7 @@
 }
 @media screen and (max-width: $bp-tab) {
   .app-content {
+    padding-bottom: 50px;
     > .app-section {
       padding-left: 50px;
       padding-right: 50px;

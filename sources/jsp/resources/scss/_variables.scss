@@ -10,7 +10,8 @@ $sqrt_2: 1.41421356237;
 $heading-xl: 58px;
 $heading-lg: 42px;
 $heading-md: 28px;
-$heading-sm: 18px;
+$heading-sm: 24px;
+$heading-xs: 18px;
 
 $text-xl: 20px;
 $text-lg: 18px;
@@ -18,9 +19,12 @@ $text-md: 16px;
 $text-sm: 14px;
 $text-xs: 12px;
 
+$font-hanja: 'malgungothic';
+
 // COLOR
 $primary-green: #06711e;
 $primary-ltgreen: #509d5f;
+$primary-mdgreen: #73b17f;
 $primary-htgreen: #dff1dc;
 $primary-red: #bf0000;
 $dim-color: rgba(0, 0, 0, 0.8);
@@ -54,3 +58,8 @@ $easing: cubic-bezier(0.52, 0.16, 0.24, 1);
 
 // Path
 $fontPath: '../fonts/';
+
+//except
+$headerHt: 286px;
+$footerHt: 137px;
+$subExcept: $headerHt + $footerHt + 20px;

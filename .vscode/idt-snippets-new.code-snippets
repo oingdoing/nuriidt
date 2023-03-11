@@ -50,16 +50,16 @@
     "description": "line button Small"
   },
   // Input
-  "input text": {
+  "form checkbox": {
     "scope": "jade, pug",
-    "prefix": "btinput text",
+    "prefix": "form checkbox",
     "body": ["span.form-selector", "\tinput#checkbox01(type='checkbox')", "\t\tlabel(for='checkbox01')"],
-    "description": "line button"
+    "description": "input checkbox"
   },
-  "checkbox": {
+  "form txt": {
     "scope": "jade, pug",
-    "prefix": "btn line",
-    "body": ["span.form-text", "\tspan.form-input-content", "\t\tinput(type='text, placeholder='Placeholder Text)"],
-    "description": "checkbox"
+    "prefix": "form txt",
+    "body": ["span.form-text", "\tspan.form-input-content", "\t\tinput(type='text', placeholder='Placeholder Text')"],
+    "description": "input txt"
   }
 }

@@ -1,0 +1,849 @@
+extends ../__template/sub-template.pug
+
+block variables
+	- var seoTitle = '고문헌 한자 OCR'
+
+block content
+	section.app-section.app-sub__tit
+		h1 고문헌 한자 OCR
+		.tooltip-wrap
+			button.line-button--md.tooltip-button__open(type='button')
+				span.button-content 도움말
+				i.icon-css-tooltip 
+			.tooltip
+				ul 
+					li 
+						strong 
+							em Q. 
+							| 누리IDT 한자 OCR 서비스는 무엇인가요?
+						p 본 서비스는 인공지능 기술로 고문헌 한자 원문을 자동인식하여 디지털 텍스트를 제공하는 서비스입니다.
+							br
+							| 고문헌 한자에 특화된 문자 인식 AI모델(학습용 데이터의 딥 러닝) 개발로 인공지능을 통해 도출된 고서 이미지 내의 한자를 인식한 후 한자 텍스트로 변환해주는 웹기반 OCR 서비스를 제공합니다.
+							br
+							| 본 서비스에서 활용하는 문자 인식 AI모델(학습용 데이터의 딥러닝)은 일반적인 고도서 형태인 세로쓰기로 인쇄된 고서들을 학습하여 개발되었으며, 문자 인식 AI모델(학습용 데이터의 딥러닝)은 ‘해서체‘와 ‘행서체’ 한자를 주로 학습하여 개발되었기 때문에 초서체나 기타 다른 서체(전서체, 예서체 등)로 제작된 고서는 인식하지 못하거나 인식률이 낮을 수 있습니다.
+					li 
+						strong 
+							em Q. 
+							| 한문 고서 원문은 어떻게 이용하나요?
+						p(data-prefix="-") 본 서비스는 한 번에 고서 이미지 1면씩을 한자 텍스트로 인식·변환할 수 있으며, 고서 이미지가 왜곡(기울어짐, 돌아감등)되지 않고, 밝고 선명할수록 인식률이 더 좋습니다.
+						p(data-prefix="-") 이용 가능한 이미지 파일 포멧은 JPEG, PNG입니다.
+						p(data-prefix="-") 고서 한자 인식 및 변환에는 평균 1초 정도가 소요되지만, 이용 환경에 따라 시간이 더 걸릴 수도 있습니다.
+					li 
+						strong 
+							em Q. 
+							| 한자 텍스트는 어떻게 수정하나요?
+						p(data-prefix="-") 본 서비스는 인식되어 출력된 한자 텍스트에 마우스를 오버하면 해당글자의 후보군(유사자형)을 보여줍니다.
+						p(data-prefix="-") 출력된 글자를 클릭하면 후보군(유사자형)목록이 상세정보(한자정보:음/뜻/이체자/유니코드)를 함께 제공합니다.
+						p(data-prefix="-") 한자 텍스트 창에서 한자를 클릭하면 원문이미지 세그먼트된 한자와 연계하여 보여줍니다.
+				.button-area
+					button.line-button--sm.tooltip-button__close(type='button', data-theme='grey')
+						span.button-content 닫기
+				button.btn-close(type='button')
+					i.icon-css-close__circle
+	section.app-section.app-sub__grid.pg-ocr 
+		article.grid-article.ocr-img
+			h2.grid-article__tit 원문 이미지
+			.grid-article__content 
+				.img-box.img-loaded 
+					input#ocrImgUpload.a11y-visible(type="file")
+					figure 
+						img(src="../static/images/_temp/ocr_img.jpg", alt="")
+						figcaption.segment-label 
+							span 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재.jpg
+							span.form-selector
+								input#segmentChkbox(type="checkbox")
+								label(for="segmentChkbox") 세그먼트 표시
+					.img-segment
+						span(style="top:90px;left:220px;width:25px;height:25px;")
+				.button-area
+					button.solid-button--lg.button-ocr-upload(type='button', data-theme='mdgreen' data-round="lg")
+						i.icon-file-img
+						span.button-content 이미지 파일 선택
+		article.grid-article.ocr-txt
+			h2.grid-article__tit 원문 텍스트
+			.grid-article__content 
+				.txt-box
+					ul 
+						li.is-selected
+							span 禁
+							.charactor-
+						li 
+							span 断
+						li 
+							span 知
+						li 
+							span 情
+						li 
+							span 故
+						li 
+							span 放
+						li 
+							span 者
+						li 
+							span 乙
+						li 
+							span 良
+						li 
+							span 這
+						li 
+							span 唘
+						li 
+							span 闻
+						li 
+							span 罷
+						li 
+							span 黜
+						li 
+							span 事
+						li 
+							span 黄
+						li 
+							span 海
+						li 
+							span 道
+						li 
+							span 觀
+						li 
+							span 察
+						li 
+							span 使
+						li 
+							span 𠁅
+						li 
+							span 并
+						li 
+							span 以
+						li 
+							span 行
+						li 
+							span 移
+						li 
+							span 何
+						li 
+							span 如
+						li 
+							span 唘
+						li 
+							span 依
+						li 
+							span 𠃔
+						li 
+							span 禮
+						li 
+							span 曺
+						li 
+							span 受
+						li 
+							span 教
+						li 
+							span 丙
+						li 
+							span 午
+						li 
+							span 六
+						li 
+							span 月
+						li 
+							span 十
+						li 
+							span 一
+						li 
+							span 日
+						li 
+							span 𠄘
+						li 
+							span 𫝊
+						li 
+							span 國
+						li 
+							span 家
+						li 
+							span 大
+						li 
+							span 事
+						li 
+							span 惟
+						li 
+							span 𥙊
+						li 
+							span 祀
+						li 
+							span 是
+						li 
+							span 去
+						li 
+							span 乙
+						li 
+							span 近
+						li 
+							span 年
+						li 
+							span 以
+						li 
+							span 来
+						li 
+							span 有
+						li 
+							span 司
+						li 
+							span 䒭
+						li 
+							span 視
+						li 
+							span 為
+						li 
+							span 尋
+						li 
+							span 掌
+						li 
+							span 凢
+						li 
+							span 𥙊
+						li 
+							span 享
+						li 
+							span 所
+						li 
+							span 用
+						li 
+							span 庻
+						li 
+							span 品
+						li 
+							span 乙
+						li 
+							span 不
+						li 
+							span 務
+						li 
+							span 精
+						li 
+							span 潔
+						li 
+							span 至
+						li 
+							span 為
+						li 
+							span 未
+						li 
+							span 便
+						li 
+							span 叱
+						li 
+							span 分
+						li 
+							span 不
+						li 
+							span 喻
+						li 
+							span 士
+						li 
+							span 断
+						li 
+							span 知
+						li 
+							span 情
+						li 
+							span 故
+						li 
+							span 放
+						li 
+							span 者
+						li 
+							span 乙
+						li 
+							span 良
+						li 
+							span 這
+						li 
+							span 唘
+						li 
+							span 闻
+						li 
+							span 罷
+						li 
+							span 黜
+						li 
+							span 事
+						li 
+							span 黄
+						li 
+							span 海
+						li 
+							span 道
+						li 
+							span 觀
+						li 
+							span 察
+						li 
+							span 使
+						li 
+							span 𠁅
+						li 
+							span 并
+						li 
+							span 以
+						li 
+							span 行
+						li 
+							span 移
+						li 
+							span 何
+						li 
+							span 如
+						li 
+							span 唘
+						li 
+							span 依
+						li 
+							span 𠃔
+						li 
+							span 禮
+						li 
+							span 曺
+						li 
+							span 受
+						li 
+							span 教
+						li 
+							span 丙
+						li 
+							span 午
+						li 
+							span 六
+						li 
+							span 月
+						li 
+							span 十
+						li 
+							span 一
+						li 
+							span 日
+						li 
+							span 𠄘
+						li 
+							span 𫝊
+						li 
+							span 國
+						li 
+							span 家
+						li 
+							span 大
+						li 
+							span 事
+						li 
+							span 惟
+						li 
+							span 𥙊
+						li 
+							span 祀
+						li 
+							span 是
+						li 
+							span 去
+						li 
+							span 乙
+						li 
+							span 近
+						li 
+							span 年
+						li 
+							span 以
+						li 
+							span 来
+						li 
+							span 有
+						li 
+							span 司
+						li 
+							span 䒭
+						li 
+							span 視
+						li 
+							span 為
+						li 
+							span 尋
+						li 
+							span 掌
+						li 
+							span 凢
+						li 
+							span 𥙊
+						li 
+							span 享
+						li 
+							span 所
+						li 
+							span 用
+						li 
+							span 庻
+						li 
+							span 品
+						li 
+							span 乙
+						li 
+							span 不
+						li 
+							span 務
+						li 
+							span 精
+						li 
+							span 潔
+						li 
+							span 至
+						li 
+							span 為
+						li 
+							span 未
+						li 
+							span 便
+						li 
+							span 叱
+						li 
+							span 分
+						li 
+							span 不
+						li 
+							span 喻
+						li 
+							span 士
+						li 
+							span 断
+						li 
+							span 知
+						li 
+							span 情
+						li 
+							span 故
+						li 
+							span 放
+						li 
+							span 者
+						li 
+							span 乙
+						li 
+							span 良
+						li 
+							span 這
+						li 
+							span 唘
+						li 
+							span 闻
+						li 
+							span 罷
+						li 
+							span 黜
+						li 
+							span 事
+						li 
+							span 黄
+						li 
+							span 海
+						li 
+							span 道
+						li 
+							span 觀
+						li 
+							span 察
+						li 
+							span 使
+						li 
+							span 𠁅
+						li 
+							span 并
+						li 
+							span 以
+						li 
+							span 行
+						li 
+							span 移
+						li 
+							span 何
+						li 
+							span 如
+						li 
+							span 唘
+						li 
+							span 依
+						li 
+							span 𠃔
+						li 
+							span 禮
+						li 
+							span 曺
+						li 
+							span 受
+						li 
+							span 教
+						li 
+							span 丙
+						li 
+							span 午
+						li 
+							span 六
+						li 
+							span 月
+						li 
+							span 十
+						li 
+							span 一
+						li 
+							span 日
+						li 
+							span 𠄘
+						li 
+							span 𫝊
+						li 
+							span 國
+						li 
+							span 家
+						li 
+							span 大
+						li 
+							span 事
+						li 
+							span 惟
+						li 
+							span 𥙊
+						li 
+							span 祀
+						li 
+							span 是
+						li 
+							span 去
+						li 
+							span 乙
+						li 
+							span 近
+						li 
+							span 年
+						li 
+							span 以
+						li 
+							span 来
+						li 
+							span 有
+						li 
+							span 司
+						li 
+							span 䒭
+						li 
+							span 視
+						li 
+							span 為
+						li 
+							span 尋
+						li 
+							span 掌
+						li 
+							span 凢
+						li 
+							span 𥙊
+						li 
+							span 享
+						li 
+							span 所
+						li 
+							span 用
+						li 
+							span 庻
+						li 
+							span 品
+						li 
+							span 乙
+						li 
+							span 不
+						li 
+							span 務
+						li 
+							span 精
+						li 
+							span 潔
+						li 
+							span 至
+						li 
+							span 為
+						li 
+							span 未
+						li 
+							span 便
+						li 
+							span 叱
+						li 
+							span 分
+						li 
+							span 不
+						li 
+							span 喻
+						li 
+							span 士
+						li 
+							span 断
+						li 
+							span 知
+						li 
+							span 情
+						li 
+							span 故
+						li 
+							span 放
+						li 
+							span 者
+						li 
+							span 乙
+						li 
+							span 良
+						li 
+							span 這
+						li 
+							span 唘
+						li 
+							span 闻
+						li 
+							span 罷
+						li 
+							span 黜
+						li 
+							span 事
+						li 
+							span 黄
+						li 
+							span 海
+						li 
+							span 道
+						li 
+							span 觀
+						li 
+							span 察
+						li 
+							span 使
+						li 
+							span 𠁅
+						li 
+							span 并
+						li 
+							span 以
+						li 
+							span 行
+						li 
+							span 移
+						li 
+							span 何
+						li 
+							span 如
+						li 
+							span 唘
+						li 
+							span 依
+						li 
+							span 𠃔
+						li 
+							span 禮
+						li 
+							span 曺
+						li 
+							span 受
+						li 
+							span 教
+						li 
+							span 丙
+						li 
+							span 午
+						li 
+							span 六
+						li 
+							span 月
+						li 
+							span 十
+						li 
+							span 一
+						li 
+							span 日
+						li 
+							span 𠄘
+						li 
+							span 𫝊
+						li 
+							span 國
+						li 
+							span 家
+						li 
+							span 大
+						li 
+							span 事
+						li 
+							span 惟
+						li 
+							span 𥙊
+						li 
+							span 祀
+						li 
+							span 是
+						li 
+							span 去
+						li 
+							span 乙
+						li 
+							span 近
+						li 
+							span 年
+						li 
+							span 以
+						li 
+							span 来
+						li 
+							span 有
+						li 
+							span 司
+						li 
+							span 䒭
+						li 
+							span 視
+						li 
+							span 為
+						li 
+							span 尋
+						li 
+							span 掌
+						li 
+							span 凢
+						li 
+							span 𥙊
+						li 
+							span 享
+						li 
+							span 所
+						li 
+							span 用
+						li 
+							span 庻
+						li 
+							span 品
+						li 
+							span 乙
+						li 
+							span 不
+						li 
+							span 務
+						li 
+							span 精
+						li 
+							span 潔
+						li 
+							span 至
+						li 
+							span 為
+						li 
+							span 未
+						li 
+							span 便
+				.button-area.grid-col2
+					button.solid-button--lg(type='button', data-theme='mdgreen' data-round="lg")
+						span.button-content
+							em.font-hanja 正字
+							| 로 변환하기
+					button.solid-button--lg(type='button', data-theme='mdgreen' data-round="lg")
+						span.button-content 텍스트 파일로 내려받기
+		article.grid-article.ocr-info
+			h2.grid-article__tit 한자정보 및 수정
+			.grid-article__content 
+				.detail-box-area
+					.detail-box
+						.detail-box__main
+							.detail-box__main-result
+								.charactor
+									strong 覽
+									span 람
+								.button-area
+									span.tag-label 99.89%
+									button.solid-button--sm(type='button', data-theme='ltgreen', data-round="sm")
+										span.button-content 적용하기
+							.detail-box__main-info
+								p
+									strong 람
+									span 두루보다, 전망, 받다
+						.detail-box__sub 
+							ul.detail-tags
+								li 
+									span.tag-label--sm 유니코드
+									span.tag-msg U+089A7
+								li 
+									span.tag-label--sm.font-hanja 正字
+									span.tag-msg 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽
+								li 
+									span.tag-label--sm.font-hanja 簡字
+									span.tag-msg 览, 览, 览, 览, 览, 览, 览, 览, 览, 览, 览, 
+					.detail-box
+						.detail-box__main
+							.detail-box__main-result
+								.charactor
+									strong 覽
+									span 람
+								.button-area
+									span.tag-label 99.89%
+									button.solid-button--sm(type='button', data-theme='ltgreen', data-round="sm")
+										span.button-content 적용하기
+							.detail-box__main-info
+								p
+									strong 각
+									span 깨닫다, 깨우치다, 깨달음, 나타나다, 높다,
+								p
+									strong 교
+									span 깨다, 깨우다
+						.detail-box__sub 
+							ul.detail-tags
+								li 
+									span.tag-label--sm 유니코드
+									span.tag-msg U+089A7
+								li 
+									span.tag-label--sm.font-hanja 正字
+									span.tag-msg 覽, 覽, 覽
+								li 
+									span.tag-label--sm.font-hanja 簡字
+									span.tag-msg 览, 览, 览
+								li 
+									span.tag-label--sm.font-hanja 簡字
+									span.tag-msg 览, 览, 览
+								li 
+									span.tag-label--sm.font-hanja 古字
+									span.tag-msg 览, 览, 览
+					.detail-box
+						.detail-box__main
+							.detail-box__main-result
+								.charactor
+									strong 覽
+									span 람
+								.button-area
+									span.tag-label 99.89%
+									button.solid-button--sm.btn-apply(type='button', data-theme='ltgreen', data-round="sm")
+										span.button-content 적용하기
+							.detail-box__main-info
+								p
+									strong 각
+									span 깨닫다, 깨우치다, 깨달음, 나타나다, 높다,
+								p
+									strong 교
+									span 깨다, 깨우다
+						.detail-box__sub 
+							ul.detail-tags
+								li 
+									span.tag-label--sm 유니코드
+									span.tag-msg U+089A7
+								li 
+									span.tag-label--sm.font-hanja 正字
+									span.tag-msg 覽, 覽, 覽
+								li 
+									span.tag-label--sm.font-hanja 簡字
+									span.tag-msg 览, 览, 览
+								li 
+									span.tag-label--sm.font-hanja 簡字
+									span.tag-msg 览, 览, 览
+								li 
+									span.tag-label--sm.font-hanja 古字
+									span.tag-msg 览, 览, 览
+					.detail-input 
+						span.form-text.t01
+							span.form-input-content
+								input(type='text', placeholder='직접 입력')
+						button.solid-button--sm.btn-apply(type='button', data-theme='ltgreen', data-round="md")
+							span.button-content 적용하기

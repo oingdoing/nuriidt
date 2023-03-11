@@ -34,6 +34,13 @@
   clip-path: inset(0px 0px 99.9% 99.9%);
   border: 0;
 }
+@mixin a11y-visible {
+  //Element 숨김
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  visibility: hidden;
+}
 
 // * -------------------------------
 // * Heading Tag
@@ -54,6 +61,11 @@
   font-weight: 800;
 }
 @mixin h4 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+}
+@mixin h5 {
   font-size: 18px;
   line-height: 22px;
   font-weight: 500;
@@ -67,7 +79,7 @@
 @mixin p1-medium {
   font-size: 20px;
   line-height: 32px;
-  font-weight: 700;
+  font-weight: 600;
 }
 @mixin p1-bold {
   font-size: 20px;
@@ -82,7 +94,7 @@
 }
 @mixin p2-medium {
   @include p2;
-  font-weight: 700;
+  font-weight: 600;
 }
 @mixin p2-bold {
   @include p2;
@@ -97,7 +109,7 @@
 @mixin p3-medium {
   font-size: 16px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: 600;
 }
 @mixin p3-bold {
   font-size: 16px;
@@ -113,7 +125,7 @@
 @mixin p4-medium {
   font-size: 14px;
   line-height: 28px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {

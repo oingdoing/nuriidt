@@ -3,14 +3,14 @@
   width: 100%;
   min-width: $bp-pc;
   padding-top: 58px; //header
-  padding-bottom: 90px; //footer
+  padding-bottom: 137px; //footer
   min-height: 100vh;
   @media screen and (max-width: $bp-nb) {
     min-width: auto;
   }
   @media screen and (max-width: $bp-mob) {
     padding-top: 50px;
-    padding-bottom: 228px;
+    padding-bottom: 353px;
   }
 }
 
@@ -20,9 +20,11 @@
   right: 0;
   z-index: $level20;
   width: 100%;
+  min-width: 1400px;
   height: 58px;
   padding: 0 15px;
   background-color: $color-white;
+  border-bottom: 1px solid $line-color03;
   @media screen and (max-width: $bp-mob) {
     height: 50px;
     padding: 0;
@@ -235,15 +237,30 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 90px;
+  min-width: 1400px;
+  min-height: 137px;
   background-color: $primary-green;
   @media screen and (max-width: $bp-tab) {
     height: auto;
-    padding: 20px 20px 30px;
+  }
+  @media screen and (max-width: $bp-mob) {
     .btn-link__privacy {
       display: block;
       width: 100%;
       margin-top: 15px;
+    }
+  }
+  &-msg {
+    width: 100%;
+    min-height: 47px;
+    padding: 10px 15px;
+    line-height: 28px;
+    font-size: $text-sm;
+    color: $primary-green;
+    text-align: center;
+    background-color: $color-bg;
+    @media screen and (max-width: $bp-mob) {
+      line-height: 22px;
     }
   }
   &-content {
@@ -251,6 +268,17 @@
     max-width: 1400px;
     height: 100%;
     margin: 0 auto;
+    padding: 22px 0;
+    @media screen and (max-width: $bp-nb) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media screen and (max-width: $bp-tab) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 20px 30px;
+    }
     @media screen and (max-width: $bp-mob) {
       display: block;
     }
@@ -266,10 +294,11 @@
       color: #dfc38a;
     }
     @media screen and (max-width: $bp-tab) {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      span {
+      p {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span:last-child {
         display: block;
       }
     }
@@ -282,7 +311,7 @@
     }
   }
   .icon-app-footer__ci {
-    display: block;
+    display: inline-block;
   }
   .icon-app-footer__ci_m {
     display: none;
@@ -370,6 +399,23 @@
     }
     &-desc {
       @include p3;
+    }
+  }
+}
+
+.sub-page {
+  .app-header {
+    padding-left: 20px;
+    padding-right: 20px;
+    &-content {
+      max-width: 100%;
+    }
+  }
+  .app-footer {
+    &-content {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }

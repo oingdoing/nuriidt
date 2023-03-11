@@ -1,0 +1,211 @@
+// * -------------------------------
+// * Sub
+// * -------------------------------
+
+.app-sub {
+  min-width: 1440px;
+  padding-left: 100px;
+  padding-right: 100px;
+  &__grid {
+    @extend .app-sub;
+    display: grid;
+    place-items: flex-start;
+    place-content: space-between;
+    grid-gap: 25px;
+    padding-bottom: 40px;
+  }
+  &__tit {
+    @include flex-justify;
+    width: 100%;
+    height: 120px;
+    padding-right: 70px;
+    @include backImg(sub__title);
+    h1 {
+      font-size: $heading-lg;
+      line-height: 1;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 10px;
+        background-color: $primary-green;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.grid-article {
+  position: relative;
+  width: 100%;
+  &__tit {
+    padding: 40px 0 20px;
+    font-size: $heading-md;
+    line-height: 1;
+    color: $primary-green;
+  }
+  &__content {
+    min-height: 800px;
+    height: calc(100vh - $subExcept);
+    // max-height: calc(100vh - $subExcept);
+    padding-bottom: 80px;
+    border: 1px solid $primary-green;
+    border-top-width: 10px;
+    background-color: #fff;
+  }
+  &.is-disabled {
+    .grid-article__tit {
+      font-weight: 400;
+      color: $line-color;
+    }
+    .grid-article__content {
+      border-color: $line-color02;
+      background-color: $color-bg;
+      [class*='-button'] {
+        background-color: $line-color;
+      }
+    }
+  }
+  &:not(.ocr-info) .button-area {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+    [class*='-button'] {
+      width: 100%;
+    }
+  }
+}
+
+// * -------------------------------
+// * OCR
+// * -------------------------------
+
+.pg-ocr {
+  grid-template-columns: 1fr 1fr 350px;
+  /*** 원본 이미지 ***/
+  .ocr-img {
+    .img-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 10px 10px 0 10px;
+      .img-upload-info {
+        display: block;
+        text-align: center;
+        width: 330px;
+        height: 300px;
+        margin: 180px auto 0;
+        padding-top: 94px;
+        background: #ffffff;
+        border: 3px dashed $line-color;
+        border-radius: 30px;
+        font-size: 24px;
+        line-height: 28px;
+        color: $line-color;
+        & + .info-msg {
+          margin-top: 30px;
+        }
+        &:hover {
+          cursor: point;
+        }
+      }
+      figure {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 36px;
+        border: 1px solid #c8ddcc;
+      }
+      .segment-label {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include flex-justify;
+        width: 100%;
+        height: 36px;
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 36px;
+        // @include ellipsis(100% - 90px);
+        background-color: $primary-htgreen;
+        &:hover {
+          cursor: point;
+        }
+        span:not(.form-selector) {
+          display: inline-block;
+          width: calc(100% - 120px);
+          text-align: left;
+          @include ellipsis(100%);
+        }
+      }
+      .img-segment {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 36px);
+        span {
+          position: absolute;
+          display: block;
+          min-width: 25px;
+          min-height: 25px;
+          border: 2px solid $primary-green;
+          &:hover,
+          &.is-selected {
+            border-color: $primary-red;
+          }
+        }
+      }
+    }
+  }
+  /*** 원본 텍스트 ***/
+  .ocr-txt {
+    .txt-box {
+      height: 100%;
+      padding: 30px 5px;
+      overflow: hidden;
+      ul {
+        height: 100%;
+        padding: 0 10px 0 30px;
+        overflow: auto;
+      }
+      li {
+        display: inline-block;
+        > span {
+          position: relative;
+          z-index: $level10;
+          font-size: 24px;
+          font-family: $font-hanja;
+        }
+        &:hover span::before,
+        &.is-selected span::before {
+          position: absolute;
+          top: 0;
+          left: -5px;
+          content: '';
+          display: block;
+          width: 32px;
+          height: 32px;
+          border: 1px solid $primary-red;
+        }
+        &.is-selected span::before {
+          border-width: 2px;
+        }
+      }
+    }
+    .button-area {
+      @include grid-col2;
+    }
+  }
+  /*** 한자정보 및 수정 ***/
+  .ocr-info {
+    .grid-article__content {
+      padding: 18px 5px;
+    }
+  }
+}

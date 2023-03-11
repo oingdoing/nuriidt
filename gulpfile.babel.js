@@ -69,13 +69,13 @@ const ROUTES_INIT = () => {
     },
     DIST: {
       GUIDE: STATE + '/__guide/',
-      FONT: STATE + '/static/fonts/',
-      IMG: STATE + '/static/images',
-      CSS: STATE + '/static/css/',
-      JS: STATE + '/static/js',
-      SPRITE: STATE + '/static/images/',
-      PUG: STATE,
-      INCLUDE: STATE,
+      FONT: STATE + '/jsp/static/fonts/',
+      IMG: STATE + '/jsp/static/images',
+      CSS: STATE + '/jsp/static/css/',
+      JS: STATE + '/jsp/static/js',
+      SPRITE: STATE + '/jsp/static/images/',
+      PUG: STATE + '/jsp/',
+      INCLUDE: STATE + '/jsp/',
     },
   };
 };
@@ -139,7 +139,7 @@ const compile = {
         .pipe(gulppug({ basedir: './sources/jsp' }))
         .pipe(beautify.html(beautifyOptions))
         .pipe(debug({ title: 'PUG -> HTML:' }))
-        .pipe(gulp.dest(STATE))
+        .pipe(gulp.dest(STATE + '/jsp/'))
         .pipe(browserSync.reload({ stream: true }))
     );
   },
@@ -151,7 +151,7 @@ const compile = {
         .pipe(gulppug({ basedir: './sources/jsp' }))
         .pipe(beautify.html(beautifyOptions))
         .pipe(debug({ title: 'INCLUDE -> HTML:' }))
-        .pipe(gulp.dest(STATE))
+        .pipe(gulp.dest(STATE + '/jsp/'))
         .pipe(browserSync.reload({ stream: true }))
     );
   },

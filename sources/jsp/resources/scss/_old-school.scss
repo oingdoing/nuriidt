@@ -114,6 +114,13 @@
   text-align: right;
 }
 
+.a11y-hidden {
+  @include a11y-hidden;
+}
+.a11y-visible {
+  @include a11y-visible;
+}
+
 // Size
 .w-100 {
   width: 100px !important;

@@ -1,11 +1,11 @@
 extends ../__template/sub-template.pug
 
 block variables
-	- var seoTitle = '고문헌 한자 OCR'
+	- var seoTitle = '한자 자형 검색'
 
 block content
 	section.app-section.app-sub__tit
-		h1 고문헌 한자 OCR
+		h1 한자 자형 검색
 		.tooltip-wrap
 			button.line-button--md.tooltip-button__open(type='button')
 				span.button-content 도움말
@@ -35,21 +35,6 @@ block content
 						p(data-prefix="-") 본 서비스는 인식되어 출력된 한자 텍스트에 마우스를 오버하면 해당글자의 후보군(유사자형)을 보여줍니다.
 						p(data-prefix="-") 출력된 글자를 클릭하면 후보군(유사자형)목록이 상세정보(한자정보:음/뜻/이체자/유니코드)를 함께 제공합니다.
 						p(data-prefix="-") 한자 텍스트 창에서 한자를 클릭하면 원문이미지 세그먼트된 한자와 연계하여 보여줍니다.
-					li 
-						strong 
-							em Q. 
-							| 상세보기 및 수정은 어떻게 활용하나요?
-						p(data-prefix="-") 선택된 글자의 상세정보(한자정보:음/뜻/이체자/유니코드)
-						p(data-prefix="-") 상세정보는 한자 검색 목록에 출력된 글자를 클릭하게 되면 클릭한 한자의 상세정보(한자정보:음/뜻/이체자/유니코드)을 함께 제공합니다.
-						p(data-prefix="-") 후보글자(유사인식글자)에 교정할 한자가 있으면 ‘적용’을 클릭하면 한자 텍스트 장에 바로 반영되어 교정한 글자는 빨간 박스로 보여줍니다.
-						p(data-prefix="-") 후보글자(유사인식글자)에 교정할 한자가 없으면 하단에 ‘직접입력’에서 입력하고 적용하면 바로 반영되어 빨간 박스로 보여줍니다.
-					li 
-						strong 
-							em Q. 
-							| OCR텍스트는 어떻게 다운로드 하나요?
-						p(data-prefix="-") 하단에 텍스트파일 내려받기를 클릭하면 팝업창이 뜨며, 텍스트 파일명도 수정해서 다운로드 할 수 있습니다.
-						p(data-prefix="-") 다운로드 한 텍스트는 편집기(한글, MS Word 등)를 사용하여 다양하게 활용할 수 있습니다.
-						p.info-msg ※ 다운로드한 파일을 메모장에서 열면 화면의 글꼴 때문에 확장 한자 영역의 일부 글자가 깨져 보이는 경우가 있으니 유의하여 주십시오.
 				.button-area
 					button.line-button--sm.tooltip-button__close(type='button', data-theme='grey')
 						span.button-content 닫기

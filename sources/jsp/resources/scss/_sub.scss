@@ -209,3 +209,69 @@
     }
   }
 }
+
+// * -------------------------------
+// * jahyung
+// * -------------------------------
+.pg-jahyung {
+  grid-template-columns: 1fr 1fr 200px;
+  .charactor-list {
+    .grid-article__content {
+      padding: 18px 20px;
+    }
+    &__filter {
+      width: 100%;
+      height: 45px;
+      margin-bottom: 15px;
+      padding: 6px 12px;
+      text-align: center;
+      border: 1px solid #b1b1b1;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    &__items {
+      li {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        > strong {
+          display: block;
+          width: 38px;
+          height: 38px;
+          margin-right: 20px;
+          border-radius: 5px;
+          background-color: #e7e7e7;
+          text-align: center;
+          line-height: 38px;
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+      .filter-item {
+        li {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          margin-right: 5px;
+          button {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border: 1px solid $color-font05;
+            border-radius: 5px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: auto;
+            }
+            &.is-selected,
+            &:hover {
+              border-width: 2px;
+              border-color: $primary-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

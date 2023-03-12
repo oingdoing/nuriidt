@@ -22,8 +22,6 @@ html(lang="ko")
 
 		block headCSS
 			link(rel="stylesheet", href='./static/css/ui.css')
-		//- 		link(rel="stylesheet", href='/css/template/template10/pc/swiper.min.css')
-		//- 		link(rel="stylesheet", href='/css/template/template10/pc/jquery-ui.min.css')
 
 	body
 		.app.main-page
@@ -35,10 +33,7 @@ html(lang="ko")
 							block content
 
 			include ../__includes/app-footer.pug
-		
-		//- block modals
-		//- 	include ../__template/template__modal.pug
 
-		block headJS 
-		script(src="./static/js/jquery-3.6.0.min.js")
-		script(src="./static/js/ui.js")
+			block bodyJS 
+				script(src="./static/js/jquery-3.6.0.min.js")
+				script(src="./static/js/ui.js")

@@ -6,11 +6,15 @@
   padding-bottom: 137px; //footer
   min-height: 100vh;
   @media screen and (max-width: $bp-nb) {
-    min-width: auto;
+    min-width: $bp-nb;
+  }
+  @media screen and (max-width: $bp-tab_big) {
+    min-width: $bp-tab;
   }
   @media screen and (max-width: $bp-mob) {
+    min-width: 360px;
     padding-top: 50px;
-    padding-bottom: 353px;
+    padding-bottom: 265px;
   }
 }
 
@@ -25,6 +29,9 @@
   padding: 0 15px;
   background-color: $color-white;
   border-bottom: 1px solid $line-color03;
+  @media screen and (max-width: $bp-tab_big) {
+    min-width: auto;
+  }
   @media screen and (max-width: $bp-mob) {
     height: 50px;
     padding: 0;
@@ -47,7 +54,7 @@
       padding: 15px 0;
       @media screen and (max-width: $bp-mob) {
         height: 50px;
-        padding: 0 20px;
+        padding: 0;
       }
     }
     .icon-app-header__ci_m {
@@ -241,9 +248,14 @@
   min-height: 137px;
   background-color: $primary-green;
   @media screen and (max-width: $bp-tab) {
+    min-width: 960px;
     height: auto;
   }
+  @media screen and (max-width: $bp-tab_big) {
+    min-width: 900px;
+  }
   @media screen and (max-width: $bp-mob) {
+    min-width: 360px;
     .btn-link__privacy {
       display: block;
       width: 100%;
@@ -351,7 +363,7 @@
 }
 @media screen and (max-width: $bp-nb) {
   .app-content {
-    > .app-section {
+    > .app-section:not([class*='app-sub__']) {
       padding-left: 60px;
       padding-right: 60px;
     }
@@ -368,7 +380,7 @@
 @media screen and (max-width: $bp-tab) {
   .app-content {
     padding-bottom: 50px;
-    > .app-section {
+    > .app-section:not([class*='app-sub__']) {
       padding-left: 50px;
       padding-right: 50px;
     }
@@ -385,7 +397,7 @@
 }
 @media screen and (max-width: $bp-mob) {
   .app-content {
-    > .app-section {
+    > .app-section:not([class*='app-sub__']) {
       padding-left: 20px;
       padding-right: 20px;
     }

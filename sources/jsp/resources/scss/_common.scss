@@ -86,7 +86,6 @@ textarea::placeholder {
 /* ScrollBar */
 ::-webkit-scrollbar-track {
   background-color: #e7e7e7;
-  border-radius: 3px;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -94,6 +93,15 @@ textarea::placeholder {
 }
 ::-webkit-scrollbar-thumb {
   background-color: $primary-ltgreen;
+  border-radius: 3px;
+}
+ul::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+ul::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+  background-color: $line-color;
   border-radius: 3px;
 }
 textarea::-webkit-scrollbar-track {

@@ -757,7 +757,7 @@ block content
 						span.button-content
 							em.font-hanja 正字
 							| 로 변환하기
-					button.solid-button--lg(type='button', data-theme='mdgreen' data-round="lg")
+					button.solid-button--lg.js-open-layered(type='button', data-theme='mdgreen' data-round="lg", data-layer-name="downloadTxtFile")
 						span.button-content 텍스트 파일로 내려받기
 		article.grid-article.ocr-info
 			h2.grid-article__tit 한자정보 및 수정
@@ -862,3 +862,4 @@ block content
 								input(type='text', placeholder='직접 입력')
 						button.solid-button--sm.btn-apply(type='button', data-theme='ltgreen', data-round="md")
 							span.button-content 적용하기
+	

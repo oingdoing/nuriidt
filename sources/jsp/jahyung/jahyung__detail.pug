@@ -58,52 +58,96 @@ block content
 	section.app-section.app-sub__grid.pg-jahyung 
 		article.grid-article.charactor-list
 			h2.grid-article__tit 자형 목록
+				.button-area 
+					button.line-button--sm.is-selected(type='button', data-theme='green')
+						span.button-content 자형 펼쳐보기
+					button.line-button--sm(type='button', data-theme='green')
+						span.button-content 자형 모아보기
 			.grid-article__content 
-				.charactor-list__filter
+				.charactor-list__filter.is-filtering
 					span.info-msg 아래 자형을 선택하면, 선택된 자형이 이곳에 보여집니다.
+					span.selected-filter-item
+						img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					span.selected-filter-item
+						img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					span.selected-filter-item
+						img(src="../static/images/_temp/charactor_sample.jpg", alt="")
 				ul.charactor-list__items
-					li
-						strong .
-						ul.filter-item 
+					li.filter-item 
+						strong.tit .
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.filter-item 
+						strong.tit ㄱ
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.filter-item 
+						strong.tit ㄴ
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+						button(type="button")
+							img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+		article.grid-article.charactor-txt
+			h2.grid-article__tit 한자 상세보기
+				.count-info 총
+					em 137
+					| 건
+			.grid-article__content 
+				ul.charactor-txt__result 
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 4
+							| 획
+						ul.charactor-txt__result-item
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 5
+							| 획
+						ul.charactor-txt__result-item
 							li 
 								button(type="button")
 									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
 							li 
 								button(type="button")
 									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-					li
-						strong ㄱ
-						ul.filter-item 
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-							li 
-								button(type="button")
-									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 10
+							| 획
+						ul.charactor-txt__result-item
 							li 
 								button.is-selected(type="button")
 									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
@@ -131,9 +175,6 @@ block content
 							li 
 								button(type="button")
 									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-					li
-						strong ㄴ
-						ul.filter-item 
 							li 
 								button(type="button")
 									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
@@ -152,10 +193,477 @@ block content
 							li 
 								button(type="button")
 									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
-		article.grid-article.charactor-txt
-			h2.grid-article__tit 한자 상세보기
-			.grid-article__content 
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 10
+							| 획
+						ul.charactor-txt__result-item
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 10
+							| 획
+						ul.charactor-txt__result-item
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 10
+							| 획
+						ul.charactor-txt__result-item
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 10
+							| 획
+						ul.charactor-txt__result-item
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+					li.charactor-txt__result-list
+						span.stroke-count 
+							em 10
+							| 획
+						ul.charactor-txt__result-item
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+							li 
+								button(type="button")
+									img(src="../static/images/_temp/charactor_sample.jpg", alt="")
+		
 		article.grid-article.charactor-info
 			h2.grid-article__tit 한자정보 및 수정
 			.grid-article__content 
 				.detail-box
+					.detail-box__main
+						.detail-box__main-result
+							.charactor
+								strong 覽
+								span 람
+						.detail-box__main-info
+							p
+								strong 각
+								span 깨닫다, 깨우치다, 깨달음, 나타나다, 높다,
+							p
+								strong 교
+								span 깨다, 깨우다
+					.detail-box__sub 
+						ul.detail-tags
+							li 
+								span.tag-label--sm 유니코드
+								span.tag-msg U+089A7
+							li 
+								span.tag-label--sm.font-hanja 正字
+								span.tag-msg 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽
+							li 
+								span.tag-label--sm.font-hanja 簡字
+								span.tag-msg 览, 览, 览
+							li 
+								span.tag-label--sm.font-hanja 簡字
+								span.tag-msg 览, 览, 览
+							li 
+								span.tag-label--sm.font-hanja 古字
+								span.tag-msg 览, 览, 览
+

@@ -6,6 +6,7 @@ $(function () {
   navFunction.set();
   tooltipAction.set();
   ocrAction.set();
+  pgJahyung.set();
 });
 
 const navFunction = {
@@ -54,6 +55,29 @@ const ocrAction = {
     let $ocrUpload = $('.ocr-img');
     $ocrUpload.on('click', '.button-ocr-upload', function () {
       $(this).closest('.ocr-img').find('#ocrImgUpload').trigger('click');
+    });
+  },
+};
+
+const pgJahyung = {
+  set: function () {
+    pgJahyung.filter();
+  },
+  filter: function () {
+    let $filter = $('.charactor-list');
+    let $filterBox = $filter.find('.charactor-list__filter');
+    let $filterItem = $filter.find('.charactor-list__items');
+    $filterItem.on('click', '.filter-item button', function () {
+      var chkLength = $filterBox.find('.selected-filter-item').length;
+      var chkClass = $filterBox.hasClass('is-filtering');
+      $(this).toggleClass('is-selected');
+      if (!chkClass) {
+        $filterBox.addClass('is-filtering');
+      }
+      if (chkClass && chkLength < 1) {
+        $filterBox.removeClass('is-filtering');
+      }
+      console.log(chkLength);
     });
   },
 };

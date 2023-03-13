@@ -219,15 +219,20 @@
           display: none;
         }
       }
-      figure {
+      .img-wrap {
         position: relative;
-        display: flex;
-        justify-content: center;
-        text-align: center;
         width: 100%;
         height: 100%;
         padding-bottom: 36px;
         border: 1px solid #c8ddcc;
+        overflow: hidden;
+        figure {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+        }
       }
       .segment-label {
         position: absolute;
@@ -277,36 +282,34 @@
       height: 100%;
       padding: 30px 5px;
       overflow: hidden;
-      ul {
+      &__content {
         height: 100%;
         padding: 0 10px 0 30px;
         overflow: auto;
-      }
-      li {
-        display: inline-block;
         > span {
           position: relative;
           z-index: $level10;
+          display: inline-block;
+          width: auto;
+          height: 32px;
+          margin-right: -3px;
           font-size: 24px;
           font-family: $font-hanja;
+          text-align: center;
+          line-height: 24px;
+          &:hover,
+          &.is-selected {
+            border: 1px solid $primary-red;
+          }
+          &.is-selected {
+            width: 32px;
+            border-width: 2px;
+            background-color: $primary-htgreen;
+          }
         }
-        &:hover span::before,
-        &.is-selected span::before {
-          position: absolute;
-          top: 0;
-          left: -5px;
-          content: '';
-          display: block;
-          width: 32px;
-          height: 32px;
-          border: 1px solid $primary-red;
+        @media screen and (max-width: $bp-nb) {
+          padding-bottom: 0;
         }
-        &.is-selected span::before {
-          border-width: 2px;
-        }
-      }
-      @media screen and (max-width: $bp-nb) {
-        padding-bottom: 0;
       }
     }
     .button-area {

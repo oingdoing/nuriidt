@@ -13,13 +13,17 @@
     place-content: space-between;
     grid-gap: 25px;
     padding-bottom: 40px;
-    @media screen and (max-width: $bp-nb) {
+    @media screen and (max-width: $bp-pc__min) {
       min-width: $bp-tab;
       padding-left: 50px;
       padding-right: 50px;
       grid-gap: 20px;
     }
+    @media screen and (max-width: $bp-nb__min) {
+      grid-template-columns: repeat(3, 1fr);
+    }
     @media screen and (max-width: $bp-mob) {
+      display: block;
       min-width: 360px;
       padding-left: 20px;
       padding-right: 20px;
@@ -31,7 +35,7 @@
     height: 120px;
     padding-right: 70px;
     @include backImg(sub__title);
-    @media screen and (max-width: $bp-nb) {
+    @media screen and (max-width: $bp-pc__min) {
       height: 58px;
       padding-right: 35px;
     }
@@ -50,7 +54,7 @@
         margin-right: 20px;
         vertical-align: middle;
       }
-      @media screen and (max-width: $bp-nb) {
+      @media screen and (max-width: $bp-pc__min) {
         font-size: $heading-md;
         &::before {
           width: 40px;
@@ -75,7 +79,7 @@
     font-size: $heading-md;
     line-height: 1;
     color: $primary-green;
-    @media screen and (max-width: $bp-nb) {
+    @media screen and (max-width: $bp-pc__min) {
       padding-top: 30px;
       padding-bottom: 15px;
       font-size: $heading-sm;
@@ -92,7 +96,7 @@
     border: 1px solid $primary-green;
     border-top-width: 10px;
     background-color: #fff;
-    @media screen and (max-width: $bp-nb) {
+    @media screen and (max-width: $bp-pc__min) {
       // min-height: 550px;
       border-top-width: 8px;
     }
@@ -130,14 +134,8 @@
 
 .pg-ocr {
   grid-template-columns: 1fr 1fr 350px;
-  @media screen and (max-width: $bp-nb) {
+  @media screen and (max-width: $bp-pc__min) {
     grid-template-columns: 1fr 1fr 320rem;
-  }
-  @media screen and (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media screen and (max-width: $bp-mob) {
-    display: block;
   }
   .grid-article:not(.ocr-info) .button-area {
     position: absolute;
@@ -154,7 +152,7 @@
     @media screen and (max-width: 1480px) {
       font-size: 16px;
     }
-    @media screen and (max-width: $bp-nb) {
+    @media screen and (max-width: $bp-pc__min) {
       padding: 15px;
       [class*='-button'] {
         width: 100%;
@@ -164,14 +162,11 @@
         }
       }
     }
-    @media screen and (max-width: $bp-tab_big) {
+    @media screen and (max-width: $bp-nb) {
       [class*='-button'] {
         font-size: 15px;
-      }
-    }
-    @media screen and (max-width: $bp-mob) {
-      [class*='-button'] {
-        font-size: 16px;
+        padding-left: 6px;
+        padding-right: 6px;
       }
     }
   }
@@ -209,7 +204,7 @@
         &:hover {
           cursor: pointer;
         }
-        @media screen and (max-width: $bp-tab_big) {
+        @media screen and (max-width: $bp-nb) {
           width: 200px;
           height: 200px;
           margin: 120px auto 0;
@@ -254,6 +249,9 @@
           width: calc(100% - 120px);
           text-align: left;
           @include ellipsis(100%);
+        }
+        .form-selector {
+          margin-top: 4px;
         }
       }
       .img-segment {
@@ -307,8 +305,14 @@
             background-color: $primary-htgreen;
           }
         }
-        @media screen and (max-width: $bp-nb) {
+        @media screen and (max-width: $bp-pc__min) {
           padding-bottom: 0;
+        }
+      }
+      @media screen and (max-width: $bp-mob) {
+        padding-top: 15px;
+        &__content {
+          padding-left: 15px;
         }
       }
     }
@@ -339,6 +343,27 @@
       .button-area {
         margin-left: 65px;
       }
+      @media screen and (max-width: $bp-nb__min) {
+        justify-content: space-between;
+        .button-area {
+          margin-left: 0;
+        }
+      }
+
+      @media screen and (max-width: $bp-nb__min) {
+        [class*='line-button'] {
+          padding-left: 5px;
+          padding-right: 5px;
+          & + [class*='line-button'] {
+            margin-left: 3px;
+          }
+        }
+      }
+      @media screen and (max-width: $bp-tab) {
+        [class*='line-button'] {
+          font-size: $text-sm;
+        }
+      }
     }
     &__content {
       padding: 15px 20px;
@@ -356,6 +381,9 @@
       text-align: center;
       border: 1px solid #b1b1b1;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      @media screen and (min-width: $bp-mob) and (max-width: $bp-nb__min) {
+        height: 68px;
+      }
       .selected-filter-item {
         display: inline-block;
         width: 35px;
@@ -376,6 +404,9 @@
     &__items {
       height: calc(100% - 60px);
       overflow: auto;
+      @media screen and (min-width: $bp-mob) and (max-width: $bp-nb__min) {
+        height: calc(100% - 83px);
+      }
       .filter-item {
         position: relative;
         padding-left: 58px;

@@ -5,10 +5,10 @@
   padding-top: 58px; //header
   padding-bottom: 137px; //footer
   min-height: 100vh;
-  @media screen and (max-width: $bp-nb) {
-    min-width: $bp-nb;
+  @media screen and (max-width: $bp-pc__min) {
+    min-width: $bp-pc__min;
   }
-  @media screen and (max-width: $bp-tab_big) {
+  @media screen and (max-width: $bp-nb) {
     min-width: $bp-tab;
   }
   @media screen and (max-width: $bp-mob) {
@@ -29,7 +29,7 @@
   padding: 0 15px;
   background-color: $color-white;
   border-bottom: 1px solid $line-color03;
-  @media screen and (max-width: $bp-tab_big) {
+  @media screen and (max-width: $bp-nb) {
     min-width: auto;
   }
   @media screen and (max-width: $bp-mob) {
@@ -251,7 +251,7 @@
     min-width: 960px;
     height: auto;
   }
-  @media screen and (max-width: $bp-tab_big) {
+  @media screen and (max-width: $bp-nb) {
     min-width: 900px;
   }
   @media screen and (max-width: $bp-mob) {
@@ -281,7 +281,7 @@
     height: 100%;
     margin: 0 auto;
     padding: 22px 0;
-    @media screen and (max-width: $bp-nb) {
+    @media screen and (max-width: $bp-pc__min) {
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -361,7 +361,7 @@
     position: relative;
   }
 }
-@media screen and (max-width: $bp-nb) {
+@media screen and (max-width: $bp-pc__min) {
   .app-content {
     > .app-section:not([class*='app-sub__']) {
       padding-left: 60px;

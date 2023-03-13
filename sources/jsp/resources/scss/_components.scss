@@ -498,12 +498,12 @@ h4 {
       }
     }
 
-    @media screen and (max-width: $bp-tab_big) {
+    @media screen and (max-width: $bp-nb) {
       .tag-label {
         font-size: 14px;
       }
       .solid-button--sm {
-        padding: 5rem 7rem;
+        padding: 3rem 7rem;
         font-size: 14px;
       }
     }

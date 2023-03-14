@@ -224,11 +224,18 @@
         width: 100%;
         height: 100%;
         figure {
-          display: flex;
-          justify-content: center;
-          text-align: center;
           width: 100%;
           height: 100%;
+          > img {
+            max-height: 100%;
+            min-height: 300px;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: auto;
+            transform: translate(-50%, -50%);
+          }
         }
       }
       .segment-label {
@@ -256,22 +263,17 @@
           margin-top: 4px;
         }
       }
-      .img-segment {
+      .box-mark {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 36px);
-        span {
-          position: absolute;
-          display: block;
-          min-width: 25px;
-          min-height: 25px;
-          border: 2px solid $primary-green;
-          &:hover,
-          &.is-selected {
-            border-color: $primary-red;
-          }
+        width: 26px;
+        height: 26px;
+        border: 2px solid $primary-green;
+        &:hover,
+        &.box-selected {
+          border-color: $primary-red;
+        }
+        &.box-selected {
+          background-color: #06711e5e;
         }
       }
     }

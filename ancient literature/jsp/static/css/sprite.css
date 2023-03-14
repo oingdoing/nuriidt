@@ -1,0 +1,47 @@
+[class^=icon-] {
+  display: inline-block;
+  flex-shrink: 0;
+  background-image: url(../images/sprite.png);
+  background-repeat: no-repeat;
+  background-size: 385rem 95rem;
+  white-space: nowrap;
+  text-indent: 200%;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  [class^=icon-sprite] {
+    background-image: url(../images/sprite@2x.png);
+  }
+}
+.icon-app-footer__ci {
+  width: 120rem;
+  height: 44rem;
+  background-position: 0px -51rem;
+}
+
+.icon-app-footer__ci_m {
+  width: 100rem;
+  height: 38rem;
+  background-position: -130rem -51rem;
+}
+
+.icon-app-header__ci {
+  width: 219rem;
+  height: 24rem;
+  background-position: -166rem 0px;
+}
+
+.icon-app-header__ci_m {
+  width: 156rem;
+  height: 41rem;
+  background-position: 0px 0px;
+}
+
+.icon-file-img {
+  width: 32rem;
+  height: 28rem;
+  background-position: -240rem -51rem;
+}
+/*# sourceMappingURL=maps/sprite.css.map */

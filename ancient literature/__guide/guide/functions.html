@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide | Learning Lounge/e-Campus</title>
+    <link rel="icon" type="image/x-icon" href="/front/static/common/favicons/favicon.ico" />
+    <link rel="stylesheet" href="../resources/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../resources/a11y-dark.min.css" />
+    <link rel="stylesheet" href="../resources/reset.css" />
+    <link rel="stylesheet" href="../resources/guide.css" />
+    <link rel="stylesheet" href="../../jsp/static/css/ui.css">
+    <script src="../resources/jquery-3.6.0.min.js"></script>
+    <script src="../resources/jquery-ui.min.js"></script>
+    <script src="../resources/highlight.min.js"></script>
+
+  <body class="guide">
+    <div class="guide-header">
+      <h1>
+        <a href="../index.html">GUIDE</a>
+      </h1>
+      <div class="guide_select">
+        <button type="button" class="lx_btn-sitemap js_toggle-class"><span></span><span>메뉴열기</span><span></span></button>
+      </div>
+    </div>
+    <div class="guide-container">
+      <div class="box">
+        <h2>공통</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            <ol>
+              <li>Global Variables에는 Prefix : <span class="c-red">gvr_</span> 사용</li>
+              <li>Global Function에는 Prefix : <span class="c-red">gfn_</span> 사용</li>
+            </ol>
+          </dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                //Global Variables
+                                //브라우저 넓이
+                                let gvr_winW = $window.outerWidth();
+                                //브라우저 높이
+                                let gvr_winH = $window.outerHeight();
+                                //컨텐츠 높이
+                                let gvr_docH = $document.outerHeight();
+                                //브라우저 스크롤값
+                                let gvr_st = $window.scrollTop();
+                                //화면고정(gfn_body.fix) 상태가 될때 현재 스크롤값을 기억
+                                let gvr_fixedSt = 0; //when body is fixed, move screen position
+                                //레이어팝업이 뜬 히스토리
+                                let layeredHistory = [];
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>Cookie</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">브라우저 쿠키 제어 (공지사항, 쿠키설정 팝업)</dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                gfn_cookie.set(name, value, day);
+                                gfn_cookie.get(name);
+                                gfn_cookie.delete(name);
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>body scroll</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">레이어팝업 등을 호출할때 배경 페이지 스크롤 Lock</dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                //body의 스크롤을 없애고 위치 맞춤
+                                gfn_body.fix();
+
+                                //body의 스크롤과 위치을 복원
+                                gfn_body.loose();
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>Layered</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            <ol>
+              <li>
+                호출하는 팝업 :
+                <pre><code>.js_layered[data-layered-name="레이어 이름"]</code></pre>
+              </li>
+              <li>
+                레이어팝업은
+                <pre><code>.app-layered</code></pre>
+                안에 위치해야함 (쿠키경고팝업예외)
+              </li>
+              <li>
+                레이어가 뜨면 주소 뒤 hash값에 따라
+                <pre><code>#레이어이름</code></pre>
+                이 붙음
+                <pre><code>window.history.pushState({}, '', '#' + layeredName);</code></pre>
+              </li>
+              <li>
+                <pre><code>window.load, window.hashchange</code></pre>
+                이벤트 시 hash값에 따라 해당 레이어팝업이 호출됨
+              </li>
+              <li>
+                <pre><code>&lt;a href="#layerName"&gt;링크&lt;/a&gt;</code></pre>
+                링크에 hash태그를 넣는 방법으로도 팝업을 띄울수 있음
+              </li>
+            </ol>
+          </dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                //레이어 팝업 열기                                
+                                gfn_layered.open('레이어 이름');
+
+                                //레이어 팝업 닫기(history Back)
+                                //이전 상테도 레이어가 떠있었을 경우 해당 레이어를 호출함
+                                gfn_layered.historyBack();
+
+                                //모든 레이어를 닫기 (꼭 필요한 경우에만 사용)
+                                gfn_layered.close();
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>SNS</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">Facebook, Twitter, URL 복사</dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                //Facebook, Twitter용 링크 삽입
+                                gfn_social.init();
+
+                                //URL 복사
+                                gfn_social.urlCopy();
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>다국어 링크</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            Ajax 로 다국어 링크를 찾고 <br />
+            <span class="c-red">있는 경우</span> 해당 페이지 링크에 삽입 <br />
+            <span class="c-red">없는 경우</span> main 링크 삽입 <br />
+            <strong class="c-red">브라우저 console에 에러가 발생함</strong>으로 다른 방법도 고려해야함
+          </dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                gfn_multilingualLink.init();
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>Dropdown (Select)</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            <ol>
+              <li>링크의 경우 a 태그로 사용</li>
+              <li>select의 경우 ul>li로 치환하고 내부 버튼 클릭시 select의 change이벤트를 trigger 함</li>
+            </ol>
+          </dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                gfn_dropdown
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>입력용 폼(input)</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            <ol>
+              <li>input, dropdown, textarea 에서 동작</li>
+              <li>에러 표시, 제거 등</li>
+            </ol>
+          </dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                //id 셀렉터에 .error-msg 안에 msg를 삽입
+                                //.error-msg가 마크업에 있는 경우 show()
+                                //마크업에도 없고 msg도 없으면 alert
+                                gfn_lxForm.error(id, msg)
+
+                                //id 셀렉터에 에러 스타일 제거
+                                gfn_lxForm.noError(id)
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>Page Naviagtion</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            <ol>
+              <li>같은 Depth의 이전/다음 메뉴 링크를 삽입</li>
+              <li>window.load 에 삽입</li>
+            </ol>
+          </dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                //prevUrl, NextUrl => String
+                                //url이 '', null 이면 class="is-disabled"가 붙음(opacity:0.3)
+                                pageNavigation.init(prevUrl, NextUrl);
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+      <div class="box">
+        <h2>Animation</h2>
+        <dl class="flex-dl">
+          <dt class="no-code"></dt>
+          <dd class="guide-description">
+            <ol>
+              <li>영역이 화면 안으로 들어왔을때 class를 주거나 function을 동작시킴</li>
+              <li>window.load, resize, scroll 에 삽입</li>
+              <li>기본 클래스 "is-animated" 로 변경됨</li>
+            </ol>
+          </dd>
+          <dd style="width: 100%">
+            <pre>
+                            <code>
+                                //options 은 object 형식으로 사용
+                                //gap : 호출되는 시점의 갭이 있을때 사용
+                                //class : 'is-animated'가 아닌 다른 class가 필요할때
+                                //cb : callback function 사용 (arguments[0] 에 options이 들어가 있음)
+                                gfn_screen.on($target, options, cb);
+                            </code>
+                        </pre>
+          </dd>
+        </dl>
+      </div>
+      <hr />
+    </div>
+
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="../resources/guide.js"></script>
+  </body>
+</html>

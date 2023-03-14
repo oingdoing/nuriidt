@@ -167,6 +167,10 @@ h4 {
     color: $primary-green;
     background-color: $color-white;
   }
+  &[data-theme='grey'] {
+    color: #fff;
+    background-color: #69736b;
+  }
   &.is-disabled {
     color: $color-font04;
     background-color: $line-color03;

@@ -402,8 +402,9 @@
   .charactor-list {
     max-width: 970px;
     &__filter {
+      position: relative;
       width: 100%;
-      height: 45px;
+      height: 50px;
       margin-bottom: 15px;
       padding: 6px 12px;
       text-align: center;
@@ -411,6 +412,16 @@
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       @media screen and (min-width: $bp-mob) and (max-width: $bp-nb__min) {
         height: 68px;
+      }
+      .filter-button__clear {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 9px 12px;
+        font-size: 14px;
+        padding-left: 6px;
+        padding-right: 6px;
+        display: none;
       }
       .selected-filter-item {
         display: inline-block;
@@ -423,9 +434,13 @@
         }
       }
       &.is-filtering {
+        padding-right: 70px;
         text-align: left;
         > span.info-msg {
           display: none;
+        }
+        .filter-button__clear {
+          display: block;
         }
       }
     }
@@ -468,6 +483,9 @@
           img {
             width: 100%;
             height: auto;
+            &.disabled {
+              opacity: 0.3;
+            }
           }
           &.is-selected,
           &:hover {
@@ -532,6 +550,8 @@
             border-radius: 5px;
             background-color: #fff;
             border: 1px solid $color-font05;
+            font-family: $font-hanja;
+            font-size: 24px;
             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
             &:hover,
             &.is-selected {

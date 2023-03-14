@@ -61,14 +61,14 @@ block content
 			.grid-article__content 
 				.img-box.is-loaded 
 					input#ocrImgUpload.a11y-visible(type="file")
-					.img-wrap
-						figure#pageImage
+					.img-wrap#pageImage
+						figure
 							img(src="../static/images/_temp/ocr_img.jpg", alt="")
-						.segment-label 
-							span 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재.jpg
-							span.form-selector
-								input#segmentChkbox(type="checkbox")
-								label(for="segmentChkbox") 세그먼트 표시
+					.segment-label 
+						span 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재선생문집 일 목재.jpg
+						span.form-selector
+							input#segmentChkbox(type="checkbox")
+							label(for="segmentChkbox") 세그먼트 표시
 					.img-segment
 						span(style="top:90px;left:220px;width:25px;height:25px;")
 				.button-area

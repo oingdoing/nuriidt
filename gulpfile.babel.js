@@ -25,6 +25,7 @@ import spritesmith from 'gulp.spritesmith-multi';
 import merge from 'merge-stream';
 import browserSync from 'browser-sync';
 import pxtorem from 'gulp-pxtorem';
+import fileInclude from 'gulp-file-include';
 
 const sass = gulpSass(dartSass);
 const beautifyOptions = {

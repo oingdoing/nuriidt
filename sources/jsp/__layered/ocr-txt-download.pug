@@ -1,0 +1,17 @@
+extends ../__template/window-popup-template.pug
+
+block variables
+	- var seoTitle = '고문헌 한자 OCR'
+	- var popupName = 'ocr-txt-download'
+	- var popupTitle = '텍스트 파일로 내려받기'
+
+block content
+	.ocr-txt-download
+		span.form-text
+			span.form-input-content
+				input(type='text', placeholder='목재선생문집 일_ocrtext.txt')
+		.info-msg.t01(data-prefix="※", data-theme='warning') 메모장에서는 일부 글자가 깨져 보일 수 있습니다.
+			br
+			| 문서편집기(아래한글, MS Word 등)를 사용을 권장합니다.
+		button.solid-button--lg.full(type='button', data-theme='ltgreen')
+			span.button-content 다운로드

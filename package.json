@@ -1,7 +1,7 @@
 {
-  "name": "hyundai__e-campus",
+  "name": "nuri-idt__ancient-literature",
   "version": "1.0.0",
-  "description": "Hyundai e-Campus",
+  "description": "Nuri IDT Ancient Literature",
   "main": "gulpfile.babel.js",
   "author": "shson",
   "license": "MIT",
@@ -40,5 +40,8 @@
     "sass": "^1.51.0",
     "through2": "^4.0.2",
     "util": "^0.12.4"
+  },
+  "dependencies": {
+    "gulp-file-include": "^2.3.0"
   }
 }

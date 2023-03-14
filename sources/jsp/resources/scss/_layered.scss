@@ -1,0 +1,16 @@
+.ocr-txt-download {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
+  .form-text {
+    width: 100%;
+  }
+  .info-msg {
+    margin-top: 10px;
+    text-align: left;
+  }
+  [type='button'],
+  [role='button'] {
+    margin-top: 20px;
+  }
+}

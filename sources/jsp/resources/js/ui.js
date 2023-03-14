@@ -73,9 +73,10 @@ const pgJahyung = {
       $(this).toggleClass('is-selected');
       if (!chkClass) {
         $filterBox.addClass('is-filtering');
-      }
-      if (chkClass && chkLength < 1) {
-        $filterBox.removeClass('is-filtering');
+      } else {
+        if (chkClass && chkLength < 1) {
+          $filterBox.removeClass('is-filtering');
+        }
       }
       console.log(chkLength);
     });

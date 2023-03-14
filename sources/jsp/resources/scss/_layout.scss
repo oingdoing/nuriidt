@@ -431,3 +431,15 @@
     }
   }
 }
+
+.app-popup {
+  &__tit {
+    padding: 20px;
+    font-size: 22px;
+    line-height: 1;
+    border-bottom: 1px solid $line-color;
+  }
+  &__content {
+    padding: 20px;
+  }
+}

@@ -269,10 +269,10 @@
         height: 26px;
         border: 2px solid $primary-green;
         &:hover,
-        &.box-selected {
+        &.box_selected {
           border-color: $primary-red;
         }
-        &.box-selected {
+        &.box_selected {
           background-color: #06711e5e;
         }
       }
@@ -299,14 +299,19 @@
           font-family: $font-hanja;
           text-align: center;
           line-height: 24px;
+          border: 1px solid #fff;
+          cursor: pointer;
           &:hover,
           &.is-selected {
-            border: 1px solid $primary-red;
+            border-color: $color-font02;
           }
           &.is-selected {
             width: 32px;
             border-width: 2px;
             background-color: $primary-htgreen;
+          }
+          &.changed {
+            border: 1px solid $primary-red;
           }
         }
         @media screen and (max-width: $bp-pc__min) {
@@ -332,6 +337,25 @@
     .grid-article__content {
       padding: 18px 5px;
     }
+  }
+
+  #candidates {
+    display: block;
+    left: 10000px;
+    top: 10000px;
+    position: fixed;
+    z-index: 1001;
+    background: #eeffee;
+    width: auto;
+    height: auto;
+    border: solid 4px #33dd66;
+    text-align: center;
+    border-radius: 7px;
+    padding: 5px 20px 8px 20px;
+    white-space: nowrap;
+    font-size: 32px;
+    font-family: '맑은 고딕';
+    letter-spacing: 1rem;
   }
 }
 
@@ -452,6 +476,14 @@
           }
           & + button {
             margin-left: 0;
+          }
+        }
+        &.expanded {
+          padding-left: 0px !important;
+          .tit {
+            position: relative;
+            display: inline-block;
+            margin-left: 20rem;
           }
         }
       }

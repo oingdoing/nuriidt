@@ -20,19 +20,11 @@ html(lang="ko")
 		meta(property="og:locale", content="ko_KR")
 
 		block headCSS
-			link(rel="stylesheet", href='./static/css/ui.css')
+			link(rel="stylesheet", href='../static/css/ui.css')
 
 	body
-		.app.main-page
-		
-			include ../__includes/app-header.pug
-
-			.app-container
-					main.app-content
-							block content
-
-			include ../__includes/app-footer.pug
-
-			block bodyJS 
-				script(src="./static/js/jquery-3.6.0.min.js")
-				script(src="./static/js/ui.js")
+		.app-popup
+			.popup
+				.app-popup__tit #{popupTitle}
+				.app-popup__content
+					block content

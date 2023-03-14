@@ -78,7 +78,7 @@ block content
 			h2.grid-article__tit 원문 텍스트
 			.grid-article__content 
 				.txt-box
-					.txt-box__content
+					.txt-box__content#trans_txt_div
 						span.is-selected 禁
 						span 断
 						span 知
@@ -87,7 +87,9 @@ block content
 						span.button-content
 							em.font-hanja 正字
 							| 로 변환하기
-					button.solid-button--lg.js-open-layered(type='button', data-theme='mdgreen' data-round="lg", data-layer-name="downloadTxtFile")
+					button.solid-button--lg.js-open-layered(type='button', data-theme='mdgreen' data-round="lg",
+						onclick="window.open('../__layered/ocr-txt-download.html', 'OCR 텍스트를 파일로 내려받기', 'width=600, height=320, location=no, status=no, scrollbars=no');")
+						//- onclick="window.open('ocr__popup.html', 'OCR 텍스트를 파일로 내려받기', 'width=600, height=320, location=no, status=no, scrollbars=no');")
 						span.button-content 텍스트 파일로 내려받기
 		article.grid-article.ocr-info
 			h2.grid-article__tit 한자정보 및 수정

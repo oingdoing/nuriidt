@@ -486,7 +486,7 @@ h4 {
         vertical-align: middle;
         font-size: 22px;
         color: $color-font02;
-        font-weight: 600;
+        font-weight: 700;
       }
     }
     .tag-label {
@@ -514,25 +514,38 @@ h4 {
   }
   &__main-info {
     width: 100%;
-    padding: 7px 15px;
-    background-color: #efefef;
     @include p3;
-    p {
-      position: relative;
-      padding: 0 15px 0 35px;
+    .info-mean {
+      padding: 7px 15px;
+      background-color: #efefef;
+      p {
+        position: relative;
+        padding: 0 15px 0 35px;
+        strong {
+          position: absolute;
+          top: 0;
+          left: 0;
+          line-height: 26px;
+          font-weight: 700;
+          color: $color-font;
+        }
+        span {
+          word-break: keep-all;
+        }
+        & + p {
+          padding-top: 0;
+        }
+      }
+    }
+    .info-peace {
+      padding: 8px 15px;
+      background-color: #dfdfdf;
       strong {
-        position: absolute;
-        top: 0;
-        left: 0;
-        line-height: 26px;
-        font-weight: 600;
-        color: $color-font;
-      }
-      span {
-        word-break: keep-all;
-      }
-      & + p {
-        padding-top: 0;
+        display: inline-block;
+        margin-right: 5px;
+        font-family: $font-hanja;
+        vertical-align: middle;
+        font-weight: 400;
       }
     }
   }
@@ -567,12 +580,17 @@ h4 {
       height: 26px;
       line-height: 26px;
       font-size: $text-sm;
+      font-family: $font-hanja;
     }
   }
   .tag-msg {
     font-size: $text-md;
     line-height: 22px;
-    font-family: $font-hanja;
+    em {
+      font-size: $heading-sm;
+      font-weight: 400;
+      font-family: $font-hanja;
+    }
     @media screen and (max-width: $bp-mob) {
       font-size: $text-xl;
     }
@@ -589,6 +607,12 @@ h4 {
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+  .form-text {
+    width: 100%;
+    input[type='text'] {
+      font-family: $font-hanja;
+    }
+  }
   .btn-apply {
     min-width: 80px;
   }
@@ -597,7 +621,7 @@ h4 {
   @include p3-medium;
   color: $color-font;
   em {
-    font-weight: 600;
+    font-weight: 700;
     color: $primary-green;
   }
 }

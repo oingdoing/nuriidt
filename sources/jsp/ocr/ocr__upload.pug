@@ -82,11 +82,11 @@ block content
 						span.is-selected 禁
 						span 断
 						span 知
-				.button-area.grid-col2
-					button.solid-button--lg(type='button', data-theme='mdgreen' data-round="lg")
-						span.button-content
-							em.font-hanja 正字
-							| 로 변환하기
+				.button-area
+					//- button.solid-button--lg(type='button', data-theme='mdgreen' data-round="lg")
+					//- 	span.button-content
+					//- 		em.font-hanja 正字
+					//- 		| 로 변환하기
 					button.solid-button--lg.js-open-layered(type='button', data-theme='mdgreen' data-round="lg",
 						onclick="window.open('../__layered/ocr-txt-download.html', 'OCR 텍스트를 파일로 내려받기', 'width=600, height=320, location=no, status=no, scrollbars=no');")
 						//- onclick="window.open('ocr__popup.html', 'OCR 텍스트를 파일로 내려받기', 'width=600, height=320, location=no, status=no, scrollbars=no');")
@@ -103,12 +103,13 @@ block content
 									span 람
 								.button-area
 									span.tag-label 99.89%
-									button.solid-button--sm(type='button', data-theme='ltgreen', data-round="sm")
-										span.button-content 적용하기
+									button.solid-button--sm.btn-apply(type='button', data-theme='ltgreen', data-round="sm")
+										span.button-content 적용
 							.detail-box__main-info
-								p
-									strong 람
-									span 두루보다, 전망, 받다
+								.info-mean
+									p
+										strong 람
+										span 두루보다, 전망, 받다
 						.detail-box__sub 
 							ul.detail-tags
 								li 
@@ -116,10 +117,26 @@ block content
 									span.tag-msg U+089A7
 								li 
 									span.tag-label--sm.font-hanja 正字
-									span.tag-msg 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽, 覽
+									span.tag-msg 
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
+										em 覽,
 								li 
 									span.tag-label--sm.font-hanja 簡字
-									span.tag-msg 览, 览, 览, 览, 览, 览, 览, 览, 览, 览, 览, 
+									span.tag-msg
+										em 览, 
+										em 览, 
+										em 览, 
+										em 览, 
+										em 览
 					.detail-box
 						.detail-box__main
 							.detail-box__main-result
@@ -128,15 +145,16 @@ block content
 									span 람
 								.button-area
 									span.tag-label 99.89%
-									button.solid-button--sm(type='button', data-theme='ltgreen', data-round="sm")
-										span.button-content 적용하기
+									button.solid-button--sm.btn-apply(type='button', data-theme='ltgreen', data-round="sm")
+										span.button-content 적용
 							.detail-box__main-info
-								p
-									strong 각
-									span 깨닫다, 깨우치다, 깨달음, 나타나다, 높다,
-								p
-									strong 교
-									span 깨다, 깨우다
+								.info-mean
+									p
+										strong 각
+										span 깨닫다, 깨우치다, 깨달음, 나타나다, 높다,
+									p
+										strong 교
+										span 깨다, 깨우다
 						.detail-box__sub 
 							ul.detail-tags
 								li 
@@ -163,14 +181,15 @@ block content
 								.button-area
 									span.tag-label 99.89%
 									button.solid-button--sm.btn-apply(type='button', data-theme='ltgreen', data-round="sm")
-										span.button-content 적용하기
+										span.button-content 적용
 							.detail-box__main-info
-								p
-									strong 각
-									span 깨닫다, 깨우치다, 깨달음, 나타나다, 높다,
-								p
-									strong 교
-									span 깨다, 깨우다
+								.info-mean
+									p
+										strong 각
+										span 깨닫다, 깨우치다, 깨달음, 나타나다, 높다,
+									p
+										strong 교
+										span 깨다, 깨우다
 						.detail-box__sub 
 							ul.detail-tags
 								li 

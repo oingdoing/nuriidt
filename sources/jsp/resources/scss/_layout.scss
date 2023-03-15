@@ -9,7 +9,7 @@
     min-width: $bp-pc__min;
   }
   @media screen and (max-width: $bp-nb) {
-    min-width: $bp-tab;
+    min-width: 1100px;
   }
   @media screen and (max-width: $bp-mob) {
     min-width: 360px;
@@ -221,7 +221,7 @@
         padding: 15px 0;
         font-size: $text-md;
         line-height: 1;
-        font-weight: 600;
+        font-weight: 700;
       }
       & + li a {
         border-top: 1px solid #cecece;

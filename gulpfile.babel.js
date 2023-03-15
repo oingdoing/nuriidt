@@ -164,7 +164,7 @@ const compile = {
         .pipe(sassGlob())
         .pipe(sourcemaps.init())
         .pipe(
-          sass({ outputStyle: 'expanded' }) //expanded, compressed
+          sass({ outputStyle: 'compressed' }) //expanded, compressed
             .on('error', sass.logError),
         )
         .pipe(

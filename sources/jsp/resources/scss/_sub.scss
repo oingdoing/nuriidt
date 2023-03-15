@@ -267,8 +267,9 @@
         position: absolute;
         width: 26px;
         height: 26px;
-        border: 2px solid $primary-green;
+        border: 1px solid $primary-green;
         &:hover,
+        &.is-over,
         &.box_selected {
           border-color: $primary-red;
         }
@@ -282,27 +283,19 @@
   .ocr-txt {
     .txt-box {
       height: 100%;
-      padding: 30px 5px;
+      padding: 20px 5px;
       overflow: hidden;
       &__content {
         height: 100%;
-        padding: 0 10px 0 30px;
+        padding: 0 10px 0 20px;
         overflow: auto;
         > span {
-          position: relative;
-          z-index: $level10;
-          display: inline-block;
-          width: auto;
-          height: 32px;
-          margin-right: -3px;
           font-size: 24px;
           font-family: $font-hanja;
-          text-align: center;
-          line-height: 24px;
           border: 1px solid #fff;
           cursor: pointer;
           &:hover,
-          &.is-selected {
+          &.is-over {
             border-color: $color-font02;
           }
           &.is-selected {
@@ -325,12 +318,12 @@
         }
       }
     }
-    .button-area {
-      @include grid-col2;
-      @media screen and (max-width: 1600px) {
-        grid-template-columns: auto 1fr;
-      }
-    }
+    // .button-area {
+    //   @include grid-col2;
+    //   @media screen and (max-width: 1600px) {
+    //     grid-template-columns: auto 1fr;
+    //   }
+    // }
   }
   /*** 한자정보 및 수정 ***/
   .ocr-info {
@@ -363,7 +356,7 @@
 // * jahyung
 // * -------------------------------
 .pg-jahyung {
-  grid-template-columns: 1fr 1fr 200px;
+  grid-template-columns: 1fr 1fr 250px;
   .grid-article {
     &__tit {
       display: flex;
@@ -467,7 +460,7 @@
           text-align: center;
           line-height: 38px;
           font-size: 24px;
-          font-weight: 600;
+          font-weight: 700;
         }
         button {
           display: inline-block;
@@ -502,6 +495,9 @@
             position: relative;
             display: inline-block;
             margin-left: 20rem;
+            &:first-child {
+              margin-left: 0;
+            }
           }
         }
       }
@@ -568,7 +564,7 @@
         line-height: 1;
         color: #fff;
         background-color: $primary-ltgreen;
-        font-weight: 600;
+        font-weight: 700;
         border-bottom-right-radius: 8px;
       }
     }

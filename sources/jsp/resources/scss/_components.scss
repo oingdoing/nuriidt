@@ -205,6 +205,10 @@ h4 {
     font-size: $text-md;
     line-height: 18px;
     padding: 5px 15px;
+    @media screen and (max-width: $bp-mob) {
+      padding: 3px 10px;
+      font-size: 14px;
+    }
   }
   &[data-theme='green'] {
     color: $primary-green;
@@ -495,6 +499,7 @@ h4 {
       padding: 2px 10px;
       border: 1px solid $primary-green;
       border-radius: 5px;
+      font-family: $font-hanja;
       & + .btn-apply {
         margin-left: 3px;
         padding: 8px;

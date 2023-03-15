@@ -42,9 +42,9 @@
     @include flex-justify;
     margin: 0 auto;
     @media screen and (max-width: $bp-mob) {
-      & > .app-header-util {
-        display: none;
-      }
+      // & > .app-header-util {
+      //   display: none;
+      // }
     }
   }
   &-ci {
@@ -71,6 +71,9 @@
   }
   &-util {
     padding: 15px 0;
+    @media screen and (max-width: $bp-mob) {
+      padding: 0 15px 0 0;
+    }
     .button-unit {
       margin-left: 10px;
       .solid-button--xs:first-child {
@@ -97,146 +100,146 @@
     }
   }
 }
-.app-nav {
-  display: none;
-  &::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: background opacity 0.5s;
-  }
-  &-content {
-    position: relative;
-    right: -100%;
-    float: right;
-    display: block;
-    content: '';
-    width: calc(100% - 75px);
-    max-width: 384px;
-    height: 100%;
-    padding-top: 50px;
-    background-color: #fff;
-    transition: right 0.3s ease;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      content: '';
-      width: 100%;
-      height: 50px;
-      background-color: $primary-green;
-    }
-  }
-  @media screen and (max-width: $bp-mob) {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    z-index: $level40;
-    width: 100%;
-    display: block;
-  }
-  .btn-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 16px 20px;
-    > span {
-      position: relative;
-      display: block;
-      width: 20px;
-      height: 16px;
-      border-top: 2px solid #000;
-      border-bottom: 2px solid #000;
-      font-size: 0;
-      color: transparent;
-      &::before,
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        margin-top: -1px;
-        content: '';
-        display: block;
-        content: '';
-        width: 100%;
-        height: 2px;
-        background-color: #000;
-        transform-origin: center;
-      }
-    }
-  }
-  &.is-active {
-    left: 0;
-    &::before {
-      content: '';
-      display: block;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-    .app-nav-content {
-      right: 0;
-    }
-    .btn-menu {
-      padding: 14px 16px;
-      z-index: $level10;
-      span {
-        width: 26px;
-        height: 22px;
-        border: 0;
-        &::before,
-        &::after {
-          background-color: #fff;
+// .app-nav {
+//   display: none;
+//   &::before {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     transition: background opacity 0.5s;
+//   }
+//   &-content {
+//     position: relative;
+//     right: -100%;
+//     float: right;
+//     display: block;
+//     content: '';
+//     width: calc(100% - 75px);
+//     max-width: 384px;
+//     height: 100%;
+//     padding-top: 50px;
+//     background-color: #fff;
+//     transition: right 0.3s ease;
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       display: block;
+//       content: '';
+//       width: 100%;
+//       height: 50px;
+//       background-color: $primary-green;
+//     }
+//   }
+//   @media screen and (max-width: $bp-mob) {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 100%;
+//     z-index: $level40;
+//     width: 100%;
+//     display: block;
+//   }
+//   .btn-menu {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     padding: 16px 20px;
+//     > span {
+//       position: relative;
+//       display: block;
+//       width: 20px;
+//       height: 16px;
+//       border-top: 2px solid #000;
+//       border-bottom: 2px solid #000;
+//       font-size: 0;
+//       color: transparent;
+//       &::before,
+//       &::after {
+//         position: absolute;
+//         top: 50%;
+//         left: 0;
+//         margin-top: -1px;
+//         content: '';
+//         display: block;
+//         content: '';
+//         width: 100%;
+//         height: 2px;
+//         background-color: #000;
+//         transform-origin: center;
+//       }
+//     }
+//   }
+//   &.is-active {
+//     left: 0;
+//     &::before {
+//       content: '';
+//       display: block;
+//       background-color: rgba(0, 0, 0, 0.7);
+//     }
+//     .app-nav-content {
+//       right: 0;
+//     }
+//     .btn-menu {
+//       padding: 14px 16px;
+//       z-index: $level10;
+//       span {
+//         width: 26px;
+//         height: 22px;
+//         border: 0;
+//         &::before,
+//         &::after {
+//           background-color: #fff;
 
-          height: 1px;
-        }
-        &::before {
-          transform: rotate(45deg);
-        }
-        &::after {
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
-  .app-header-util {
-    width: 100%;
-    padding: 20px;
-    background-color: #ececec;
-    @include grid-col2;
-    .solid-button--sm {
-      width: 100%;
-      height: 37px;
-    }
-  }
-  .app-nav-menu {
-    padding-top: 25px;
-    li {
-      padding: 0 15px;
-      a {
-        display: block;
-        padding: 15px 0;
-        font-size: $text-md;
-        line-height: 1;
-        font-weight: 700;
-      }
-      & + li a {
-        border-top: 1px solid #cecece;
-      }
-    }
-  }
-  .button-unit {
-    padding: 25px;
-    @include grid-col2;
-    .solid-button--sm {
-      width: 100%;
-      height: 37px;
-    }
-  }
-}
+//           height: 1px;
+//         }
+//         &::before {
+//           transform: rotate(45deg);
+//         }
+//         &::after {
+//           transform: rotate(-45deg);
+//         }
+//       }
+//     }
+//   }
+//   .app-header-util {
+//     width: 100%;
+//     padding: 20px;
+//     background-color: #ececec;
+//     @include grid-col2;
+//     .solid-button--sm {
+//       width: 100%;
+//       height: 37px;
+//     }
+//   }
+//   .app-nav-menu {
+//     padding-top: 25px;
+//     li {
+//       padding: 0 15px;
+//       a {
+//         display: block;
+//         padding: 15px 0;
+//         font-size: $text-md;
+//         line-height: 1;
+//         font-weight: 700;
+//       }
+//       & + li a {
+//         border-top: 1px solid #cecece;
+//       }
+//     }
+//   }
+//   .button-unit {
+//     padding: 25px;
+//     @include grid-col2;
+//     .solid-button--sm {
+//       width: 100%;
+//       height: 37px;
+//     }
+//   }
+// }
 
 .app-footer {
   position: absolute;
@@ -303,7 +306,18 @@
       margin-left: 20px;
     }
     span:last-child {
+      display: inline-block;
       color: #dfc38a;
+      &::before {
+        content: '';
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 1px;
+        height: 14px;
+        background-color: #eaeaea;
+        vertical-align: middle;
+      }
     }
     @media screen and (max-width: $bp-tab) {
       p {
@@ -312,6 +326,9 @@
       }
       span:last-child {
         display: block;
+        &::before {
+          display: none;
+        }
       }
     }
     @media screen and (max-width: $bp-mob) {

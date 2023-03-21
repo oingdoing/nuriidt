@@ -457,6 +457,7 @@
         img {
           width: 100%;
         }
+        &:hover{cursor:pointer}
       }
       &.is-filtering {
         padding-right: 70px;
@@ -510,6 +511,7 @@
             height: auto;
             &.disabled {
               opacity: 0.3;
+              &:hover{cursor:default}
             }
           }
           &.is-selected,

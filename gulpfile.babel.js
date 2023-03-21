@@ -89,7 +89,7 @@ const ROUTES_INIT = () => {
 const move = {
   image(src, dest) {
     return gulp
-      .src([src + '/**/*.{jpg,png,gif}', '!**/sprite/*.png'])
+      .src([src + '/**/*.{jpg,png,gif,ico}', '!**/sprite/*.png'])
       .pipe(changed(dest, { hasChanged: changed.compareContents }))
       .pipe(debug({ title: 'MOVE IMG:' }))
       .pipe(gulp.dest(dest))

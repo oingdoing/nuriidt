@@ -354,6 +354,7 @@ h4 {
   }
 }
 *[data-prefix] {
+  display:flex;
   &:before {
     content: attr(data-prefix);
     display: inline-block;
@@ -390,7 +391,7 @@ h4 {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 20px 50px;
     overflow: auto;
     li {
       strong {

@@ -64,35 +64,35 @@
         position: relative;
         margin-top: 20px;
         font-size: 14px;
-        &:not(.is-disabled) {
-          padding-right: 50px;
-          color: $primary-green;
-          background: none;
-        }
-        &:not(.is-disabled)::before {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          content: '';
-          display: block;
-          width: 30px;
-          height: 2px;
-          background-color: $primary-green;
-        }
-        &:not(.is-disabled)::after {
-          position: absolute;
-          top: 50%;
-          margin-top: -5px;
-          right: 0;
-          content: '';
-          display: block;
-          width: 12px;
-          height: 12px;
-          border-radius: 2px;
-          border-right: 2px solid $primary-green;
-          border-bottom: 2px solid $primary-green;
-          transform: rotate(-45deg);
-        }
+        // &:not(.is-disabled) {
+        //   padding-right: 50px;
+        //   color: $primary-green;
+        //   background: none;
+        // }
+        // &:not(.is-disabled)::before {
+        //   position: absolute;
+        //   top: 50%;
+        //   right: 0;
+        //   content: '';
+        //   display: block;
+        //   width: 30px;
+        //   height: 2px;
+        //   background-color: $primary-green;
+        // }
+        // &:not(.is-disabled)::after {
+        //   position: absolute;
+        //   top: 50%;
+        //   margin-top: -5px;
+        //   right: 0;
+        //   content: '';
+        //   display: block;
+        //   width: 12px;
+        //   height: 12px;
+        //   border-radius: 2px;
+        //   border-right: 2px solid $primary-green;
+        //   border-bottom: 2px solid $primary-green;
+        //   transform: rotate(-45deg);
+        // }
       }
       .app-content-desc {
         margin-top: 12px;

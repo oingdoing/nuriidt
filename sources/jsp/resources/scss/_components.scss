@@ -158,10 +158,16 @@ h4 {
   &[data-theme='ltgreen'] {
     color: $color-white;
     background-color: $primary-ltgreen;
+    // &:hover {
+    //   background-color: $primary-green;
+    // }
   }
   &[data-theme='mdgreen'] {
     color: $color-white;
     background-color: $primary-mdgreen;
+    &:hover {
+      background-color: $primary-green;
+    }
   }
   &[data-theme='white'] {
     color: $primary-green;
@@ -225,6 +231,11 @@ h4 {
   &[data-theme='grey'] {
     color: $color-font05;
     border-color: $color-font05;
+    &:hover {
+      color: $color-white;
+      border-color: $color-font03;
+      background-color: $color-font03;
+    }
   }
   &[data-bg='bg'] {
     background-color: $color-white;
@@ -425,6 +436,17 @@ h4 {
     &.is-active .tooltip {
       display: block;
     }
+    .tooltip-button__open {
+      &:hover {
+        color: $color-white;
+        border-color: $color-font03;
+        background-color: $color-font03;
+      }
+      @media screen and (max-width: $bp-pc__min) {
+        font-size: 16px;
+        padding: 2rem 10rem;
+      }
+    }
   }
   @media screen and (max-width: $bp-mob) {
     position: fixed;
@@ -500,6 +522,7 @@ h4 {
       border: 1px solid $primary-green;
       border-radius: 5px;
       font-family: $font-hanja;
+      vertical-align: middle;
       & + .btn-apply {
         margin-left: 3px;
         padding: 8px;
@@ -510,6 +533,8 @@ h4 {
     @media screen and (max-width: $bp-nb) {
       .tag-label {
         font-size: 14px;
+        padding-top: 1px;
+        padding-bottom: 1px;
       }
       .solid-button--sm {
         padding: 3rem 7rem;
@@ -583,14 +608,14 @@ h4 {
       @extend .tag-label;
       width: 68px;
       height: 26px;
-      line-height: 26px;
+      line-height: 25px;
       font-size: $text-sm;
       font-family: $font-hanja;
     }
   }
   .tag-msg {
     font-size: $text-md;
-    line-height: 22px;
+    line-height: 26px;
     em {
       font-size: $heading-sm;
       font-weight: 400;

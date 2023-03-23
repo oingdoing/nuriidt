@@ -32,7 +32,7 @@
   &__tit {
     @include flex-justify;
     width: 100%;
-    height: 120px;
+    height: 90px;
     padding-right: 70px;
     @include backImg(sub__title);
     @media screen and (max-width: $bp-pc__min) {
@@ -52,6 +52,7 @@
         height: 10px;
         margin-right: 20px;
         vertical-align: middle;
+        background-color: $primary-green;
       }
       @media screen and (max-width: $bp-pc__min) {
         font-size: $heading-md;
@@ -74,16 +75,19 @@
   position: relative;
   width: 100%;
   &__tit {
+    min-height: 90px;
     padding: 40px 0 20px;
     font-size: $heading-md;
     line-height: 1;
     color: $primary-green;
     @media screen and (max-width: $bp-pc__min) {
+      min-height: 75px;
       padding-top: 30px;
       padding-bottom: 15px;
       font-size: $heading-sm;
     }
     @media screen and (max-width: $bp-mob) {
+      min-height: auto;
       font-size: $heading-sm;
     }
   }
@@ -387,7 +391,7 @@
 // * jahyung
 // * -------------------------------
 .pg-jahyung {
-  grid-template-columns: 1fr 1fr 250px;
+  grid-template-columns: 2fr 1fr 250px;
   .grid-article {
     &__tit {
       display: flex;
@@ -424,7 +428,6 @@
   }
   // 자형목록
   .charactor-list {
-    max-width: 970px;
     &__filter {
       position: relative;
       width: 100%;
@@ -436,6 +439,9 @@
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       @media screen and (min-width: $bp-mob) and (max-width: $bp-nb__min) {
         height: 68px;
+      }
+      @media screen and (max-width: $bp-mob) {
+        height: auto;
       }
       .filter-button__clear {
         position: absolute;
@@ -453,6 +459,10 @@
         height: 35px;
         margin-right: 5px;
         padding: 2px;
+        @media screen and (max-width: $bp-mob) {
+          width: 32px;
+          height: 32px;
+        }
         img {
           width: 100%;
         }
@@ -486,20 +496,26 @@
           top: 0;
           left: 0;
           display: block;
-          width: 38px;
-          height: 38px;
+          width: 37px;
+          height: 37px;
           margin-right: 20px;
           border-radius: 5px;
-          background-color: #e7e7e7;
+          background-color: $primary-htgreen;
           text-align: center;
-          line-height: 38px;
+          line-height: 37px;
           font-size: 24px;
           font-weight: 700;
+          @media screen and (max-width: $bp-mob) {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: $text-xl;
+          }
         }
         button {
           display: inline-block;
-          width: 40px;
-          height: 40px;
+          width: 37px;
+          height: 37px;
           margin-right: 5px;
           margin-bottom: 8px;
           padding: 3px;
@@ -507,6 +523,10 @@
           border: 1px solid $color-font05;
           border-radius: 5px;
           overflow: hidden;
+          @media screen and (max-width: $bp-mob) {
+            width: 30px;
+            height: 30px;
+          }
           img {
             width: 100%;
             height: auto;

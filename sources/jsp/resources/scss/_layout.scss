@@ -444,6 +444,11 @@
   .app-header {
     padding-left: 20px;
     padding-right: 20px;
+
+    @media screen and (max-width: $bp-tab) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &-content {
       max-width: 100%;
     }
@@ -468,3 +473,23 @@
     padding: 20px;
   }
 }
+
+// .pg-id-jh {
+//   .app-header {
+//     [class*='line-button'] {
+//       &[data-theme='green'] {
+//         color: $primary-blue;
+//         border-color: $primary-blue;
+//       }
+//     }
+//   }
+//   .app-sub__tit h1::before {
+//     background-color: $primary-blue;
+//   }
+//   .app-footer {
+//     background-color: $primary-blue;
+//     &-msg {
+//       color: $primary-blue;
+//     }
+//   }
+// }

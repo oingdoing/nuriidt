@@ -27,7 +27,8 @@ html(lang="ko")
 		//- 		link(rel="stylesheet", href='/css/template/template10/pc/jquery-ui.min.css')
 
 	body
-		.app.sub-page
+		span.a11y-hidden #{subPageClass}
+		.app.sub-page(class=subPageClass)
 		
 			include ../__includes/app-header.pug
 

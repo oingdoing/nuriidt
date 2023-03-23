@@ -169,6 +169,17 @@ h4 {
       background-color: $primary-green;
     }
   }
+  &[data-theme='blue'] {
+    color: $color-white;
+    background-color: $primary-blue;
+  }
+  &[data-theme='mdblue'] {
+    color: $color-white;
+    background-color: $primary-mdblue;
+    &:hover {
+      background-color: $primary-blue;
+    }
+  }
   &[data-theme='white'] {
     color: $primary-green;
     background-color: $color-white;
@@ -223,6 +234,14 @@ h4 {
   &[data-theme='mdgreen'] {
     color: $primary-mdgreen;
     border-color: $primary-mdgreen;
+  }
+  &[data-theme='blue'] {
+    color: $primary-blue;
+    border-color: $primary-blue;
+  }
+  &[data-theme='mdblue'] {
+    color: $primary-mdblue;
+    border-color: $primary-mdblue;
   }
   &[data-theme='white'] {
     color: $color-white;
@@ -354,7 +373,7 @@ h4 {
   }
 }
 *[data-prefix] {
-  display:flex;
+  display: flex;
   &:before {
     content: attr(data-prefix);
     display: inline-block;

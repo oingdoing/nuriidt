@@ -2,7 +2,7 @@ extends ../__template/sub-template.pug
 
 block variables
 	- var seoTitle = '한자 자형 검색'
-	- var subPageClass = 'pg-id-jh'
+	- var colorTheme = 'orange'
 
 block content
 	section.app-section.app-sub__tit
@@ -12,9 +12,9 @@ block content
 		article.grid-article.charactor-list
 			h2.grid-article__tit 자형 목록
 				.button-area 
-					button.line-button--sm.is-selected(type='button', data-theme='green')
+					button.line-button--sm.is-selected(type='button', data-theme='orange')
 						span.button-content 자형 펼쳐보기
-					button.line-button--sm(type='button', data-theme='green')
+					button.line-button--sm(type='button', data-theme='orange')
 						span.button-content 자형 모아보기
 			.grid-article__content 
 				.charactor-list__filter.is-filtering

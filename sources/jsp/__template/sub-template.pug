@@ -1,7 +1,7 @@
 block variables
 
 <!DOCTYPE html>
-html(lang="ko")
+html(lang="ko")(data-theme=colorTheme)
 	head
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -27,8 +27,8 @@ html(lang="ko")
 		//- 		link(rel="stylesheet", href='/css/template/template10/pc/jquery-ui.min.css')
 
 	body
-		span.a11y-hidden #{subPageClass}
-		.app.sub-page(class=subPageClass)
+		span.a11y-hidden #{subPageClass} #{colorTheme}
+		.app.sub-page
 		
 			include ../__includes/app-header.pug
 

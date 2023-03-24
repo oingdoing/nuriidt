@@ -169,15 +169,15 @@ h4 {
       background-color: $primary-green;
     }
   }
-  &[data-theme='blue'] {
+  &[data-theme='orange'] {
     color: $color-white;
-    background-color: $primary-blue;
+    background-color: $primary-org;
   }
-  &[data-theme='mdblue'] {
+  &[data-theme='mdorg'] {
     color: $color-white;
-    background-color: $primary-mdblue;
+    background-color: $primary-mdorg;
     &:hover {
-      background-color: $primary-blue;
+      background-color: $primary-org;
     }
   }
   &[data-theme='white'] {
@@ -235,13 +235,13 @@ h4 {
     color: $primary-mdgreen;
     border-color: $primary-mdgreen;
   }
-  &[data-theme='blue'] {
-    color: $primary-blue;
-    border-color: $primary-blue;
+  &[data-theme='org'] {
+    color: $primary-org;
+    border-color: $primary-org;
   }
-  &[data-theme='mdblue'] {
-    color: $primary-mdblue;
-    border-color: $primary-mdblue;
+  &[data-theme='mdorg'] {
+    color: $primary-mdorg;
+    border-color: $primary-mdorg;
   }
   &[data-theme='white'] {
     color: $color-white;
@@ -255,6 +255,22 @@ h4 {
       border-color: $color-font03;
       background-color: $color-font03;
     }
+  }
+  &[data-theme='orange'] {
+    color: $primary-org;
+    border-color: $primary-org;
+    &.is-selected {
+      background-color: $primary-org;
+      color: #fff;
+    }
+  }
+  &[data-theme='mdorg'] {
+    color: $primary-mdorg;
+    border-color: $primary-mdorg;
+  }
+  &[data-theme='white'] {
+    color: $primary-green;
+    background-color: $color-white;
   }
   &[data-bg='bg'] {
     background-color: $color-white;
@@ -502,13 +518,14 @@ h4 {
 }
 
 .detail-box {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: #f8f8f8;
   &-area {
     height: 100%;
     padding: 0 10px;
     overflow: auto;
   }
-  margin-bottom: 10px;
-  border-bottom: 1px solid #d9d9d9;
   &__main-result {
     @include flex-justify;
     width: 100%;
@@ -591,7 +608,7 @@ h4 {
     }
   }
   &__sub {
-    padding: 10px 15px 15px 15px;
+    padding: 10px 15px 0 15px;
     background-color: #f8f8f8;
     @media screen and (max-width: $bp-mob) {
       padding: 10px 5px;

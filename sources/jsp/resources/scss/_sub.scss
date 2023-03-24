@@ -424,6 +424,9 @@
     &__content {
       padding: 15px 20px;
       overflow: hidden;
+      @media screen and (max-width: $bp-tab) {
+        padding: 10px;
+      }
     }
   }
   // 자형목록
@@ -489,8 +492,11 @@
       }
       .filter-item {
         position: relative;
-        padding-left: 58px;
+        padding-left: 50px;
         margin-bottom: 10px;
+        @media screen and (max-width: $bp-tab) {
+          padding-left: 45px;
+        }
         .tit {
           position: absolute;
           top: 0;
@@ -500,7 +506,6 @@
           height: 37px;
           margin-right: 20px;
           border-radius: 5px;
-          background-color: $primary-htgreen;
           text-align: center;
           line-height: 37px;
           font-size: 24px;
@@ -508,6 +513,7 @@
           @media screen and (max-width: $bp-mob) {
             width: 30px;
             height: 30px;
+            margin-right: 10px;
             line-height: 30px;
             font-size: $text-xl;
           }
@@ -630,6 +636,11 @@
   .charactor-info {
     .grid-article__content {
       padding: 10px;
+      @media screen and (max-width: $bp-tab) {
+        min-height: 250px;
+        height: auto;
+        overflow-y: auto;
+      }
     }
     .detail-box {
       height: 100%;

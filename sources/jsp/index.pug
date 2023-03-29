@@ -28,7 +28,7 @@ block content
 				figure 
 					img(src="./static/images/common/main-img-icon__ocr.png", alt="")
 			.app-main__service-box
-				.app-main__service-charactor
+				.app-main__service-charactor.sub-item
 					.app-content-tit.t01 한자 자형 검색 서비스
 					.app-content-desc
 						span.br
@@ -45,7 +45,7 @@ block content
 					a.button-link.solid-button--md(role='button', data-theme='white')
 						.button-content 서비스 바로가기
 
-				.app-main__service-typing
+				.app-main__service-typing.sub-item
 					.app-content-tit.t01 누리 한자입력기
 					.app-content-desc
 						span.hide 본 서비스에서 활용되는 누리한자 입력기는
@@ -56,21 +56,43 @@ block content
 						span.br 입력할 수 있는 프로그램입니다.
 					a.button-link.solid-button--md.is-disabled(role='button')
 						.button-content 서비스 오픈 예정
-			.app-main__service-img.main-item
-				.app-content-tit 이미지 검색 서비스
-				.app-content-desc
-					span.hide 본 서비스는 디지털 텍스트가 없어도
-					span.br 사용자가 
-					br.web
-					| 보유한 이미지에 한자 OCR 기술을 
-					span.br 적용하여 
-					br.web
-					span.br 이미지 속의 단어를 검색
-					span.br 활용할 수 있도록 해주는 검색 서비스입니다.
-					p.info-msg ※ 본 서비스는 서울대학교 규장각한국학연구원의
-						span.br 과학문헌 자료를 적용하였습니다.
-				a.button-link.solid-button--md(role='button', data-theme='green')
-					.button-content 서비스 바로가기
-				figure 
-					img(src="./static/images/common/main-img-icon__search.png", alt="")
+			.app-main__service-box
+				.app-main__service-img.main-item
+					.app-content-tit 이미지 검색 서비스
+					.app-content-desc
+						span.hide 본 서비스는 디지털 텍스트가 없어도
+						span.br 사용자가 보유한 
+						br.web
+						| 이미지에 한자 OCR 기술을 
+						span.br 적용하여 
+						br.web
+						span.br 이미지 속의 단어를 검색
+						span.br 활용할 수 있도록 해주는 
+						br.web 
+						| 검색 서비스입니다.
+						p.info-msg ※ 본 서비스는 
+							br.mob
+							| 서울대학교 규장각한국학연구원의
+							br
+							| 과학문헌 자료를 적용하였습니다.
+					a.button-link.solid-button--md(role='button', data-theme='green')
+						.button-content 서비스 바로가기
+					figure 
+						img(src="./static/images/common/main-img-icon__search.png", alt="")
+				.app-main__service-api.main-item
+					.app-content-tit 고문헌 한자 OCR - API
+					.app-content-desc
+						span.br 각 기관에서 서비스 중인 웹사이트에
+						br.web
+						span.br 디지털 데이터가 없는 고문헌 이미지가 있다면,
+						br.web
+						span.br 당사가 제공하는 OCR API를 활용하십시오.
+						br
+						| 해당 이미지의 디지털 텍스트를
+						br
+						| 즉시 제공할 수 있습니다.
+					a.button-link.solid-button--md.is-disabled(role='button')
+						.button-content 서비스 오픈 예정
+					figure 
+						img(src="./static/images/common/main-img-icon__api.png", alt="")
 

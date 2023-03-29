@@ -473,3 +473,53 @@
     padding: 20px;
   }
 }
+
+.app-layered {
+  position: fixed;
+  left: calc(50% - 300px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  min-height: 250px;
+  background-color: #fff;
+  box-shadow: 8px 8px 40px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+  &.is-active {
+    display: block;
+  }
+  &__tit {
+    padding: 20px 30px;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1;
+    background-color: $primary-green;
+  }
+  &__content {
+    padding: 0 20px;
+    > p {
+      padding: 50px 0;
+      font-size: 18px;
+      color: $color-font02;
+      line-height: 1.6;
+      text-align: center;
+    }
+  }
+  .btn-area {
+    @include flex-justify;
+    padding: 10px 13px;
+    background-color: $color-font04;
+    .form-selector input + label {
+      color: #fff;
+      &::before {
+        border-color: #fff;
+        background-color: $color-font04;
+      }
+    }
+  }
+  > .js_layered-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 22px;
+  }
+}

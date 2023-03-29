@@ -32,6 +32,56 @@
     > div {
       border-radius: 15px;
     }
+    .main-item {
+      position: relative;
+      width: 100%;
+      padding: 50px;
+      border: 2px solid $primary-green;
+      border-radius: 15px;
+      overflow: hidden;
+      @media screen and (max-width: $bp-tab) {
+        padding: 20px;
+        &::before {
+          width: 370px;
+          height: 370px;
+        }
+      }
+      overflow: hidden;
+      .app-content-tit {
+        color: $primary-green;
+        line-height: 1.4;
+      }
+      .app-content-desc {
+        position: relative;
+        z-index: 1;
+        margin-top: 16px;
+      }
+      .button-link {
+        margin-top: 25px;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 410px;
+        height: 410px;
+        border-radius: 50%;
+        background-color: $primary-htgreen;
+        opacity: 0.5;
+      }
+      @media screen and (max-width: $bp-mob) {
+        padding: 20px;
+        &::before {
+          width: 294px;
+          height: 294px;
+          opacity: 0.5;
+        }
+        figure {
+          opacity: 0.5;
+        }
+      }
+    }
+
     &-box {
       @include grid-justify;
       grid-template-columns: 1fr 1fr;
@@ -42,7 +92,7 @@
       @media screen and (max-width: $bp-mob) {
         display: block;
       }
-      > div {
+      > .sub-item {
         width: 100%;
         height: 100%;
         padding: 50px;
@@ -88,7 +138,7 @@
         //   display: block;
         //   width: 12px;
         //   height: 12px;
-        //   border-radius: 2px;
+        //   border-radius: 2px;gulp
         //   border-right: 2px solid $primary-green;
         //   border-bottom: 2px solid $primary-green;
         //   transform: rotate(-45deg);
@@ -97,49 +147,47 @@
       .app-content-desc {
         margin-top: 12px;
       }
-    }
-    .main-item {
-      position: relative;
-      padding: 50px;
-      border: 2px solid $primary-green;
-      border-radius: 15px;
-      overflow: hidden;
-      @media screen and (max-width: $bp-tab) {
-        padding: 20px;
+      [class*='main-item'] {
+        padding-bottom: 40px;
         &::before {
-          width: 370px;
-          height: 370px;
-        }
-      }
-      overflow: hidden;
-      .app-content-tit {
-        color: $primary-green;
-        line-height: 1.4;
-      }
-      .app-content-desc {
-        margin-top: 16px;
-      }
-      .button-link {
-        margin-top: 25px;
-      }
-      &::before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 410px;
-        height: 410px;
-        border-radius: 50%;
-        background-color: $primary-htgreen;
-      }
-      @media screen and (max-width: $bp-mob) {
-        padding: 20px;
-        &::before {
-          width: 294px;
-          height: 294px;
-          opacity: 0.5;
+          right: -100px;
+          bottom: -68px;
         }
         figure {
-          opacity: 0.5;
+          position: absolute;
+        }
+        @media screen and (max-width: $bp-nb) {
+          figure {
+            opacity: 0.5;
+          }
+        }
+        @media screen and (max-width: $bp-mob) {
+          text-align: left;
+          padding-bottom: 20px;
+          &::before {
+            right: -95px;
+            bottom: -102px;
+          }
+          figure {
+            width: 147px;
+            left: auto;
+            right: 0;
+            opacity: 0.6;
+          }
+          & + [class*='main-item'] {
+            margin-top: 20px;
+          }
+          .button-link {
+            float: none;
+          }
+        }
+        .app-content-desc {
+          min-height: 186px;
+        }
+        .button-link {
+          position: relative;
+          z-index: $level10;
+          margin-top: -50px;
         }
       }
     }
@@ -166,27 +214,23 @@
       }
     }
     &-img {
-      text-align: right;
-      &::before {
-        left: -30px;
-        bottom: -98px;
-      }
       figure {
-        position: absolute;
-        left: 77px;
-        bottom: 55px;
-      }
-      @media screen and (max-width: $bp-mob) {
-        text-align: left;
-        &::before {
-          right: -95px;
-          bottom: -102px;
+        right: 18px;
+        top: 10px;
+        transform: scale(0.9);
+        @media screen and (max-width: $bp-mob) {
+          bottom: auto;
+          top: 120rem;
         }
-        figure {
-          width: 147px;
-          left: auto;
-          right: 0;
-          bottom: 20px;
+      }
+    }
+    &-api {
+      figure {
+        right: 0;
+        top: 60px;
+        @media screen and (max-width: $bp-mob) {
+          top: auto;
+          bottom: 0;
         }
       }
     }

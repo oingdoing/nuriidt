@@ -33,16 +33,17 @@ html(lang="ko")(data-theme=colorTheme)
 			include ../__includes/app-header.pug
 
 			.app-container
-					main.app-content
-							block content
+				main.app-content
+					block content
 
 			include ../__includes/app-footer.pug
+			
+			.app-layered
+				block layered
 
 		block bodyJS 
 			script(src="../static/js/jquery-3.6.0.min.js")
 			script(src="../static/js/ui.js")
 
 		block addJs
-			
-		block layered
 		

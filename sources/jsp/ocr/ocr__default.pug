@@ -41,3 +41,10 @@ block content
 			h2.grid-article__tit 한자정보 및 수정
 			.grid-article__content 
 				.detail-box
+
+block layered
+	include ../__layered/ocr-info.pug
+
+block addJs 
+	script.
+		gfn_layered.open('ocr-info');

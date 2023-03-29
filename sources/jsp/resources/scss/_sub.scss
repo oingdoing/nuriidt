@@ -648,7 +648,9 @@
       border: 0;
       &__main-result {
         padding: 0;
-        border: 0;
+        .charactor{
+          padding-left: 10px;
+        }
       }
       &__sub {
         padding: 16px 10px;

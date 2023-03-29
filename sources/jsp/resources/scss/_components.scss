@@ -268,10 +268,6 @@ h4 {
     color: $primary-mdorg;
     border-color: $primary-mdorg;
   }
-  &[data-theme='white'] {
-    color: $primary-green;
-    background-color: $color-white;
-  }
   &[data-bg='bg'] {
     background-color: $color-white;
   }
@@ -307,6 +303,14 @@ h4 {
   position: relative;
   background-image: none;
   text-indent: inherit;
+}
+.ir {
+  position: absolute;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  color: transparent;
+  overflow: hidden;
 }
 .icon-css-tooltip {
   width: 20px;
@@ -373,6 +377,30 @@ h4 {
     margin: 6px auto;
     width: 1px;
     height: 17px;
+  }
+}
+.icon-css-close__white {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transform: rotate(45deg);
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    background-color: #fff;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 29px;
+    height: 1px;
+  }
+  &::after {
+    margin: 0 auto;
+    width: 1px;
+    height: 28px;
   }
 }
 .info-msg {

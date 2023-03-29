@@ -36,6 +36,12 @@ br.web {
     display: none;
   }
 }
+br.mob {
+  display: none;
+  @media screen and (max-width: $bp-tab) {
+    display: block;
+  }
+}
 
 input[type='text'],
 input[type='password'],

@@ -484,6 +484,22 @@
   background-color: #fff;
   box-shadow: 8px 8px 40px 20px rgba(0, 0, 0, 0.15);
   display: none;
+  @media screen and (max-width: $bp-mob) {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: none;
+    &.is-active {
+      display: flex;
+    }
+  }
   &.is-active {
     display: block;
   }
@@ -493,6 +509,10 @@
     color: #fff;
     line-height: 1;
     background-color: $primary-green;
+    @media screen and (max-width: $bp-mob) {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
   }
   &__content {
     padding: 0 20px;
@@ -502,6 +522,10 @@
       color: $color-font02;
       line-height: 1.6;
       text-align: center;
+      @media screen and (max-width: $bp-mob) {
+        padding: 30px 0;
+        font-size: 16px;
+      }
     }
   }
   .btn-area {
@@ -521,5 +545,20 @@
     top: 0;
     right: 0;
     padding: 22px;
+    visibility: visible;
+  }
+  @media screen and (max-width: $bp-mob) {
+    .js_layered {
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fff;
+      box-shadow: 8rem 8rem 40rem 20rem rgba(0, 0, 0, 0.15);
+      & + .js_layered-close {
+        visibility: hidden;
+      }
+    }
   }
 }

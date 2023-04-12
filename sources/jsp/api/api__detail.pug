@@ -1,0 +1,30 @@
+extends ../__template/sub-template__footer.pug
+
+block variables
+	- var seoTitle = 'OCR API 시범 서비스'
+
+block content
+	section.app-section.app-sub__tit.logo-tit.device-pc 
+		h1 
+			figure.sub-tit__img 
+				img(src="../static/images/_temp/company-ci-sample.png", alt="")
+	section.app-section.app-sub__grid.pg-ocr.col2.device-pc
+		article.grid-article.ocr-img
+			h2.grid-article__tit 원문 이미지
+			.grid-article__content 
+				.img-box
+					.img-wrap#pageImage
+						figure
+							img(src="../static/images/_temp/ocr_img.jpg", alt="")
+
+		article.grid-article.ocr-txt
+			h2.grid-article__tit.flex-box 원문 텍스트 
+				span.result-number [
+					em 161
+					| 글자]
+			.grid-article__content 
+				.txt-box
+					.txt-box__content#trans_txt_div
+						span.is-selected 禁
+						span 断
+						span 知

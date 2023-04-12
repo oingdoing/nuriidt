@@ -104,6 +104,18 @@
       }
     }
   }
+  &__pg-tit {
+    @include h4;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 6px;
+      margin-right: 10px;
+      background-color: $primary-green;
+      vertical-align: middle;
+    }
+  }
 }
 // .app-nav {
 //   display: none;
@@ -359,6 +371,21 @@
     }
     .icon-app-footer__ci_m {
       display: block;
+    }
+  }
+  &.only-msg {
+    height: 80px;
+    min-height: auto;
+    font-size: 20px;
+    background-color: $color-bg;
+    p,
+    strong {
+      font-weight: 600;
+    }
+    span {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 6px;
     }
   }
 }

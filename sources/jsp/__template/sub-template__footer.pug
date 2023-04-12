@@ -27,15 +27,15 @@ html(lang="ko")(data-theme=colorTheme)
 		//- 		link(rel="stylesheet", href='/css/template/template10/pc/jquery-ui.min.css')
 
 	body
-		.app.sub-page
+		.app.sub-page.device-pc
 		
-			include ../__includes/app-header.pug
+			include ../__includes/app-header__subtit.pug
 
 			.app-container
 				main.app-content
 					block content
 
-			include ../__includes/app-footer.pug
+			include ../__includes/app-footer__simple.pug
 			
 			.app-layered
 				block layered

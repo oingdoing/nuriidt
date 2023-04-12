@@ -428,7 +428,7 @@ h4 {
 .tooltip {
   position: absolute;
   top: -12px;
-  right: 140px;
+  right: 130%;
   z-index: $level20;
   display: none;
   width: 600px;
@@ -438,6 +438,11 @@ h4 {
   background-color: #fff;
   border-radius: 30px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  &.auto-height {
+    width: 500px;
+    height: auto;
+    word-break: keep-all;
+  }
   &::after {
     position: absolute;
     top: 23px;
@@ -501,6 +506,17 @@ h4 {
       display: block;
     }
     .tooltip-button__open {
+      &.solid-button--md {
+        padding: 6px 15px;
+        @media screen and (max-width: $bp-pc__min) {
+          padding: 3rem 10rem;
+        }
+        @media screen and (max-width: $bp-mob) {
+          font-size: 16px;
+          padding: 2rem 10rem;
+          line-height: 22px;
+        }
+      }
       &:hover {
         color: $color-white;
         border-color: $color-font03;
@@ -539,6 +555,33 @@ h4 {
       right: 30px;
     }
   }
+  .link-type--box {
+    display: block;
+    margin: 30px auto 0;
+    width: 335px;
+    height: 40px;
+    border: 1px solid #c6c6c6;
+    background-color: #fafafa;
+    @include p3;
+    line-height: 40px;
+    color: $primary-red;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+div > .tooltip-wrap {
+  display: inline-block;
+  & + .tooltip-wrap {
+    margin-left: 4px;
+  }
+}
+.is-fixed-tooltip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
 }
 
 .font-hanja {

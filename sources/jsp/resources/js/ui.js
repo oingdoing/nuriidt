@@ -8,6 +8,7 @@ $(function () {
   tooltipAction.set();
   ocrAction.set();
   pgJahyung.set();
+  pgApiAction.set();
 });
 
 $(document).on('click', '.js_layered-close', function () {
@@ -144,5 +145,41 @@ const gfn_layered = {
         .removeClass('is-active');
       gfn_layered.wrap();
     }
+  },
+};
+
+const pgApiAction = {
+  set: function () {
+    pgApiAction.img();
+    pgApiAction.click();
+  },
+  img: function () {
+    var $imgBoxSizing = $('.img-box__sizing');
+    var $imgBoxSizing__img = $imgBoxSizing.find(' img');
+    var imgBoxSizingHt = $imgBoxSizing.height();
+    var viewImgHt = $imgBoxSizing__img.height();
+    if (viewImgHt > imgBoxSizingHt) {
+      $imgBoxSizing__img.removeClass('fit-wd').addClass('fit-ht');
+    } else {
+      $imgBoxSizing__img.removeClass('fit-ht').addClass('fit-wd');
+    }
+    //- console.log('img');
+  },
+  click: function () {
+    var $txtLayer = $('.api-txt-layer');
+    $txtLayer.on('click', '.btn-close', function () {
+      $(this).closest($txtLayer).removeClass('is-active');
+      $(this).closest('.app-section-content').removeClass('is-transform');
+    });
+    $('.api-btn-layer').on('click', function () {
+      $txtLayer.addClass('is-active');
+      $(this).closest('.app-section-content').addClass('is-transform');
+    });
+    $('.api-load-btn').on('click', function () {
+      setTimeout(function () {
+        pgApiAction.img();
+      }, 100);
+      clearTimeout();
+    });
   },
 };

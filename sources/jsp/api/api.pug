@@ -1,0 +1,101 @@
+extends ../__template/sub-template__simple.pug
+
+block variables
+	- var seoTitle = 'OCR API 시범 서비스'
+
+block content
+	section.app-section.pg-api
+		include ../__includes/app-tooltip__api.pug
+		article.app-section-content
+			table.tbl
+				caption 고문헌 한자 이미지 보기 테이블
+				colgroup 
+					col(style="width:100px")
+					col(style="width:220px")
+					col(style="width:auto")
+				thead 
+					tr 
+						th 번호
+						th 서종
+						th 원문 이미지
+				tbody 
+					tr 
+						td 1
+						td
+							button.btn-api-load(type="button") 001.jpg
+						td(rowspan="13")
+							figure.img-box__sizing
+								img(src="../static/images/_temp/ocr_img.jpg", alt="")
+					tr
+						td 2
+						td 
+							button.btn-api-load(type="button") 002.jpg
+					tr.is-selected
+						td 3
+						td 
+							button.btn-api-load(type="button") 003.jpg
+					tr
+						td 4
+						td 
+							button.btn-api-load(type="button") 004.jpg
+					tr
+						td 5
+						td 
+							button.btn-api-load(type="button") 005.jpg
+					tr
+						td 6
+						td 
+							button.btn-api-load(type="button") 006.jpg
+					tr
+						td 7
+						td 
+							button.btn-api-load(type="button") 007.jpg
+					tr
+						td 8
+						td 
+							button.btn-api-load(type="button") 008.jpg
+					tr
+						td 9
+						td 
+							button.btn-api-load(type="button") 009.jpg
+					tr
+						td 10
+						td 010.jpg
+			.api-util__buttons
+				strong.buttons-wrap__tit OCR 보기
+				button.api-util-btn.api-btn-layer(type="button", title="간단히 보기") 
+					span &#9312;	
+				a.api-util-btn.api-btn-window(role="button", href="api__detail.html", target="_blank", title="자세히 보기") 
+					span &#9313;
+			.api-txt-layer
+				.api-txt-layer__tit OCR 텍스트
+				.api-txt-layer__cont 
+					| 上宗家
+					br
+					| 三山先生文集附錄上
+					br
+					| 年譜
+					br
+					| 明陵十八年壬午十二月二十日丙𦥔辰時癸未立
+					br
+					| 春後先生生于安東府臨河縣北三山里第曾祖
+					br
+					| 萬嶺公自馬嶺往來僑寓癸
+					br
+					| 酉考參判公始築室而居焉
+					br
+					| 二十三年丁亥先生五歲始知讀書能屬文聰頴異常
+					br
+					| 參判公常曰異日持
+					br
+					| 門戶者必此兒也
+					br
+					| 二十四年戊子先生六歲三月丁貞夫人李氏憂
+					br
+					| 哀毀如成人隨參判公避痘于光川全氏家卽參判公
+					br
+					| 外宅也主人新粧屋壁甚侈先生疊床爲梯
+					br
+					| 以葛根濡墨大書光川草堂四字參判公呵
+				button.btn-close(type="button")
+					i.icon-css-close

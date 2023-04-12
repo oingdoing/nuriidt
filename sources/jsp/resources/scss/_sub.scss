@@ -75,16 +75,6 @@
         display: none;
       }
     }
-    .sub-tit__img {
-      display: inline-block;
-      vertical-align: middle;
-      width: auto;
-      height: 50px;
-      img {
-        width: auto;
-        height: 100%;
-      }
-    }
   }
 }
 .grid-article {
@@ -892,7 +882,7 @@
   }
   .app-sub__grid {
     .grid-article__content {
-      height: calc(100vh - 360rem);
+      height: calc(100vh - 250rem);
       min-height: auto;
       padding-bottom: 10px;
     }

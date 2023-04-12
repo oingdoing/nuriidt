@@ -374,18 +374,34 @@
     }
   }
   &.only-msg {
+    display: flex;
+    align-items: center;
     height: 80px;
     min-height: auto;
     font-size: 20px;
     background-color: $color-bg;
+    p {
+      display: inline-block;
+      margin-right: 15px;
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: $primary-green;
+        margin-left: 15px;
+        vertical-align: middle;
+      }
+    }
     p,
     strong {
-      font-weight: 600;
-    }
-    span {
-      display: inline-block;
-      margin-left: 10px;
-      margin-right: 6px;
+      font-weight: 700;
+      ~ span {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 6px;
+      }
     }
   }
 }

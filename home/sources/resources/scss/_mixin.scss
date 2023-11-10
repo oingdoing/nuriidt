@@ -1,0 +1,124 @@
+@use 'sass:math';
+
+// * -------------------------------
+// * Text
+// * -------------------------------
+@mixin text($size: 16px, $lh: 1.6, $weight: 400) {
+  font-size: $size;
+  line-height: $lh;
+  font-weight: $weight;
+}
+@mixin gradientColor($bg, $from, $to){
+  background: $bg;
+  background: linear-gradient(to right, $from 0%, $to 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// * -------------------------------
+// * Clear Fix
+// * -------------------------------
+@mixin clfix {
+  //Float 해제
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+// * -------------------------------
+// * A11y
+// * -------------------------------
+@mixin a11y-hidden {
+  //Element 숨김
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  border: 0;
+}
+@mixin a11y-visible {
+  //Element 숨김
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  visibility: hidden;
+}
+
+// * -------------------------------
+// * Heading Tag
+// * -------------------------------
+@mixin h1 {
+  font-size: 58px;
+  line-height: 65px;
+  font-weight: 800;
+}
+// * -------------------------------
+// * Ellipsis
+// * -------------------------------
+@mixin ellipsis($w) {
+  //한줄 말줄임
+  overflow: hidden;
+  display: inline-block;
+  max-width: $w;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin ellipsis-multi($line, $lh, $w) {
+  // 여러줄 말줄임 (IE에서는 ... 없음) : 줄수, line-height, 넓이
+  overflow: hidden;
+  display: -webkit-box;
+  width: $w;
+  max-height: $line * $lh;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: inherit;
+}
+
+// * -------------------------------
+// * align
+// * -------------------------------
+@mixin flex-justify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin grid-justify {
+  display: grid;
+  place-items: flex-start;
+  place-content: space-between;
+}
+@mixin grid-col2 {
+  display: grid;
+  place-items: flex-start;
+  place-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+// * -------------------------------
+// * img
+// * -------------------------------
+@mixin backImg($img) {
+  background-image: url('../images/common/' + $img + '.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// * -------------------------------
+// * gradient
+// * -------------------------------
+@mixin gradient ($from, $to) {
+  background:linear-gradient(90deg, $from 0%, $to 100%);-webkit-background-clip:text;-webkit-text-fill-color: transparent;
+}

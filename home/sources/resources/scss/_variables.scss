@@ -1,0 +1,59 @@
+//Device
+$bp-pc: 1441px;
+$bp-pc__min: 1440px;
+$bp-nb: 1366px;
+$bp-nb__min: 1200px;
+$bp-tab: 1023px;
+$bp-mob: 768px;
+
+$sqrt_2: 1.41421356237;
+
+// SIZE (xl > lg > md > sm > xs)
+$heading-xl: 58px;
+$heading-lg: 38px;
+$heading-md: 28px;
+$heading-sm: 24px;
+$heading-xs: 18px;
+
+$text-xl: 20px;
+$text-lg: 18px;
+$text-md: 16px;
+$text-sm: 14px;
+$text-xs: 12px;
+
+// COLOR
+$dim-color: rgba(0, 0, 0, 0.8);
+$line-color: #bbbbbb;
+$line-color02: #ababab;
+$line-color03: #ccc;
+$line-color04: #D2D2D2;
+$line-color05: #e4e4e4;
+$color-black: #141414;
+$color-bg: #eeeeee;
+$color-font02: #222;
+$color-font03: #333;
+$color-font04: #666;
+$color-font05: #999;
+$placeholder: #999;
+$color-purple: #5D5AFA;
+$color-deeppurple: #7A78FF;
+$bg-tbline: #F0F4FD;
+// z-index Level
+$zlv: 1;
+$zlv1: 10; //activated element (select)
+$zlv5: 50; //Tooltip
+$zlv10: 100; //App-header
+$zlv15: 150; //Skip-nav
+$zlv20: 200; //btn-top(globalnetwork)
+$zlv25: 250; //All-Menu
+$zlv30: 300; //Layered(Page)
+$zlv35: 350; //Layered(Notice)
+$zlv40: 400; //Cookie Information
+
+// $bp-3rd: 768px;
+// Easing
+$easing: cubic-bezier(0.52, 0.16, 0.24, 1);
+//except
+// $headerHt: 286px;
+// $footerHt: 137px;
+// $subExcept: $headerHt + $footerHt + 20px;

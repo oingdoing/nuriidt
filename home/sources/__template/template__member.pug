@@ -1,0 +1,49 @@
+block variables
+
+<!DOCTYPE html>
+html(lang="ko")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="shortcut icon" href="/resources/favicon/favicon.ico")
+		link(rel="shortcut icon" href="/resources/favicon/favicon.png")
+		link(rel="apple-touch-icon" href="/resources/favicon/favorite.png")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style" content="black")
+		meta(property="og:site_name" content="KBS미디어")
+		meta(name="description" content="KBS미디어")
+		meta(name="keywords" content="글로벌 콘텐츠 창조 기업! KBS미디어 홈페이지")
+		meta(property="og:title" content="글로벌 콘텐츠 창조 기업! KBS미디어 홈페이지")
+		meta(property="og:site_name" content="KBS미디어")
+		meta(property="og:image" content="resources/img/ico/kbsmedia_og.jpeg")
+		meta(property="og:description" content="KBS 홈페이지")
+		meta(name="mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title #{seoTitle}KBS미디어 음원 유통 관리 시스템
+
+
+		block headCSS
+			link(rel="stylesheet", href='http://www.kbsmedia.co.kr/resources/css/common.css')
+			link(rel="stylesheet", href='../static/lib/jquery-ui.min.css')
+			link(rel="stylesheet", href='../static/css/ui.css')
+
+	body
+		.app.pg-sub.lightmode
+			include ../__includes/app-header__member.pug
+
+			main#content.app-container
+				h2.blind 본문 영역
+				block content
+
+			include ../__includes/app-footer.pug
+
+		block bodyScript 
+			script(type="text/javascript" src="https://www.google-analytics.com/analytics.js")
+			script(type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-81CGNLZWV8&amp;l=dataLayer&amp;cx=c")
+			script(type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/d0936ad4/www-widgetapi.vflset/www-widgetapi.js" async="")
+			script(src="../static/lib/jquery-3.4.1.min.js")
+			script(src="../static/lib/jquery-ui.min.js")
+			script(src="../static/js/ui.js")

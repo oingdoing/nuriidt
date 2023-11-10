@@ -1,0 +1,117 @@
+extends ../__template/template__main.pug
+
+block variables
+	- var seoTitle = '';
+
+block append headCSS
+	link(rel='stylesheet', href='../static/lib/swiper.min.css')
+
+block content
+	.app-content
+		// VISUAL
+		article.app-article.article-visual.main-visual
+			h3.blind 음원 유통 소개
+			.app-article__bg
+				video#video1.article-visual1(poster="", autoplay="", loop="", muted="", playsinline="", src="../static/video/main_video.mp4")
+			.app-article__content
+				.app-article__item
+					p 유통사의 경계를 허물고
+						br
+						| 창작자의 좋은 친구가 되겠습니다.
+						span
+							| 25,000여곡 이상 유통 및 유튜브 CID직운영
+							br
+							| LP, 피지컬 포토카드형 음반제작 및 사내변호사 보유
+					a(href="distribution-process.html" role="button" class="app-button round-button btn-apply")
+						span.button-content 음원 유통 신청하기
+						i.icon-common-arrow-tr.ctrl-md
+
+		// PARTNERS
+		article.app-article.article-partners
+			.app-article__content.full
+				h3.app-article__tit PARTNERS
+				each dr_val in ['rtl', 'ltr']
+					.app-article__item.swiper-container(data-type=dr_val)
+							ul.swiper-wrapper
+								each logo_val in ['melon', 'genie', 'FLO', 'VIBE', 'bugs', 'youtube', 'spotify', 'appleMusic', 'lineMusic', 'planty_m']
+									li.swiper-slide
+										i(class="icon-channel-logo__"+logo_val)
+										i(class="icon-channel-logo__"+logo_val+"-c")
+		// KBS Media album+
+		article.app-article.article-album
+			.app-article__content
+				h3.app-article__tit
+					a(href="" target="_blank") 
+						i.icon-common-tit__music-ytb
+						span KBS Media Music&plus;
+						span.youtube-name @kbsmediamusicplus
+						img.img-youtube-icon(src="../static/images/main__youtube-icon--media.png", alt="")
+				.app-article__item
+					ul.album-list 
+						each tit_val, index in ['| PLAYLIST | 여름이다! 🌊 추억의 7080 여름 노래 모음 12곡 🎧 7080 SUMMER SONGS', '| PLAYLIST | 배호 노래 모음 12곡 🎧', '| PLAYLIST | 🎸 7080 그룹사운드 노래 모음 &gt;w.송골매, 활주로, 이치현과 벗님들, 라이너스, 신중현과 뮤직파워, 사랑의', '| PLAYLIST | 봄을 알리는 7080 노래 모음 10곡 플레이리스트']
+							li.album-list__item 
+								a(href="").list-thumb__link 
+									figure.album-list__thumb
+										img(src="../static/images/temp/thumb-test0"+(index+1)+".jpg", alt="")
+									p.album-list__tit= tit_val
+		// KBS Media Nusic
+		article.app-article.article-album
+			.app-article__content
+				h3.app-article__tit
+					a(href="" target="_blank") 
+						i.icon-common-tit__music-ytb
+						span KBS MEDIA MUSIC
+						span.youtube-name @KBSMEDIAMUSIC
+						img.img-youtube-icon(src="../static/images/main__youtube-icon--music.png", alt="")
+				.app-article__item
+					ul.album-list 
+						each tit_val, index in ['| PLAYLIST | 여름이다! 🌊 추억의 7080 여름 노래 모음 12곡 🎧 7080 SUMMER SONGS', '| PLAYLIST | 배호 노래 모음 12곡 🎧', '| PLAYLIST | 🎸 7080 그룹사운드 노래 모음 &gt;w.송골매, 활주로, 이치현과 벗님들, 라이너스, 신중현과 뮤직파워, 사랑의', '| PLAYLIST | 봄을 알리는 7080 노래 모음 10곡 플레이리스트']
+							li.album-list__item 
+								a(href="").list-thumb__link 
+									figure.album-list__thumb
+										img(src="../static/images/temp/thumb-test0"+(index+1)+".jpg", alt="")
+									p.album-list__tit= tit_val
+			span.flow-text(data-3300-start="transform:translateX(-20px)", data-4440-start="transform:translateX(-400px)")
+				strong OUR 
+				| PROJECTS &middot; 
+				strong OUR 
+				| PROJECTS &middot; 
+				strong OUR 
+				| PROJECTS &middot; 
+				strong OUR 
+				| PROJECTS
+		// RELEASES
+		article.app-article.article-release
+			.app-article__content
+				h3.app-article__tit
+					i.icon-common-tit__releases-music
+					span RELEASES
+				.app-article__item.m-swiper.swiper-container
+					ul.releases-list.swiper-wrapper 
+						-for (var i=0; i<6; i++)
+							li.releases-list__item.swiper-slide
+								a(href="").list-thumb__link 
+									figure.releases-list__thumb
+										img(src="../static/images/temp/thumb-test01.jpg", alt="")
+									p.releases-list__tit
+										strong.tit 2020 한국의 젊은
+											br
+											| 음악가들 3집
+										span.artist 유승호, 아이유
+		// FAQ
+		article.app-article.article-faq
+			.app-article__content
+				h3.app-article__tit FAQ
+					a.app-button(type="role",href="")
+						span.button-content 더보기 &plus;
+				.app-article__item
+					ul.faq-list
+						-for (var i=0; i<5; i++)
+							li.faq-list__item
+								button.question(type="button")
+									span 서비스 비용은 어떻게 책정되나요?
+								.faq-answer 뮤지션 개인 또는 팀원들이 저작권을 보유한 음악만 유통 및 판매가 가능합니다. 저작권의 문제가 없는 곡이면서 녹음상태 불량, 잡음, 노래방 수준의 편곡 등 지나치게 미완성된 곡 상태가 아니라면 누구든지 서비스가 가능합니다.
+								
+	block append bodyScript
+		script(src="../static/lib/swiper.min.js")
+		script(src="../static/lib/skrollr.min.js")

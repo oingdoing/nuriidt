@@ -1,0 +1,14 @@
+{{#spritesheet}}
+  [class^=icon-{{name}}] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite/{{{escaped_image}}}); background-repeat: no-repeat; background-size:{{px.width}}
+  {{px.height}}; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
+{{/spritesheet}}
+
+{{#if retina_spritesheet}}
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { [class^=icon-{{spritesheet.name}}] { background-image: url(../images/sprite/{{{retina_spritesheet.escaped_image}}}); } }
+{{/if}}
+
+{{#sprites}}
+  .icon-{{name}}{ width:{{px.width}}; height:{{px.height}}; background-position:
+  {{px.offset_x}}
+  {{px.offset_y}}; }
+{{/sprites}}

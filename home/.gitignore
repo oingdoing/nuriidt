@@ -1,0 +1,10 @@
+.gitignore.txt
+/node_modules
+/dist
+/build
+.DS_Store
+# .vscode/settings.json
+sources/front/static/pc/scss/sprite
+sources/front/static/mobile/scss/sprite
+## 폴더 무시
+/Compiled-HTML

@@ -1,117 +1,96 @@
-extends ../__template/template__main.pug
+extends ../__template/template.pug
 
 block variables
-	- var seoTitle = '';
+	- var seoTitle = 'Home';
 
-block append headCSS
-	link(rel='stylesheet', href='../static/lib/swiper.min.css')
+//- block append headCSS
 
 block content
 	.app-content
 		// VISUAL
-		article.app-article.article-visual.main-visual
-			h3.blind 음원 유통 소개
-			.app-article__bg
-				video#video1.article-visual1(poster="", autoplay="", loop="", muted="", playsinline="", src="../static/video/main_video.mp4")
+		article.app-article.article-intro
 			.app-article__content
-				.app-article__item
-					p 유통사의 경계를 허물고
+				.app-article__item.article-intro__visual
+					h3 데이터의 미래 가치를 만드는
 						br
-						| 창작자의 좋은 친구가 되겠습니다.
-						span
-							| 25,000여곡 이상 유통 및 유튜브 CID직운영
-							br
-							| LP, 피지컬 포토카드형 음반제작 및 사내변호사 보유
-					a(href="distribution-process.html" role="button" class="app-button round-button btn-apply")
-						span.button-content 음원 유통 신청하기
-						i.icon-common-arrow-tr.ctrl-md
-
-		// PARTNERS
-		article.app-article.article-partners
-			.app-article__content.full
-				h3.app-article__tit PARTNERS
-				each dr_val in ['rtl', 'ltr']
-					.app-article__item.swiper-container(data-type=dr_val)
-							ul.swiper-wrapper
-								each logo_val in ['melon', 'genie', 'FLO', 'VIBE', 'bugs', 'youtube', 'spotify', 'appleMusic', 'lineMusic', 'planty_m']
-									li.swiper-slide
-										i(class="icon-channel-logo__"+logo_val)
-										i(class="icon-channel-logo__"+logo_val+"-c")
-		// KBS Media album+
-		article.app-article.article-album
+						| 지능형 데이터 전문기업 누리IDT
+				.app-article__item.article-intro__desc
+					blockquote 
+						strong ‘데이터는 21세기의 원유이며, 데이터가 미래 경쟁 우위를 좌우한다’
+						span 가트너(Gartner. 미국 시장조사 및 IT 분야 전문 컨설팅 그룹)
+						p 이 말은 빅데이터, 머신러닝, 인공지능, IoT 등 격변하는 4차 산업혁명 시대를 살아가고 있는 바로 오늘의 우리들이 늘 되새겨야 할 금언입니다.
+					p ㈜누리IDT는 데이터의 미래 가치를 인식하고 고객의 미래 준비를 도와드리는 지능형 데이터 분야 전문기업입니다. 보유하고 계신 데이터의 정보화와 웹서비스를 넘어, 최신 기술을 적용하여 고효율을 이끌어낼 수 있는 데이터 정제, 가공, 융합 그리고 개방과 활용을 (주)누리IDT와 상의하십시오.
+		// SERVICE
+		article.app-article.article-service
 			.app-article__content
-				h3.app-article__tit
-					a(href="" target="_blank") 
-						i.icon-common-tit__music-ytb
-						span KBS Media Music&plus;
-						span.youtube-name @kbsmediamusicplus
-						img.img-youtube-icon(src="../static/images/main__youtube-icon--media.png", alt="")
+				h3.app-article__tit 대표 서비스
 				.app-article__item
-					ul.album-list 
-						each tit_val, index in ['| PLAYLIST | 여름이다! 🌊 추억의 7080 여름 노래 모음 12곡 🎧 7080 SUMMER SONGS', '| PLAYLIST | 배호 노래 모음 12곡 🎧', '| PLAYLIST | 🎸 7080 그룹사운드 노래 모음 &gt;w.송골매, 활주로, 이치현과 벗님들, 라이너스, 신중현과 뮤직파워, 사랑의', '| PLAYLIST | 봄을 알리는 7080 노래 모음 10곡 플레이리스트']
-							li.album-list__item 
-								a(href="").list-thumb__link 
-									figure.album-list__thumb
-										img(src="../static/images/temp/thumb-test0"+(index+1)+".jpg", alt="")
-									p.album-list__tit= tit_val
-		// KBS Media Nusic
-		article.app-article.article-album
+					ul.service-list 
+						li.service-list__item
+							i.icon-pc-ocr
+							strong 고문헌 한자 OCR
+							p 인공지능 기술로 고문헌의 한자 원문을 자동인식하여 디지털 텍스트를 제공하는 서비스입니다.
+							a.app-button.line-button(href="", role="button") 자세히 보기
+						li.service-list__item 
+							i.icon-pc-chinese
+							strong 한자 자형 검색
+							p 한자의 음이나 부수, 획수를 알지 못하더라도 한자 자형의 조합으로 검색할 수 있는 서비스입니다.
+							a.app-button.line-button(href="", role="button") 자세히 보기
+		// BUISNESS
+		article.app-article.article-service
 			.app-article__content
-				h3.app-article__tit
-					a(href="" target="_blank") 
-						i.icon-common-tit__music-ytb
-						span KBS MEDIA MUSIC
-						span.youtube-name @KBSMEDIAMUSIC
-						img.img-youtube-icon(src="../static/images/main__youtube-icon--music.png", alt="")
+				h3.app-article__tit 대표 서비스
 				.app-article__item
-					ul.album-list 
-						each tit_val, index in ['| PLAYLIST | 여름이다! 🌊 추억의 7080 여름 노래 모음 12곡 🎧 7080 SUMMER SONGS', '| PLAYLIST | 배호 노래 모음 12곡 🎧', '| PLAYLIST | 🎸 7080 그룹사운드 노래 모음 &gt;w.송골매, 활주로, 이치현과 벗님들, 라이너스, 신중현과 뮤직파워, 사랑의', '| PLAYLIST | 봄을 알리는 7080 노래 모음 10곡 플레이리스트']
-							li.album-list__item 
-								a(href="").list-thumb__link 
-									figure.album-list__thumb
-										img(src="../static/images/temp/thumb-test0"+(index+1)+".jpg", alt="")
-									p.album-list__tit= tit_val
-			span.flow-text(data-3300-start="transform:translateX(-20px)", data-4440-start="transform:translateX(-400px)")
-				strong OUR 
-				| PROJECTS &middot; 
-				strong OUR 
-				| PROJECTS &middot; 
-				strong OUR 
-				| PROJECTS &middot; 
-				strong OUR 
-				| PROJECTS
-		// RELEASES
-		article.app-article.article-release
+					ul.service-list 
+						li.service-list__item
+							i.icon-pc-ai-data
+							strong 지능형 데이터
+							P DB구축 전문 관리인력과 전문 솔루션을 보유하고있으며, 지능형 데이터 구축을 전문적으로 수행합니다. 또한 데이터 구축 사업 수행에 필요한 맞춤형 솔루션을 개발하여 공정효율을 높이고 있습니다.
+						li.service-list__item 
+							i.icon-pc-ai-service
+							strong AI 기반 고문헌 활용서비스
+							P 고문헌 한자 OCR서비스를 시작으로, 자동표점과 자동번역 시스템 구현을 위한 연구 개발을 진행하고 있습니다.
+						li.service-list__item 
+							i.icon-pc-public
+							strong 공공저작물 개방 지원
+							p 국가나 지방자치단체 및 공공기관이 보유·관리하고 있는 공공저작물을, 적합한 공공누리 유형을 선정하고 개방할 수 있도록 지원합니다.
+		// CLIENTS
+		article.app-article.article-clients
 			.app-article__content
-				h3.app-article__tit
-					i.icon-common-tit__releases-music
-					span RELEASES
-				.app-article__item.m-swiper.swiper-container
-					ul.releases-list.swiper-wrapper 
-						-for (var i=0; i<6; i++)
-							li.releases-list__item.swiper-slide
-								a(href="").list-thumb__link 
-									figure.releases-list__thumb
-										img(src="../static/images/temp/thumb-test01.jpg", alt="")
-									p.releases-list__tit
-										strong.tit 2020 한국의 젊은
-											br
-											| 음악가들 3집
-										span.artist 유승호, 아이유
-		// FAQ
-		article.app-article.article-faq
-			.app-article__content
-				h3.app-article__tit FAQ
-					a.app-button(type="role",href="")
-						span.button-content 더보기 &plus;
+				h3.app-article__tit 고객사
 				.app-article__item
-					ul.faq-list
-						-for (var i=0; i<5; i++)
-							li.faq-list__item
-								button.question(type="button")
-									span 서비스 비용은 어떻게 책정되나요?
-								.faq-answer 뮤지션 개인 또는 팀원들이 저작권을 보유한 음악만 유통 및 판매가 가능합니다. 저작권의 문제가 없는 곡이면서 녹음상태 불량, 잡음, 노래방 수준의 편곡 등 지나치게 미완성된 곡 상태가 아니라면 누구든지 서비스가 가능합니다.
-								
+					ul.clients-list 
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--nia.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--kk.png", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--ksi.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--kcisa.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--etri.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--kko.png", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--kasi.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--k-data.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--gn.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--susan.png", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--khu.jpg", alt="")
+						li.clients-list__item 
+							img(src="../static/images/page/main-service__client-list--cnu.jpg", alt="")
+		// CLIENTS
+		article.app-article.article-inquiry
+			.app-article__content
+				h3.app-article__tit 궁금하신가요?
+				.app-article__item
+					p.app-artice__desc 문의하기를 통해 연락주시면
+						br
+						| 신속하고 성실하게 답변드리겠습니다.
+					a.app-button.solid-button(href="", role="button") 문의하기
 	block append bodyScript
-		script(src="../static/lib/swiper.min.js")
-		script(src="../static/lib/skrollr.min.js")

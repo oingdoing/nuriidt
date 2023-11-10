@@ -1,11 +1,4 @@
 @charset "utf-8";
-/**
- * KBS Web Font Style
- * @author KBS Media Webpublisher
- * @version 1.0
- * @date 2021-06-10
- * @copyright Copyright (c) KBS Media. All right reserved.
- **/
 
 @font-face{
 	font-family:'Noto Sans';
@@ -92,24 +85,6 @@
 	url(../fonts/woff/NotoSerifKR-SemiBold.woff) format('woff'),
 	url(../fonts/woff/NotoSerifKR-SemiBold.woff2) format('woff2'),
 	url(../fonts/otf/NotoSerifKR-SemiBold.otf) format('opentype');
-}
-
-@font-face{
-	font-family:'Pretendard';
-	font-style:normal;
-	font-weight:600;
-	src:local('Pretendard Bold'),
-	url(../fonts/woff/Pretendard-Bold.woff) format('woff'),
-	url(../fonts/otf/Pretendard-Bold.otf) format('opentype');
-}
-
-@font-face{
-	font-family:'KBS_CI';
-	font-style:normal;
-	font-weight:400;
-	src:local('KBS_CI'),
-	url(../fonts/KBS_CI.ttf),
-	url(../fonts/KBS_CI.ttf) format('ttf');
 }
 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,div,span,strong,table,thead,tbody,tr,th,td,form,fieldset,legend,input,textarea,button{font-family:'Noto Sans','Apple SD Gothic Neo','애플 SD 산돌고딕 Neo','Helvetica Neue','Roboto','sans-serif';}

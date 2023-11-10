@@ -41,15 +41,12 @@
       .guide-page .ui-guide__list-el > h4::before{position:absolute;content:'';display:block;width:100%;height:1px;top:50%;left:0;border-top:2px dashed #ccc}
       .guide-page .ui-guide__list-el > h4 span{position:relative;display:inline-block;padding-right:20px;background-color:#333}
       .guide-page .view-el{position:relative;display:flex;flex-wrap:wrap;margin-top:15px;padding:0;border:1px solid #666;border-radius:5px;overflow:hidden}
-      .guide-page .view{flex:1;padding:20px 40px;background-color:#141414}
-      .guide-page .view.is-light{background-color:#454545}
+      .guide-page .view{flex:1;padding:20px 40px;background-color:#fff}
+      .guide-page .view.is-light{background-color:#ddd}
       .guide-page .code{flex:1;max-width:50%;margin:0;padding:15px 20px;font-size:14px;white-space:break-spaces}
       .guide-page .codenote{width:100%;padding:15px 35px;background-color:#3f3f3f}
       .guide-page .codenote li{list-style:disc}
       .guide-page .codenote li span{color:#acff00}
-      .guide-page .btn-mode{position:absolute;top:0;left:50%;margin-left:-20px;padding:10px;}
-      .guide-page .btn-mode::before{display:inline-block;content:'☼';width:25px;height:25px;border-radius:20px;text-align:center;border:2px solid #000;background-color:#fff;color:#000;}
-      .guide-page .btn-mode.lightmode::before{content:'☾';background-color:#000;color:#fff;border-color:#666}
     </style>
 </head>
 
@@ -61,12 +58,6 @@
     <strong>Guide List</strong>
     <ul>
       <li><a href="#ac_icon">Icons</a></li>
-      <li><a href="#ac_text">Input text</a></li>
-      <li><a href="#ac_textarea">Textarea</a></li>
-      <li><a href="#ac_checkbox">Checkbox</a></li>
-      <li><a href="#ac_datepicker">Datepicker</a></li>
-      <li><a href="#ac_file">File</a></li>
-      <li><a href="#ac_select">Select</a></li>
       <li><a href="#ac_button">Button</a></li>
       <li><a href="#ac_subTit">Sub page tit</a></li>
       <li><a href="#ac_search">Search</a></li>
@@ -77,17 +68,21 @@
       <div class="app-article__content">
         <ul class="ui-guide__list">
           <li class="ui-guide__list-el">
-            <h4 id="ac_icon"><span>Sprite Icon</span></h4>
+            <h4 id="ac_icon"><span>Icon</span></h4>
             <div class="view-el">
-              <div class="view">
+              <div class="view is-light">
 <i class="icon-app-header__ci"></i>
+<i class="icon-pc-ai-data"></i>
+<i class="icon-pc-ai-service"></i>
+<i class="icon-pc-chinese"></i>
+<i class="icon-pc-ocr"></i>
+<i class="icon-pc-public"></i>
               </div>
               <xmp class="code"></xmp>
               <ul class="codenote">
                 <li>아이콘은 <u>기본 이미지와 두배 이미지</u>를 같이 sprite 폴더에 넣는다. 정확히 2배여야 한다. <span>예)16x16, 32x32</span></li>
                 <li>두배 이미지는 같은 이름을 쓰되, 뒤에 <u>@2x</u>를 붙인다. <span>예) imges@2x.png</span></li>
               </ul>
-              <button class="btn-mode" data-state="to-light"></button>
             </div>
           </li>
           <li class="ui-guide__list-el">
@@ -161,10 +156,6 @@
       $('.view').each( function(){
         var code = $(this).html();
         $(this).closest('.view-el').find('.code').text(code);
-      });
-      $('.btn-mode').on('click', function(){
-        $(this).siblings('.view').toggleClass('is-light');
-        $(this).toggleClass('lightmode');
       });
     </script>
 </body>

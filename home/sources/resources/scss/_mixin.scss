@@ -93,6 +93,11 @@
   align-items: center;
   justify-content: center;
 }
+@mixin flex-stretch {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
 @mixin grid-justify {
   display: grid;
   place-items: flex-start;

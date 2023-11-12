@@ -1,0 +1,23 @@
+block variables
+
+<!DOCTYPE html>
+html(lang="ko")
+	include ../__includes/app-head.pug
+
+	block headCSS
+		link(rel="stylesheet", href='../static/lib/jquery-ui.min.css')
+		link(rel="stylesheet", href='../static/css/ui.css')
+
+	body
+		.app.pg-main
+			include ../__includes/app-header.pug
+
+			main.app-container
+				block content
+
+			include ../__includes/app-footer.pug
+
+		block bodyScript 
+			script(src="../static/lib/jquery-3.4.1.min.js")
+			script(src="../static/lib/jquery-ui.min.js")
+			script(src="../static/js/ui.js")

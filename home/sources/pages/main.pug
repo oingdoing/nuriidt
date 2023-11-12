@@ -1,4 +1,4 @@
-extends ../__template/template.pug
+extends ../__template/template-main.pug
 
 block variables
 	- var seoTitle = 'Home';
@@ -8,52 +8,60 @@ block variables
 block content
 	.app-content
 		// VISUAL
-		article.app-article.article-intro
+		article.app-article.article-intro.full
 			.app-article__content
 				.app-article__item.article-intro__visual
-					h3 데이터의 미래 가치를 만드는
+					h2 데이터의 미래 가치를 만드는
 						br
 						| 지능형 데이터 전문기업 누리IDT
 				.app-article__item.article-intro__desc
 					blockquote 
 						strong ‘데이터는 21세기의 원유이며, 데이터가 미래 경쟁 우위를 좌우한다’
 						span 가트너(Gartner. 미국 시장조사 및 IT 분야 전문 컨설팅 그룹)
-						p 이 말은 빅데이터, 머신러닝, 인공지능, IoT 등 격변하는 4차 산업혁명 시대를 살아가고 있는 바로 오늘의 우리들이 늘 되새겨야 할 금언입니다.
-					p ㈜누리IDT는 데이터의 미래 가치를 인식하고 고객의 미래 준비를 도와드리는 지능형 데이터 분야 전문기업입니다. 보유하고 계신 데이터의 정보화와 웹서비스를 넘어, 최신 기술을 적용하여 고효율을 이끌어낼 수 있는 데이터 정제, 가공, 융합 그리고 개방과 활용을 (주)누리IDT와 상의하십시오.
+						p 이 말은 빅데이터, 머신러닝, 인공지능, IoT 등 격변하는 4차 산업혁명 시대를 살아가고 있는 바로
+							br
+							| 오늘의 우리들이 늘 되새겨야 할 금언입니다.
+					p ㈜누리IDT는 데이터의 미래 가치를 인식하고 고객의 미래 준비를 도와드리는 지능형 데이터 분야
+						br
+						| 전문기업입니다. 보유하고 계신 데이터의 정보화와 웹서비스를 넘어, 최신 기술을 적용하여 고효율을
+						br
+						| 이끌어낼 수 있는 데이터 정제, 가공, 융합 그리고 개방과 활용을 (주)누리IDT와 상의하십시오.
 		// SERVICE
 		article.app-article.article-service
 			.app-article__content
 				h3.app-article__tit 대표 서비스
 				.app-article__item
-					ul.service-list 
-						li.service-list__item
+					ul.item-list 
+						li.item-list__item
 							i.icon-pc-ocr
-							strong 고문헌 한자 OCR
-							p 인공지능 기술로 고문헌의 한자 원문을 자동인식하여 디지털 텍스트를 제공하는 서비스입니다.
-							a.app-button.line-button(href="", role="button") 자세히 보기
-						li.service-list__item 
+							strong.item-list__item-tit 고문헌 한자 OCR
+							p.item-list__item-desc 인공지능 기술로 고문헌의 한자 원문을 자동인식하여 디지털 텍스트를 제공하는 서비스입니다.
+							a.app-button.line-button(href="", role="button") 
+								span.button-content 자세히 보기
+						li.item-list__item 
 							i.icon-pc-chinese
-							strong 한자 자형 검색
-							p 한자의 음이나 부수, 획수를 알지 못하더라도 한자 자형의 조합으로 검색할 수 있는 서비스입니다.
-							a.app-button.line-button(href="", role="button") 자세히 보기
+							strong.item-list__item-tit 한자 자형 검색
+							p.item-list__item-desc 한자의 음이나 부수, 획수를 알지 못하더라도 한자 자형의 조합으로 검색할 수 있는 서비스입니다.
+							a.app-button.line-button(href="", role="button") 
+								span.button-content 자세히 보기
 		// BUISNESS
-		article.app-article.article-service
+		article.app-article.article-service.theme-dark
 			.app-article__content
-				h3.app-article__tit 대표 서비스
+				h3.app-article__tit 사업 분야
 				.app-article__item
-					ul.service-list 
-						li.service-list__item
+					ul.item-list(data-col="3")
+						li.item-list__item
 							i.icon-pc-ai-data
-							strong 지능형 데이터
-							P DB구축 전문 관리인력과 전문 솔루션을 보유하고있으며, 지능형 데이터 구축을 전문적으로 수행합니다. 또한 데이터 구축 사업 수행에 필요한 맞춤형 솔루션을 개발하여 공정효율을 높이고 있습니다.
-						li.service-list__item 
+							strong.item-list__item-tit 지능형 데이터
+							P.item-list__item-desc DB구축 전문 관리인력과 전문 솔루션을 보유하고있으며, 지능형 데이터 구축을 전문적으로 수행합니다. 또한 데이터 구축 사업 수행에 필요한 맞춤형 솔루션을 개발하여 공정효율을 높이고 있습니다.
+						li.item-list__item 
 							i.icon-pc-ai-service
-							strong AI 기반 고문헌 활용서비스
-							P 고문헌 한자 OCR서비스를 시작으로, 자동표점과 자동번역 시스템 구현을 위한 연구 개발을 진행하고 있습니다.
-						li.service-list__item 
+							strong.item-list__item-tit AI 기반 고문헌 활용서비스
+							P.item-list__item-desc 고문헌 한자 OCR서비스를 시작으로, 자동표점과 자동번역 시스템 구현을 위한 연구 개발을 진행하고 있습니다.
+						li.item-list__item 
 							i.icon-pc-public
-							strong 공공저작물 개방 지원
-							p 국가나 지방자치단체 및 공공기관이 보유·관리하고 있는 공공저작물을, 적합한 공공누리 유형을 선정하고 개방할 수 있도록 지원합니다.
+							strong.item-list__item-tit 공공저작물 개방 지원
+							p.item-list__item-desc 국가나 지방자치단체 및 공공기관이 보유·관리하고 있는 공공저작물을, 적합한 공공누리 유형을 선정하고 개방할 수 있도록 지원합니다.
 		// CLIENTS
 		article.app-article.article-clients
 			.app-article__content
@@ -79,7 +87,7 @@ block content
 						li.clients-list__item 
 							img(src="../static/images/page/main-service__client-list--gn.jpg", alt="")
 						li.clients-list__item 
-							img(src="../static/images/page/main-service__client-list--susan.png", alt="")
+							img(src="../static/images/page/main-service__client-list--susan.jpg", alt="")
 						li.clients-list__item 
 							img(src="../static/images/page/main-service__client-list--khu.jpg", alt="")
 						li.clients-list__item 
@@ -89,7 +97,7 @@ block content
 			.app-article__content
 				h3.app-article__tit 궁금하신가요?
 				.app-article__item
-					p.app-artice__desc 문의하기를 통해 연락주시면
+					p.app-article__desc 문의하기를 통해 연락주시면
 						br
 						| 신속하고 성실하게 답변드리겠습니다.
 					a.app-button.solid-button(href="", role="button") 문의하기

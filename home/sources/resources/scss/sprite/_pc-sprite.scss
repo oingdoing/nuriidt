@@ -1,20 +1,26 @@
-  [class^=icon-pc] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite/pc.png); background-repeat: no-repeat; background-size:234px
-  154px; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
+  [class^=icon-pc] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite/pc.png); background-repeat: no-repeat; background-size:247px
+  247px; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { [class^=icon-pc] { background-image: url(../images/sprite/pc@2x.png); } }
 
   .icon-pc-ai-data{ width:70px; height:70px; background-position:
   -84px
+  -93px; }
+  .icon-pc-ai-service-bk{ width:74px; height:74px; background-position:
+  -93px
   0px; }
   .icon-pc-ai-service{ width:74px; height:74px; background-position:
   0px
-  0px; }
+  -93px; }
   .icon-pc-chinese{ width:70px; height:70px; background-position:
-  0px
-  -84px; }
-  .icon-pc-ocr{ width:70px; height:70px; background-position:
-  -80px
-  -84px; }
-  .icon-pc-public{ width:70px; height:70px; background-position:
-  -164px
+  -177px
   0px; }
+  .icon-pc-ocr-bk{ width:83px; height:83px; background-position:
+  0px
+  0px; }
+  .icon-pc-ocr{ width:70px; height:70px; background-position:
+  -177px
+  -80px; }
+  .icon-pc-public{ width:70px; height:70px; background-position:
+  0px
+  -177px; }

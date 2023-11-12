@@ -1,34 +1,15 @@
 extends ../__template/template-sub.pug
 
 block variables
-	- var seoTitle = '회사소개';
+	- var seoTitle = '사업실적';
 	- var pageTitle = 'COMPANY';
 
 block content
 	.app-content
-		// VISUAL
-		article.app-article.article-intro.full
-			.app-article__content
-				.app-article__item.article-intro__visual
-					h2.visual-tit 데이터의 미래 가치를 만드는
-						br
-						| 지능형 데이터 전문기업 누리IDT
-				.app-article__item.article-intro__desc
-					blockquote 
-						strong ‘데이터는 21세기의 원유이며, 데이터가 미래 경쟁 우위를 좌우한다’
-						span 가트너(Gartner. 미국 시장조사 및 IT 분야 전문 컨설팅 그룹)
-						p 이 말은 빅데이터, 머신러닝, 인공지능, IoT 등 격변하는 4차 산업혁명 시대를 살아가고 있는 바로
-							br
-							| 오늘의 우리들이 늘 되새겨야 할 금언입니다.
-					p ㈜누리IDT는 데이터의 미래 가치를 인식하고 고객의 미래 준비를 도와드리는 지능형 데이터 분야
-						br
-						| 전문기업입니다. 보유하고 계신 데이터의 정보화와 웹서비스를 넘어, 최신 기술을 적용하여 고효율을
-						br
-						| 이끌어낼 수 있는 데이터 정제, 가공, 융합 그리고 개방과 활용을 (주)누리IDT와 상의하십시오.
 		// HISTOFY
-		aritlce.app-article.article-history
+		aritlce.app-article.article-history.theme-dark
 			.app-article__content 
-				.app-article__item.article-history__list
+				.app-article__item.article-history__list.wide
 					ol.history-year
 						li.history-year__item 
 							strong.history-year__tit 2022

@@ -7,42 +7,27 @@ header#header.app-header
         span.blind 누리IDT
     nav.app-header__gnb
       ul.depth1
-        li.app-header__gnb-item
+        li.app-header__gnb-item(class= pageTitle=== 'COMPANY' ? 'is-active':undefined)
           a(href="")
             span COMPANY 
           ul.depth2
-            li 
-              a(href="") 회사소개
-            li
-              a(href="") 사업분야
-            li
-              a(href="") 사업실적
-        li.app-header__gnb-item
+            each name in ['회사소개', '사업분야', '사업실적']
+              li
+                a(href="")= name
+        li.app-header__gnb-item(class= pageTitle=== 'SERVICE' ? 'is-active':undefined)
           a(href="")
             span SERVICE 
           ul.depth2
-            li 
-              a(href="") 고문헌 한자 OCR
-            li 
-              a(href="") 고문헌 이미지 검색
-            li 
-              a(href="") OCR API
-            li 
-              a(href="") 한자 자형 검색
-            li 
-              a(href="") 누리한자 입력기
-        li.app-header__gnb-item
+            each name in ['고문헌 한자 OCR', '고문헌 이미지 검색', 'OCR API', '한자 자형 검색', '누리한자입력기']
+              li 
+                a(href="")= name
+        li.app-header__gnb-item(class= pageTitle=== 'SOLUTION' ? 'is-active':undefined)
           a(href="")
             span SOLUTION 
           ul.depth2
-            li 
-              a(href="") NAH
-            li
-              a(href="") NIT’30
-            li
-              a(href="") NPM
-            li
-              a(href="") NCM
-        li.app-header__gnb-item
+            each name in ['NAH', 'NPM', 'NIT’30', 'NCM']
+              li 
+                a(href="")= name
+        li.app-header__gnb-item(class= pageTitle=== 'CONTACT' ? 'is-active':undefined)
           a(href="")
             span CONTACT

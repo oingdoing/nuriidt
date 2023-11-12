@@ -10,10 +10,25 @@ let $article = $('.app-article');
 
 $( function(){
   main.set();
+  $window.on('scroll', function(){
+    var scrolltop = $window.scrollTop();
+    util.gnb(scrolltop);
+  });
 });
 
 let main = {
   set: function(){
+  },
+}
+let util = {
+  set: function(){
+  },
+  gnb: function(scrolltop){
+    if(scrolltop > ($header.height()/2)){
+      $header.addClass('is-sticky');
+    }else{
+      $header.removeClass('is-sticky');
+    }
   },
 }
 

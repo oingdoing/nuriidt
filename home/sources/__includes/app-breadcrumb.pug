@@ -1,23 +1,19 @@
 .app-breadcrumb 
   h2.pg-tit #{pageTitle}
-  ul.app-breadcrumb__list
+  .app-breadcrumb__box
+    ul.app-breadcrumb__list
 
-  if pageTitle == 'COMPANY'
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") 회사소개
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") 사업분야
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") 사업실적
+      if pageTitle == 'COMPANY'
+        each name, link in {'about':'회사소개', 'business':'사업분야', 'performance':'사업실적'}
+          li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
+            a.app-breadcrumb__link(href='company-'+link+'.html')= name
 
-  if pageTitle == 'SERVICE'
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") 고문헌 한자 OCR
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") 고문헌 이미지 검색
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") OCR API
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") 한자 자형 검색
-    li.app-breadcrumb__item
-      a.app-breadcrumb__link(href="") 누리한자입력기
+      if pageTitle == 'SERVICE'
+        each name, link in {'ocr':'고문헌 한자 OCR', 'img':'고문헌 이미지 검색', 'api':'OCR API', 'jahyung':'한자 자형 검색', 'nuri-input':'누리한자입력기'}
+          li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
+            a.app-breadcrumb__link(href='service-'+link+'.html')= name
+
+      if pageTitle == 'SOLUTION'
+        each name, link in {'nah':'NAH', 'npm':'NPM', 'nit':'NIT’30', 'ncm':'NCM'}
+          li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
+            a.app-breadcrumb__link(href='solution-'+link+'.html')= name

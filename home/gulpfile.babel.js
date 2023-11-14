@@ -259,7 +259,7 @@ const live = {
   },
   server() {
     browserSync.init({
-      port: 5000,
+      port: 5001,
       open: 'ui',
       browser: ['chrome'],
       startPath: 'index.html',

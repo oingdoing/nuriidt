@@ -46,9 +46,17 @@
     }
     &__add{font-size:16px;color:#757575}
   }
-  @at-root .theme-dark &{
+  &.theme-dark{
+    .article-history__list{max-width:930px;padding-top:0}
     .history-year{
-      &__tit{padding:0 35px;font-size:30px;background:none}
+      &__tit{width:140px;padding:0;font-size:30px;background:none}
+      &__item{padding-bottom:60px;margin-bottom:55px;border-bottom-color:#686868;
+        &:nth-child(n) .history-year__tit{background:none}
+      }
+    }
+    .history-detail{
+      &__item,
+      &__add{color:#fff;font-weight:400}
     }
   }
 }

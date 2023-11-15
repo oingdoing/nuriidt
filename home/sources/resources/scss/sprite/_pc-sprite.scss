@@ -1,26 +1,65 @@
-  [class^=icon-pc] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite/pc.png); background-repeat: no-repeat; background-size:247px
-  247px; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
+  [class^=icon-pc] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite/pc.png); background-repeat: no-repeat; background-size:490px
+  426px; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { [class^=icon-pc] { background-image: url(../images/sprite/pc@2x.png); } }
 
   .icon-pc-ai-data{ width:70px; height:70px; background-position:
-  -84px
-  -93px; }
+  -416px
+  -84px; }
   .icon-pc-ai-service-bk{ width:74px; height:74px; background-position:
-  -93px
-  0px; }
+  -256px
+  -270px; }
   .icon-pc-ai-service{ width:74px; height:74px; background-position:
-  0px
-  -93px; }
+  -416px
+  0px; }
   .icon-pc-chinese{ width:70px; height:70px; background-position:
-  -177px
-  0px; }
+  -416px
+  -164px; }
+  .icon-pc-chinese__100{ width:100px; height:100px; background-position:
+  0px
+  -160px; }
+  .icon-pc-choice{ width:70px; height:70px; background-position:
+  -416px
+  -244px; }
+  .icon-pc-compare{ width:76px; height:76px; background-position:
+  0px
+  -270px; }
+  .icon-pc-doc{ width:70px; height:70px; background-position:
+  -320px
+  -189px; }
+  .icon-pc-explore{ width:70px; height:70px; background-position:
+  0px
+  -356px; }
+  .icon-pc-finger-check{ width:70px; height:70px; background-position:
+  -80px
+  -356px; }
   .icon-pc-ocr-bk{ width:83px; height:83px; background-position:
+  -320px
+  -96px; }
+  .icon-pc-ocr-bk__100{ width:100px; height:100px; background-position:
+  -110px
+  -160px; }
+  .icon-pc-ocr{ width:70px; height:70px; background-position:
+  -160px
+  -356px; }
+  .icon-pc-public{ width:70px; height:70px; background-position:
+  -240px
+  -356px; }
+  .icon-pc-result-txt{ width:86px; height:86px; background-position:
+  -320px
+  0px; }
+  .icon-pc-search{ width:88px; height:88px; background-position:
+  -220px
+  -160px; }
+  .icon-pc-thumb-up{ width:75px; height:75px; background-position:
+  -86px
+  -270px; }
+  .icon-pc-thumb-up__150{ width:150px; height:150px; background-position:
   0px
   0px; }
-  .icon-pc-ocr{ width:70px; height:70px; background-position:
-  -177px
-  -80px; }
-  .icon-pc-public{ width:70px; height:70px; background-position:
-  0px
-  -177px; }
+  .icon-pc-tool{ width:75px; height:75px; background-position:
+  -171px
+  -270px; }
+  .icon-pc-tool__150{ width:150px; height:150px; background-position:
+  -160px
+  0px; }

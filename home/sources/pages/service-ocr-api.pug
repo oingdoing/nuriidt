@@ -1,0 +1,47 @@
+extends ../__template/template.pug
+
+block variables
+	- var seoTitle = 'OCR API';
+	- var pgVal = 'sub';
+	- var pageTitle = 'SERVICE';
+
+block content
+	.app-content
+
+		article.app-article.article-sub-visual
+			.app-article__content
+				.app-article__item 
+					figure 
+						img(src="../static/images/page/service-ocr-api.png", alt="")
+				.app-article__tit
+					h2.app-pg-tit OCR API
+					p.app-pg-desc 각 기관에서 서비스 중인 고문헌 이미지 서비스에 당사에서 제공하는 OCR API 서비스 연동을 통해 각 기관의 기존 이미지 뷰어에서 바로 텍스트를 추출하여 원문 이미지와 OCR 결과 텍스트를 함께 제공, 원문 내용을 정확하게 파악하는데 활용할 수 있습니다.
+					a(href="https://ocr.nuriidt.co.kr/api/", target="_blank", role="button").app-button.line-button 
+						span.button-content API 사용안내 바로가기
+		
+		article.app-article
+			.app-article__content
+				h3.app-article__tit.type-h2 적용 사례
+				.app-article__desc.type-main
+					p.align-left KRpia에서는 11종의 콘텐츠에서 한자 원문 이미지를 텍스트로 자동 변환하여 열람할 수 있는 OCR 서비스를 제공하고 있습니다.
+					p.align-left.top-line 11종 콘텐츠 : 경국대전, 경세유포, 대전회통(대전회통_역주), 대한계년사, 사기, 연행록총간증보판, 한국과학기술사자료대계, 의문보감, 의방신감, 의종손익, 향약집성방
+				ol.step-grid(data-column="1")
+					li.step-grid__item 
+						a(href="https://www.krpia.co.kr/", target="_blank").item-link
+							span.item-label OCR API 서비스 예시
+							dl.item-box
+								dt 
+									figure 
+										img(src="../static/images/page/service-ocr-api__case.png", alt="")
+									strong KRpia
+								dd 한자 OCR(문자인식) 서비스
+								
+		article.app-article.article-inquiry
+			.app-article__content
+				h3.app-article__tit.type-h4 궁금하신가요?
+				.app-article__item
+					p.app-article__desc 문의하기를 통해 연락주시면
+						br
+						| 신속하고 성실하게 답변드리겠습니다.
+					a.app-button.solid-button(href="", role="button") 문의하기
+					

@@ -6,7 +6,6 @@ let $header = $('.app-header');
 let $footer = $('.app-footer');
 let $nav = $('.app-header__gnb');
 let $article = $('.app-article');
-let $counter = $('.count-box');
 
 
 $( function(){
@@ -14,7 +13,7 @@ $( function(){
   $window.on('scroll', function(){
     var scrolltop = $window.scrollTop();
     util.gnb(scrolltop);
-    if($counter.lenght>0) util.counting(scrolltop);
+    util.counting(scrolltop); 
   });
 });
 
@@ -33,15 +32,17 @@ let util = {
   },
   counting: function(st){
     var $countEl = $('.counting-box');
-    var countTarget = $countEl.offset().top  - (windowHt/2);
-    var activeChk = $countEl.hasClass('is-counting');
-    if(st > countTarget){
-      if(!activeChk){
-        $countEl.addClass('is-counting');
-        $('.counter').counterUp({
-          delay: 10,
-          time: 1000
-        });
+    if($countEl.length>0){
+      var countTarget = $countEl.offset().top  - (windowHt/2);
+      var activeChk = $countEl.hasClass('is-counting');
+      if(st > countTarget){
+        if(!activeChk){
+          $countEl.addClass('is-counting');
+          $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+          });
+        }
       }
     }
   }

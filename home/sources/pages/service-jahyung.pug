@@ -1,0 +1,67 @@
+extends ../__template/template.pug
+
+block variables
+	- var seoTitle = '한자 자형 검색';
+	- var pgVal = 'sub';
+	- var pageTitle = 'SERVICE';
+
+block content
+	.app-content
+
+		article.app-article.article-sub-visual
+			.app-article__content
+				.app-article__item 
+					figure 
+						img(src="../static/images/page/service-jahyung.png", alt="")
+				.app-article__tit
+					h2.app-pg-tit 한자 자형 검색
+					p.app-pg-desc 한자의 음이나 부수, 획수를 알지 못하더라도 한자 자형의 조합으로 검색할 수 있는 서비스입니다.
+					a(href="https://ocr.nuriidt.co.kr/jahyung/", target="_blank", role="button").app-button.line-button 
+						span.button-content 바로가기
+		
+		article.app-article
+			.app-article__content
+				h3.app-article__tit 자형 검색 과정
+				ol.step-grid(data-column="4")
+					li.step-grid__item 
+						span.item-label Step 1
+						dl.item-box
+							dt 
+								span.icon-box
+									i.icon-pc-doc
+								strong 한자 목록
+							dd 한자 자형 목록
+					li.step-grid__item 
+						span.item-label Step 2
+						dl.item-box
+							dt 
+								span.icon-box
+									i.icon-pc-choice
+								strong 자형 선택
+							dd 검색하려는 한자의 자형 선택
+					li.step-grid__item 
+						span.item-label Step 3
+						dl.item-box
+							dt 
+								span.icon-box
+									i.icon-pc-explore 
+								strong 한자 검색 결과 조회
+							dd 선택한 자형에 해당하는 한자 목록 표시
+					li.step-grid__item 
+						span.item-label Step 4
+						dl.item-box
+							dt 
+								span.icon-box
+									i.icon-pc-search
+								strong 한자 정보
+							dd 다양한 이체자 정보와 음, 뜻, 획수, 유니코드 조회
+								
+		article.app-article.article-inquiry
+			.app-article__content
+				h3.app-article__tit.type-h4 궁금하신가요?
+				.app-article__item
+					p.app-article__desc 문의하기를 통해 연락주시면
+						br
+						| 신속하고 성실하게 답변드리겠습니다.
+					a.app-button.solid-button(href="", role="button") 문의하기
+					

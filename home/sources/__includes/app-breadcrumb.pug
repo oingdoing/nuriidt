@@ -9,7 +9,7 @@
             a.app-breadcrumb__link(href='company-'+link+'.html')= name
 
       if pageTitle == 'SERVICE'
-        each name, link in {'ocr':'고문헌 한자 OCR', 'img':'고문헌 이미지 검색', 'api':'OCR API', 'jahyung':'한자 자형 검색', 'nuri-input':'누리한자입력기'}
+        each name, link in {'chinese-ocr':'고문헌 한자 OCR', 'archaic-images':'고문헌 한자 이미지 검색', 'ocr-api':'OCR API', 'jahyung':'한자 자형 검색', 'nuri-input':'누리한자입력기'}
           li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
             a.app-breadcrumb__link(href='service-'+link+'.html')= name
 

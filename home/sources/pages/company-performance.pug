@@ -1,7 +1,8 @@
-extends ../__template/template-sub.pug
+extends ../__template/template.pug
 
 block variables
 	- var seoTitle = '사업실적';
+	- var pgVal = 'sub';
 	- var pageTitle = 'COMPANY';
 
 block content
@@ -31,7 +32,7 @@ block content
 										li - 주관기관 : 한국국학진흥원
 						li.history-year__item 
 							strong.history-year__tit 2021
-							ul.history-detail 
+							ul.history-detail 	
 								li.history-detail__item 고서 문자 검출 및 인식 학습용 라벨 데이터 구축
 									ul.history-detail__add
 										li - 주관기관 : 한국전자통신연구원
@@ -120,40 +121,47 @@ block content
 			.app-article__content 
 				.app-article__tit
 					span 공공·민간 전문 데이터 관련 사업
-					stropng 16년간 150여회 수행
-				.app-article__item
+					strong
+						span 16년간 150여회 수행
+				.app-article__item.counting-box
 					ul 
 						li 
 							strong.counting-val 
-								em 33
+								em.counter 33
 								| 회
-								span.counting-label 국가DB 사업
+							span.counting-label 국가DB 사업
 						li 
 							strong.counting-val 
-								em 28
+								em.counter 28
 								| 회
-								span.counting-label 주관사업자
+							span.counting-label 주관사업자
 						li 
 							strong.counting-val 
-								em 66
+								em.counter 66
 								| 회
-								span.counting-label 고전문헌 관련 사업
+							span.counting-label 고전문헌 관련 사업
 						li 
 							strong.counting-val 
-								em 12
+								em.counter 12
 								| 회
-								span.counting-label 공공저작물 개방 지원 사업
+							span.counting-label 공공저작물 개방 지원 사업
 		
-		article.app-article.article-core-desc
+		article.app-article.app-bg-desc
 			.app-article__content 
 				.app-article__item
-					p 고객 기관에서 인정하는 전문성과 신뢰성
-					ul 
-						li 한국언론진흥재단 사업 18회 수행 (2008∼2015) : 고신문 DB 구축 및 서비스 개발
-						li 한국국학진흥원 사업 16회 수행 (2005∼2022) : 고문헌 DB 구축 및 서비스 개발
-						li 한국고전번역원 사업 16회 수행 (2007∼2019) : 고문헌 DB 구축 및 서비스 개발
-						li ※ 인공지능 기반 고전문헌 자동번역시스템 기계학습용 고전문헌 코퍼스 구축(2017∼2019)
-						li 한국한의학연구원 사업 8회 수행 (2004∼2008) : 고문헌 DB 구축
-						li 한국문화정보원 사업 11회 수행 (2012∼2022) : 공공저작물 수집 및 저작권 권리 처리
-						li 한국저작권위원회 사업 5회 수행 (2012∼2016) : 공공 및 공유 저작물 수집 및 저작권 권리 처리
-						li 서울대학교 규장각한국학연구원 사업 5회 수행 (2018~2022) : 고문헌 DB 구축 및 서비스 개발
+					.app-txt-list
+						p.tit 고객 기관에서 인정하는 전문성과 신뢰성
+						ul.list
+							li 한국언론진흥재단 사업 18회 수행 (2008∼2015) : 고신문 DB 구축 및 서비스 개발
+							li 한국국학진흥원 사업 16회 수행 (2005∼2022) : 고문헌 DB 구축 및 서비스 개발
+							li 한국고전번역원 사업 16회 수행 (2007∼2019) : 고문헌 DB 구축 및 서비스 개발
+								span.app-desc-note ※ 인공지능 기반 고전문헌 자동번역시스템 기계학습용 고전문헌 코퍼스 구축(2017∼2019)
+							li 한국한의학연구원 사업 8회 수행 (2004∼2008) : 고문헌 DB 구축
+							li 한국문화정보원 사업 11회 수행 (2012∼2022) : 공공저작물 수집 및 저작권 권리 처리
+							li 한국저작권위원회 사업 5회 수행 (2012∼2016) : 공공 및 공유 저작물 수집 및 저작권 권리 처리
+							li 서울대학교 규장각한국학연구원 사업 5회 수행 (2018~2022) : 고문헌 DB 구축 및 서비스 개발
+
+
+block prepend pageScript
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js")
+	script(src="../static/lib/counterUp.js")

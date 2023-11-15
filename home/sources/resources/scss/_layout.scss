@@ -30,7 +30,7 @@ body.is-hidden {overflow:hidden}
   }
   &-content{position:relative;min-width:1200px;margin:0 auto;}
   &-article{
-    position:relative;display:block;width:100%;padding:80px 0;
+    position:relative;display:block;width:100%;padding:100px 0 110px;
     &__content{
       position:relative;max-width:1200px;margin:0 auto;
       @at-root .app-article.full &{max-width:100%}
@@ -38,7 +38,10 @@ body.is-hidden {overflow:hidden}
     &__tit{
       position:relative;margin-bottom:40px;@include text($size:40px, $weight:700);color:#2e2e2e;
     }
-    &__desc{margin-bottom:60px;font-size:18px;color:#181818;line-height:1.8;font-weight:400}
+    &__desc{margin-bottom:60px;font-size:18px;color:#181818;line-height:1.8;font-weight:400;
+      &.type-main{font-size:20px;font-weight:300;text-align:center}
+      p+p{margin-top:20px}
+    }
     &.theme-dark{padding-top:100px;padding-bottom:110px;color:#fff;background:#181818 url(../images/page/main-service__bg.jpg) center no-repeat;background-size:cover;
       .app-article__tit{color:#fff}
       .app-article__desc,
@@ -94,10 +97,10 @@ body.is-hidden {overflow:hidden}
 .app-breadcrumb{
   .pg-tit{width:100%;height:80px;font-size:28px;color:#fff;line-height:80px;background-color:$color-point;text-align:center}
   &__box{width:100%;padding:30px 0 20px;background-color:#0B091D}
-  &__list{@include flex-center;min-width:600px;max-width:700px;margin:0 auto;
+  &__list{@include flex-center;min-width:600px;margin:0 auto;
     &.wide{max-width:950px}
   }
-  &__item{flex:1;
+  &__item{
     &.is-active .app-breadcrumb__link{color:$color-point;border-bottom-color:$color-point}
   }
   &__link{display:block;width:100%;padding:10px 15px;font-size:17px;font-weight:400;color:#C5C5C5;border-bottom:1px solid #C6C6C6;text-align:center}
@@ -118,6 +121,13 @@ body.is-hidden {overflow:hidden}
 // * ICON
 [class^=icon-app] {display:inline-block;white-space:nowrap;text-indent:200%;overflow:hidden;vertical-align:middle}
 .icon-app-header__ci{width:161px;height:60px;background:url(../images/common/app-header__logo.png) no-repeat;background-size:contain}
+[class^=icon-svg] {display:inline-block;white-space:nowrap;overflow:hidden;vertical-align:middle}
+[class*=__70] {width:70px;height:70px}
+[class*=__74] {width:74px;height:74px}
+[class*=__75] {width:75px;height:75px}
+[class*=__76] {width:76px;height:76px}
+[class*=__83] {width:83px;height:83px}
+[class*=__88] {width:88px;height:88px}
 // * BUTTON
 [role='button'] + [role='button'],
 [type='button'] + [type='button'],
@@ -141,6 +151,17 @@ body.is-hidden {overflow:hidden}
   &:hover{color:#fff;background-color:$color-point}
 }
 a:not(.app-button):hover{text-decoration:underline}
+.app-bg-desc{padding-top:110px;padding-bottom:120px;font-size:30px;font-weight:500;line-height:1.8;color:$color-light-txt;background-color:$color-bg;text-align:center}
+.app-desc-note{display:block;font-size:15px;color:#7d7d7d;}
+.app-txt-list{
+  @include flex-center;flex-wrap:wrap;
+  .tit{width:100%;margin-bottom:40px;font-weight:700}
+  .list{text-align:left;
+    li{margin-bottom:10px;font-size:17px;color:#656565;list-style:disc;font-weight:400;
+      &::marker{font-size:10px;color:#0BA348}
+    }
+  }
+}
 .item-list{@include flex-stretch;grid-gap:60px;padding-top:20px;
   &__item{flex:1;;max-width:410px;padding:50px 30px 50px 30px;border:1px solid #C9C9C9;border-radius:20px;text-align:center;transition:box-shadow 0.3s ease;
     &:hover{box-shadow:0px 20px 50px -35px rgba(0,0,0,0.5)}
@@ -158,4 +179,14 @@ a:not(.app-button):hover{text-decoration:underline}
 .figure-radius{border-radius:20px;overflow:hidden}
 figcaption{font-size:18px;font-weight:400;
   p+p{margin-top:20px}
+}
+.step-grid{display:flex;align-items:flex-start;justify-content:space-between;grid-gap:20px;
+  &[data-column="3"]{grid-gap:40px}
+  &__item{flex:1;border-radius:20px;border:1px solid #E0E0E0;text-align:center;overflow:hidden;
+    &::before{display:block;padding:10px;background-color:$color-gr-step3;color:#fff;font-size:17px;font-weight:400;}
+    &:nth-child(1)::before{content:'Step 1';}
+    &:nth-child(2)::before{content:'Step 2';}
+    &:nth-child(3)::before{content:'Step 3';}
+    &:nth-child(4)::before{content:'Step 4';}
+  }
 }

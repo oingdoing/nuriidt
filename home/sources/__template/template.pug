@@ -1,5 +1,12 @@
 block variables
 
+// variables
+- var pgVal;
+
+include mixin.pug
+
+include ../__includes/app-head.pug
+
 <!DOCTYPE html>
 html(lang="ko")
 	include ../__includes/app-head.pug
@@ -9,11 +16,13 @@ html(lang="ko")
 		link(rel="stylesheet", href='../static/css/ui.css')
 
 	body
-		.app.pg-sub
+		.app(class='pg-'+pgVal)
 			include ../__includes/app-header.pug
 
 			main.app-container
-				include ../__includes/app-breadcrumb.pug
+				if pgVal == 'sub'
+					include ../__includes/app-breadcrumb.pug
+
 				block content
 
 			include ../__includes/app-footer.pug
@@ -21,4 +30,6 @@ html(lang="ko")
 		block bodyScript 
 			script(src="../static/lib/jquery-3.4.1.min.js")
 			script(src="../static/lib/jquery-ui.min.js")
+		
+		block pageScript 
 			script(src="../static/js/ui.js")

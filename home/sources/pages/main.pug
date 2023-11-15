@@ -1,7 +1,8 @@
-extends ../__template/template-main.pug
+extends ../__template/template.pug
 
 block variables
 	- var seoTitle = 'Home';
+	- var pgVal = 'main';
 
 //- block append headCSS
 
@@ -51,7 +52,8 @@ block content
 				.app-article__item
 					ul.item-list(data-col="3")
 						li.item-list__item
-							i.icon-pc-ai-data
+							//- i.icon-pc-ai-data
+							+svg-icon(ai-data,70)
 							strong.item-list__item-tit 지능형 데이터
 							P.item-list__item-desc DB구축 전문 관리인력과 전문 솔루션을 보유하고있으며, 지능형 데이터 구축을 전문적으로 수행합니다. 또한 데이터 구축 사업 수행에 필요한 맞춤형 솔루션을 개발하여 공정효율을 높이고 있습니다.
 						li.item-list__item 
@@ -101,4 +103,3 @@ block content
 						br
 						| 신속하고 성실하게 답변드리겠습니다.
 					a.app-button.solid-button(href="", role="button") 문의하기
-	block append bodyScript

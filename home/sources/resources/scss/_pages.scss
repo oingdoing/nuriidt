@@ -2,7 +2,9 @@
 /******************************** M A I N */
 /******************************************/
 .pg-main{
-  .app-article__tit{font-size:34px;text-align:center}
+  .app-article{padding:80px 0;
+    &__tit{font-size:34px;text-align:center}
+  }
 }
 .article-intro{width:100%;min-width:100%;padding:0;
   &__visual{position:relative;@include flex-center;;min-height:420px;background:url(../images/page/main-intro__bg.jpg) center no-repeat;background-size:cover;
@@ -30,8 +32,19 @@
 /******************************************/
 /********************************** S U B */
 /******************************************/
+.article-sub-visual{padding:40px 0 60px;background-color:#181818;
+  .app-article{
+    &__content{display:flex;align-items:flex-start;justify-content:center;grid-gap:80px}
+    &__tit{flex:1;
+      .app-pg-tit{margin-bottom:20px;font-size:50px;color:#fff}
+      .sub-tit{display:block;margin-bottom:40px;font-size:20px;color:#d1d1d1;}
+      .app-pg-desc{margin-bottom:60px;font-size:17px;font-weight:400;color:#d1d1d1;}
+    }
+    &__item{flex:1;font-size:50px;color:#fff}
+  }
+}
 .article-history{
-  &__list{max-width:800px;margin:0 auto;padding:100px 0 110px}
+  &__list{max-width:800px;margin:0 auto}
   .history-year{
     &__item{@include flex-start;grid-gap:0 60px;padding-bottom:55px;margin-bottom:50px;border-bottom:1px solid #DADADA;
       &:nth-child(3n+2) .history-year__tit{background-color:$color-gr-step2}
@@ -60,6 +73,7 @@
     }
   }
 }
+/****** 사업실적 ******/
 .article-data-visual{
   .img-type{
     .app-article__tit,
@@ -80,4 +94,21 @@
   }
   &.theme-dark{background-image:none}
 }
-.article-core-desc{padding-top:110px;padding-bottom:120px;font-size:30px;font-weight:500;line-height:1.8;color:$color-light-txt;background-color:$color-bg;text-align:center}
+.article-counting-info{
+  .app-article{
+    &__tit{text-align:center;
+      > span{font-size:30px}
+      strong{position:relative;display:block;font-size:70px;color:$color-point;
+        &::before{content:'';display:block;position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:698px;height:25px;background:url(../images/page/sub-tit__bg-line.png)}
+        span{position:relative}
+      }
+    }
+    &__item{margin-top:100px;padding:10px;
+      ul{display:flex;
+        li{flex:1;padding:10px;text-align:center}
+        .counting-val{font-size:60px;font-weight:500}
+        .counting-label{display:block;font-size:17px;line-height:2.5;font-weight:400;color:#848484}
+      }
+    }
+  }
+}

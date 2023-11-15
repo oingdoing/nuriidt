@@ -6,6 +6,7 @@ let $header = $('.app-header');
 let $footer = $('.app-footer');
 let $nav = $('.app-header__gnb');
 let $article = $('.app-article');
+let $counter = $('.count-box');
 
 
 $( function(){
@@ -13,23 +14,37 @@ $( function(){
   $window.on('scroll', function(){
     var scrolltop = $window.scrollTop();
     util.gnb(scrolltop);
+    if($counter.lenght>0) util.counting(scrolltop);
   });
 });
+
 
 let main = {
   set: function(){
   },
 }
 let util = {
-  set: function(){
-  },
-  gnb: function(scrolltop){
-    if(scrolltop > ($header.height()/2)){
+  gnb: function(st){
+    if(st > ($header.height()/2)){
       $header.addClass('is-sticky');
     }else{
       $header.removeClass('is-sticky');
     }
   },
+  counting: function(st){
+    var $countEl = $('.counting-box');
+    var countTarget = $countEl.offset().top  - (windowHt/2);
+    var activeChk = $countEl.hasClass('is-counting');
+    if(st > countTarget){
+      if(!activeChk){
+        $countEl.addClass('is-counting');
+        $('.counter').counterUp({
+          delay: 10,
+          time: 1000
+        });
+      }
+    }
+  }
 }
 
 // PC,mobile 

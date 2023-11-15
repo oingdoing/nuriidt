@@ -1,0 +1,89 @@
+extends ../__template/template.pug
+
+block variables
+	- var seoTitle = '고문헌 한자 OCR';
+	- var pgVal = 'sub';
+	- var pageTitle = 'SERVICE';
+
+block content
+	.app-content
+
+		article.app-article.article-sub-visual
+			.app-article__content
+				.app-article__item 
+					figure 
+						img(src="../static/images/page/service-chinese-ocr.png", alt="")
+				.app-article__tit
+					h2.app-pg-tit 고문헌 한자 OCR
+						strong.sub-tit Optical Character Recognition
+							br
+							| of Chinese Historical Documents
+					p.app-pg-desc 인공지능 기술로 고문헌 한자 원문을 자동인식하여 디지털 텍스트를 제공하는 서비스입니다.
+					button(type="button").app-button.line-button 
+						span.button-content 바로가기
+		
+		article.app-article 
+			.app-article__desc.type-main
+				p 고문헌 한자 OCR은 고문헌 속 한자를 자동으로 읽어내기 위한 인공지능 문자인식 기술입니다. 
+					br
+					| 한자(고문헌) 이미지를 텍스트화하여, 눈으로 읽고 손으로 입력하는 과정을 자동화합니다.
+				p 단순히 고서 이미지를 텍스트화하는 것을 넘어서, 문자를 낱자 단위로 수정할 수 있으며, 
+					br
+					| 해당 한자의 상세정보를 함께 제공하여 활용성을 높였습니다.
+			ol.step-grid(data-column="3")
+				li.step-grid__item 
+					.item-box
+						span.icon-box 
+							i.icon-pc-chinese
+						dt 원문 이미지 
+						dd 고서 원문 이미지 1면 업로드
+				li.step-grid__item 
+					dl
+						dt 문자 인식
+						dd 한자 자동인식
+				li.step-grid__item 
+					dl
+						dt 결과 텍스트 생성
+						dd OCR 결과물 생성
+		
+		article.app-article.theme-dark
+			h3.app-article__tit 왜 누리IDT인가요?
+			.app-article__item
+				.grid-box
+					.grid-box__item
+
+					.grid-box__item
+						h4.item-tit 최고의 인식률
+						p.item-desc 고문헌 한자 자료를 대상으로, 90% 이상의 높은 인식률을 자랑합니다.
+							br
+							| 인식 성능 향상을 위해 지속적인 연구개발을 수행하고 있습니다.
+				.grid-box 
+					.grid-box__item
+					.grid-box__item
+						h4.item-tit 차별화된 기능
+						ul.item-list 
+							li 
+								strong 텍스트 편집
+								p 낱자 단위로 결과를 수정할 수 있습니다.
+							li 
+								strong 텍스트 복사
+								p 텍스트 결과에서 필요한 부분만을 복사(copy)할 수 있습니다.
+							li 
+								strong 텍스트 저장
+								p TXT 파일 다운로드 기능을 제공합니다.
+							li 
+								strong 유사 자형 추천
+								p 텍스트 결과 조회 시, AI가 유사 자형을 추천해줍니다.
+							li
+								strong 한자 정보 제공
+								p 다양한 이체자 정보와 음, 뜻, 획수, 유니코드를 제공합니다.
+								
+		article.app-article.article-inquiry
+			.app-article__content
+				h3.app-article__tit 궁금하신가요?
+				.app-article__item
+					p.app-article__desc 문의하기를 통해 연락주시면
+						br
+						| 신속하고 성실하게 답변드리겠습니다.
+					a.app-button.solid-button(href="", role="button") 문의하기
+					

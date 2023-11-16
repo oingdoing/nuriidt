@@ -1,0 +1,108 @@
+extends ../__template/template.pug
+
+block variables
+	- var seoTitle = 'NLM';
+	- var pgVal = 'sub';
+	- var pageTitle = 'SOLUTION';
+
+block content
+	.app-content
+
+		article.app-article.article-sub-visual
+			.app-article__content.column-reverse
+				.app-article__item 
+					figure 
+						img(src="../static/images/page/solution-nlm.png", alt="")
+				.app-article__tit
+					h2.app-pg-tit NLM
+						strong.sub-tit NuriIDT License Management System
+					p.app-pg-desc 공공저작물 개방지원 관리시스템은 국가나 지방자치단체 및 공공기관이 보유·관리하고 있는 공공저작물의 “공공누리 유형 마크” 선택을 지원하는 솔루션입니다
+		// 주요 기능
+		article.app-article
+			.app-article__content
+				h3.app-article__tit 주요 기능
+				.app-article__desc.type-main
+					p.align-left 
+				ol.step-grid(data-column="5")
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-list-order
+								strong 사업관리
+							dd 공정별 진행 현황 관리
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-schedule
+								strong 일정관리
+							dd 지원 기관 방문 일정 관리
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-finger-check
+								strong 권리확인
+							dd 공공저작물 공공누리
+								br
+								| 부착 여부 판단
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-checklist
+								strong 권리처리
+							dd 공공저작물 권리처리 결과
+								br
+								| 진행기록
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-original-media
+								strong 원문확보
+							dd 원문 콘텐츠 관리
+	
+		// 적용사례
+		article.app-article.theme-dark__bg
+			.app-article__content
+				h3.app-article__tit 적용 사례
+				.app-article__desc
+					p.align-left 국가나 지방자치단체 및 공공기관이 보유·관리하고 있는 공공저작물의 개방과 관련해 적합한 공공누리 유형을 선정하여 제안합니다.
+						br
+						| 복잡하게 얽혀 있는 저작권으로 인해 개방에 어려움이 있는 공공저작물의 경우, 법률전문가(저작권 전문 변호사)의 저작권 권리처리를 거쳐 개방이 가능하도록 지원합니다.
+				p.app-article__desc.type-main 한국문화정보원
+					br
+					| 공공·민간 저작물 권리처리 및 확인 사업 
+				ol.step-grid(data-column="3")
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								figure 
+									img(src="../static/images/page/solution-NLM__case1.jpg", alt="")
+								dd 공공저작물에 적용 가능한 『공공누리』유형
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								figure 
+									img(src="../static/images/page/solution-NLM__case2.jpg", alt="")
+								dd 선행사업 대상 기관 공공누리 유형 부착 결과
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								figure 
+									img(src="../static/images/page/solution-NLM__case3.jpg", alt="")
+								dd 한국문화정보원『공공누리』
+									br
+									| 권리처리 완료 원문공공저작물
+
+		article.app-article.article-inquiry
+			.app-article__content
+				h3.app-article__tit.type-h4 궁금하신가요?
+				.app-article__item
+					p.app-article__desc 문의하기를 통해 연락주시면
+						br
+						| 신속하고 성실하게 답변드리겠습니다.
+					a.app-button.solid-button(href="contact.html", role="button") 문의하기
+					

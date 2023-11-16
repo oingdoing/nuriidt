@@ -8,26 +8,26 @@ header#header.app-header
     nav.app-header__gnb
       ul.depth1
         li.app-header__gnb-item(class= pageTitle=== 'COMPANY' ? 'is-active':undefined)
-          a(href="")
+          a(href="ompany-about.html")
             span COMPANY 
           ul.depth2
-            each name in ['회사소개', '사업분야', '사업실적']
+            each name, link in {'about':'회사소개', 'business':'사업분야', 'performance':'사업실적'}
               li
-                a(href="")= name
+                a(href='company-'+link+'.html')= name
         li.app-header__gnb-item(class= pageTitle=== 'SERVICE' ? 'is-active':undefined)
-          a(href="")
+          a(href="service-chinese-ocr.html")
             span SERVICE 
           ul.depth2
-            each name in ['고문헌 한자 OCR', '고문헌 이미지 검색', 'OCR API', '한자 자형 검색', '누리한자입력기']
+            each name, link in {'chinese-ocr':'고문헌 한자 OCR', 'archaic-images':'고문헌 한자 이미지 검색', 'ocr-api':'OCR API', 'jahyung':'한자 자형 검색', 'nuri-input':'누리한자입력기'}
               li 
-                a(href="")= name
+                a(href='business-'+link+'.html')= name
         li.app-header__gnb-item(class= pageTitle=== 'SOLUTION' ? 'is-active':undefined)
-          a(href="")
+          a(href="solution-nah.html")
             span SOLUTION 
           ul.depth2
-            each name in ['NAH', 'NPM', 'NIT’30', 'NCM']
+            each name, link in {'nah':'NAH', 'npm':'NPM', 'nit':'NIT’30', 'ncm':'NCM', 'nnt':'NNT', 'nlm':'NLM'}
               li 
-                a(href="")= name
+                a(href='solution-'+link+'.html')= name
         li.app-header__gnb-item(class= pageTitle=== 'CONTACT' ? 'is-active':undefined)
-          a(href="")
+          a(href="contact.html")
             span CONTACT

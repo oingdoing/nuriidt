@@ -1,0 +1,92 @@
+extends ../__template/template.pug
+
+block variables
+	- var seoTitle = 'NNT';
+	- var pgVal = 'sub';
+	- var pageTitle = 'SOLUTION';
+
+block content
+	.app-content
+
+		article.app-article.article-sub-visual
+			.app-article__content.column-reverse
+				.app-article__item 
+					figure 
+						img(src="../static/images/page/solution-nnt.png", alt="")
+				.app-article__tit
+					h2.app-pg-tit NNT
+						strong.sub-tit NuriIDT Newspaper Tools 
+					p.app-pg-desc 신문 지면상 기사별 위치(좌표 값)와 각 기사 본문을 맵핑하는 신문 데이터베이스 구축 솔루션입니다.
+						br
+						br
+						| 저작권등록 제C-2018-009318호
+		// 주요 기능
+		article.app-article
+			.app-article__content
+				h3.app-article__tit 주요 기능
+				.app-article__desc.type-main
+					p.align-left 
+				ol.step-grid(data-column="5")
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-splite-article
+								strong 기사 분할
+							dd 기사, 제목, 부제목 추출
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-edit-index
+								strong 색인어 입력
+							dd 표제명, 저자, 본문 키워드 등
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-metadata
+								strong 공정 작업 배분
+							dd 작업자 별 작업 배분
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-process-bk
+								strong 작업자별 공정현황
+							dd 공정 진행상황 조회 및 관리
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-user
+								strong 사용자 관리
+							dd 조회, 등록, 삭제, 권한
+								br 
+								| 및 그룹 설정
+	
+		// 적용사례
+		article.app-article.theme-dark__bg
+			.app-article__content
+				h3.app-article__tit 적용 사례
+				.app-article__desc
+					p.align-left 고신문 자료를 보유한 기관에 적용되는 솔루션으로, 기사를 구분하고, 기사별 좌표정보를 추출하여 신문 뉴스콘텐츠를 다방면으로 활용할 수 있도록 하였습니다.
+				ol.step-grid.gap80(data-column="1")
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								figure 
+									img(src="../static/images/page/solution-nnt__case1.jpg", alt="")
+								strong 한국언론진흥재단
+								dd 고신문DB 구축 및 서비스 개발
+									span (2008 ~ 2015년)
+
+		article.app-article.article-inquiry
+			.app-article__content
+				h3.app-article__tit.type-h4 궁금하신가요?
+				.app-article__item
+					p.app-article__desc 문의하기를 통해 연락주시면
+						br
+						| 신속하고 성실하게 답변드리겠습니다.
+					a.app-button.solid-button(href="contact.html", role="button") 문의하기
+					

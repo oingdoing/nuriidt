@@ -1,5 +1,5 @@
-  [class^=icon-pc] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite/pc.png); background-repeat: no-repeat; background-size:490px
-  426px; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
+  [class^=icon-pc] { display: inline-block; flex-shrink: 0; background-image: url(../images/sprite/pc.png); background-repeat: no-repeat; background-size:730px
+  586px; white-space:nowrap; text-indent:200%; overflow:hidden; vertical-align:middle}
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { [class^=icon-pc] { background-image: url(../images/sprite/pc@2x.png); } }
 
@@ -12,27 +12,81 @@
   .icon-pc-ai-service{ width:74px; height:74px; background-position:
   -416px
   0px; }
-  .icon-pc-chinese{ width:70px; height:70px; background-position:
+  .icon-pc-automark-edit{ width:70px; height:70px; background-position:
   -416px
   -164px; }
+  .icon-pc-automark{ width:70px; height:70px; background-position:
+  -416px
+  -244px; }
+  .icon-pc-automation{ width:70px; height:70px; background-position:
+  -320px
+  -189px; }
+  .icon-pc-checklist{ width:70px; height:70px; background-position:
+  0px
+  -356px; }
+  .icon-pc-checkup{ width:70px; height:70px; background-position:
+  -80px
+  -356px; }
+  .icon-pc-chinese{ width:70px; height:70px; background-position:
+  -160px
+  -356px; }
   .icon-pc-chinese__100{ width:100px; height:100px; background-position:
   0px
   -160px; }
   .icon-pc-choice{ width:70px; height:70px; background-position:
-  -416px
-  -244px; }
+  -240px
+  -356px; }
   .icon-pc-compare{ width:76px; height:76px; background-position:
   0px
   -270px; }
-  .icon-pc-doc{ width:70px; height:70px; background-position:
+  .icon-pc-copyediting{ width:70px; height:70px; background-position:
   -320px
-  -189px; }
+  -356px; }
+  .icon-pc-corpus{ width:70px; height:70px; background-position:
+  -400px
+  -356px; }
+  .icon-pc-dictionary{ width:70px; height:70px; background-position:
+  -500px
+  0px; }
+  .icon-pc-doc{ width:70px; height:70px; background-position:
+  -500px
+  -80px; }
+  .icon-pc-edit-index{ width:70px; height:70px; background-position:
+  -500px
+  -160px; }
   .icon-pc-explore{ width:70px; height:70px; background-position:
+  -500px
+  -240px; }
+  .icon-pc-extract{ width:70px; height:70px; background-position:
+  -500px
+  -320px; }
+  .icon-pc-file-combine{ width:70px; height:70px; background-position:
   0px
-  -356px; }
-  .icon-pc-finger-check{ width:70px; height:70px; background-position:
+  -436px; }
+  .icon-pc-file-division{ width:70px; height:70px; background-position:
   -80px
-  -356px; }
+  -436px; }
+  .icon-pc-finger-check{ width:70px; height:70px; background-position:
+  -160px
+  -436px; }
+  .icon-pc-img-edit{ width:70px; height:70px; background-position:
+  -240px
+  -436px; }
+  .icon-pc-input-txt{ width:70px; height:70px; background-position:
+  -320px
+  -436px; }
+  .icon-pc-list-order{ width:70px; height:70px; background-position:
+  -400px
+  -436px; }
+  .icon-pc-make-structure{ width:70px; height:70px; background-position:
+  -480px
+  -436px; }
+  .icon-pc-metadata{ width:70px; height:70px; background-position:
+  -580px
+  0px; }
+  .icon-pc-nas{ width:70px; height:70px; background-position:
+  -580px
+  -80px; }
   .icon-pc-ocr-bk{ width:83px; height:83px; background-position:
   -320px
   -96px; }
@@ -40,17 +94,44 @@
   -110px
   -160px; }
   .icon-pc-ocr{ width:70px; height:70px; background-position:
-  -160px
-  -356px; }
+  -580px
+  -160px; }
+  .icon-pc-original-media{ width:70px; height:70px; background-position:
+  -580px
+  -240px; }
+  .icon-pc-process-assignment{ width:70px; height:70px; background-position:
+  -580px
+  -320px; }
+  .icon-pc-process-bk{ width:70px; height:70px; background-position:
+  -580px
+  -400px; }
+  .icon-pc-process{ width:70px; height:70px; background-position:
+  0px
+  -516px; }
+  .icon-pc-proofread{ width:70px; height:70px; background-position:
+  -80px
+  -516px; }
   .icon-pc-public{ width:70px; height:70px; background-position:
+  -160px
+  -516px; }
+  .icon-pc-release{ width:70px; height:70px; background-position:
   -240px
-  -356px; }
+  -516px; }
   .icon-pc-result-txt{ width:86px; height:86px; background-position:
   -320px
   0px; }
+  .icon-pc-schedule{ width:70px; height:70px; background-position:
+  -320px
+  -516px; }
   .icon-pc-search{ width:88px; height:88px; background-position:
   -220px
   -160px; }
+  .icon-pc-splite-article{ width:70px; height:70px; background-position:
+  -400px
+  -516px; }
+  .icon-pc-statistics{ width:70px; height:70px; background-position:
+  -480px
+  -516px; }
   .icon-pc-thumb-up{ width:75px; height:75px; background-position:
   -86px
   -270px; }
@@ -63,3 +144,15 @@
   .icon-pc-tool__150{ width:150px; height:150px; background-position:
   -160px
   0px; }
+  .icon-pc-user-gr{ width:70px; height:70px; background-position:
+  -560px
+  -516px; }
+  .icon-pc-user{ width:70px; height:70px; background-position:
+  -660px
+  0px; }
+  .icon-pc-worktree{ width:70px; height:70px; background-position:
+  -660px
+  -80px; }
+  .icon-pc-xml{ width:70px; height:70px; background-position:
+  -660px
+  -160px; }

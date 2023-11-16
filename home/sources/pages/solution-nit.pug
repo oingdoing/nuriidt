@@ -1,0 +1,142 @@
+extends ../__template/template.pug
+
+block variables
+	- var seoTitle = 'NIT’S30';
+	- var pgVal = 'sub';
+	- var pageTitle = 'SOLUTION';
+
+block content
+	.app-content
+
+		article.app-article.article-sub-visual
+			.app-article__content.column-reverse
+				.app-article__item 
+					figure 
+						img(src="../static/images/page/solution-nits30.png", alt="")
+				.app-article__tit
+					h2.app-pg-tit NIT'S30
+						strong.sub-tit NuriIDT Intelligent Tools
+					p.app-pg-desc 대량 파일 및 데이터를 일괄 가공·처리(수정, 변환, 추출, 생성)가 가능한 프로그램으로, 규칙적이고 반복적인 작업을 단순화·체계화 합니다.
+						br
+						br
+						| 저작권등록 제C-2018-009317호
+		// 주요 기능
+		article.app-article
+			.app-article__content
+				h3.app-article__tit 주요 기능
+				.app-article__desc.type-main
+					p.align-left 
+				ol.step-grid
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-extract
+								strong 문장 추출
+							dd 본문에서 초록, 원주 등
+								br
+								| 필요한 문장 추출
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-xml
+								strong XML 적합성 검사
+							dd XML 태그 속성의
+								br
+								| 유효성 검사
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-statistics
+								strong 통계 제공
+							dd 입력 글자수 &sol; 태그 수 등
+								br
+								| 통계 추출
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-release
+								strong 메타데이터 입력&sol;변환
+							dd 메타데이터 속성 입력 및
+								br
+								| 변환
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-file-division
+								strong 문장 추출
+							dd 본문에서 초록, 원주 등
+								br
+								| 필요한 문장 추출
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-file-combine
+								strong 파일 결합
+							dd 본문에서 초록, 원주 등
+								br
+								| 필요한 문장 추출
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-input-txt
+								strong 이미지 지정영역 문자 입력
+							dd 삽화 등 이미지 내부의
+								br
+								| 특정영역 설정 및 입력
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								span.icon-box
+									icon.icon-pc-img-edit
+								strong 이미지 변환
+							dd 이미지 사이즈 수정 &sol; 자르기,
+								br
+								| 썸네일 생성 등
+		// 적용사례
+		article.app-article.theme-dark__bg
+			.app-article__content
+				h3.app-article__tit.type-h2 적용 사례
+				.app-article__desc.type-main
+					p.align-left 한자(고문헌) 자료 소장·활용 기관의 DB 구축 사업에 적극 활용되며, 데이터 건수, 메타데이터 속성 및 XML 적합성 검사에 매우 유용합니다.
+				ol.step-grid(data-column="3")
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								figure 
+									img(src="../static/images/page/solution-nit30__case1.jpg", alt="")
+								strong 한국고전번역원
+							dd 한국문집총간 DB구축
+								span (2007~2016년)
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								figure 
+									img(src="../static/images/page/solution-nit30__case2.jpg", alt="")
+								strong 서울대학교 규장각한국학연구원
+							dd 규장각 원문검색서비스 DB재정비 고도화 사업
+								span (2020년)
+					li.step-grid__item 
+						dl.item-box
+							dt 
+								figure 
+									img(src="../static/images/page/solution-nit30__case3.jpg", alt="")
+								strong 한국국학진흥원
+							dd 고문헌 DB구축 및 서비스개발
+								span (2005~2016년)
+								
+		article.app-article.article-inquiry
+			.app-article__content
+				h3.app-article__tit.type-h4 궁금하신가요?
+				.app-article__item
+					p.app-article__desc 문의하기를 통해 연락주시면
+						br
+						| 신속하고 성실하게 답변드리겠습니다.
+					a.app-button.solid-button(href="contact.html", role="button") 문의하기
+					

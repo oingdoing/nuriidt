@@ -1,0 +1,94 @@
+extends ../__template/template.pug
+
+block variables
+	- var seoTitle = 'CONTACT';
+	- var pgVal = 'sub';
+	- var pageTitle = 'CONTACT';
+
+block content
+	.app-content
+		article.app-article.article-contact-info
+			.app-article__content.align-center
+				h3.app-article__tit 문의하기
+				h3.app-article__desc 아래 메일이나 연락처로 문의하실 수 있습니다.
+				.app-article__item
+					ol.step-grid(data-column="auto")
+						li.step-grid__item 
+							a.item-link(href="mailto:nuriidt@nuriidt.co.kr") 
+								span.icon-box__100.type-circle
+									icon.icon-pc-email
+								strong nuriidt@nuriidt.co.kr
+						li.step-grid__item
+							a.item-link(href="tel:070-2631-5331") 
+								span.icon-box__100.type-circle
+									icon.icon-pc-call
+								strong 070-2631-5331
+								strong= value
+				.app-article__item
+					.app-article__item-tit 
+						strong 문의 유형
+					ol.step-grid.type-simple
+						each value in ['AI기반 고문헌 활용 서비스','저작권 권리처리','데이터 정제·가공·융합','데이터 구축·활용·개방','회사일반']
+							li.step-grid__item 
+								strong= value
+		article.app-article.article-map
+			.app-article__content
+				.app-article__item.map
+					iframe(
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.197664132796!2d126.8897239154274!3d37.52683753415815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f13c3843c5f%3A0x51d01f8f54369016!2zKOyjvCnriITrpqxJRFQ!5e0!3m2!1sko!2skr!4v1678348603272!5m2!1sko!2skr"
+						width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+				.app-article__item.map-info
+					.address-info
+						ul.app-label-list
+							li.app-label-list__item
+								strong.app-label-list__label
+									i.icon-pc-address
+									span 주소
+								ul.txt-list 
+									li (07255) 서울시 영등포구 선유로 146, 405호 (양평동3가,이앤씨드림타워)
+							li.app-label-list__item
+								strong.app-label-list__label 
+									i.icon-pc-speaker
+									span 대표전화
+								ul.txt-list 
+									li
+										a(href="tel:02-2631-5331") 02-2631-5331
+							li.app-label-list__item
+								strong.app-label-list__label 
+									i.icon-pc-fax
+									span 팩스
+								ul.txt-list 
+									li
+										a(href="fax:02-710-5330") 02-710-5330
+					.navigation-info
+						ul.app-label-list
+							li.app-label-list__item 
+								strong.app-label-list__label 
+									i.icon-pc-subway
+									span 지하철 이용 시
+								ul.txt-list
+									li 2호선·5호선 영등포구청역 3번 출구에서 코스트코방향 방향 400m(도보 약 5분). 롯데마트와 코스트코 사이 건물.
+							li.app-label-list__item
+								strong.app-label-list__label 
+									i.icon-pc-bus
+									span 버스 이용 시
+								ul.txt-list 
+									li 당중초등학교(19207. 당산동삼익아파트 방면) : 지선 7612, 일반 5, 마을버스 영등포05
+									li 당중초등학교(19206. 오산당요양병원 방면) : 지선 7612
+							li.app-label-list__item
+								strong.app-label-list__label 
+									i.icon-pc-car
+									span 자가 차량 이용 시
+								ul.txt-list 
+									li 양화대교 남단에서 양남사거리 방향으로 1.5km 직진하여 코스트코(양평점) 다음 건물. 코스트코와 롯데마트 사이 건물
+									li 양남사거리에서 양화대교 방향으로 500m 직진하여 롯데마트(양평점) 다음 건물. 롯데마트와 코스트코 사이 건물
+									li T맵 네비에서 ‘누리IDT’ 검색
+									li 카카오네비 또는 카카오맵에서 ‘누리IDT’ 검색
+							li.app-label-list__item
+								strong.app-label-list__label 
+									i.icon-pc-map
+									span 지도 검색
+								ul.txt-list 
+									li 구글, 네이버, 다음 지도에서 ‘누리IDT’ 검색
+
+			

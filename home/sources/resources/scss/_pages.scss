@@ -62,7 +62,7 @@
     &__item{margin-bottom:20px;list-style:disc;font-size:18px;color:#555;line-height:1.8;font-weight:400;
       &:last-child{margin-bottom:0}
     }
-    &__add{font-size:16px;color:#757575}
+    &__add{font-size:16px;color:$color-gr__75}
   }
   &.theme-dark{
     .article-history__list{max-width:930px;padding-top:0}
@@ -119,4 +119,45 @@
 }
 .article-why-idt{
   .app-article__tit.type-h2{margin-bottom:100px}
+}
+.article-contact-info{
+  .app-article__item-tit{margin-top:45px;padding-top:10px;border-top:1px solid #e0e0e0;
+    strong{display:inline-block;padding:0 20px;background-color:#fff;transform:translateY(-100%)}
+  }
+  .step-grid__item .item-link{padding:20px;
+    .type-circle{@include flex-center;margin:0 auto 15px;padding:20px;border-radius:50%;background-color:$color-bg;}
+    strong{font-size:14px;color:$color-point}
+  }
+}
+.article-map{padding-top:0;
+  .map-info{@include flex-start;margin-top:50px;grid-gap:20px;
+    >*{flex:1}
+  }
+  .app-label-list{padding-left:37px;
+    &__item{margin-bottom:30px;}
+    &__label{position:relative;display:block;margin-bottom:5px;font-size:19px;font-weight:500;color:$color-gr__47;
+      [class^="icon-"]{position:absolute;top:4px;left:-37px}
+    }
+    .txt-list{padding-left:20px;
+      li{font-size:15px;color:$color-gr__75;
+        &::marker{color:$color-gr__75}
+      }
+    }
+  }
+}
+
+.article-privacy{
+  .app-article{
+    &__item+.app-article__item{margin-top:60px}
+    &__tit{@extend .item-tit;margin-bottom:20px}
+    &__desc{font-size:17px;color:$color-gr__47;line-height:1.8;
+      ul{margin-top:16px;padding-left:20px;
+        &+p{margin-top:15px}
+      }
+      .list-number li{list-style-type:decimal}
+      .list-disc li{list-style-type:disc}
+      dl{display:grid;grid-template-columns:auto 1fr;grid-gap:0 10px}
+    }
+  }
+
 }

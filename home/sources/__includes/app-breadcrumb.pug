@@ -1,19 +1,20 @@
 .app-breadcrumb 
   h2.pg-tit #{pageTitle}
-  .app-breadcrumb__box
-    ul.app-breadcrumb__list
+  if pageTitle !== 'CONTACT' && pageTitle !== '개인정보처리방침'
+    .app-breadcrumb__box
+      ul.app-breadcrumb__list(class= pageTitle=== 'COMPANY' ? 'is-minimum':undefined)
 
-      if pageTitle == 'COMPANY'
-        each name, link in {'about':'회사소개', 'business':'사업분야', 'performance':'사업실적'}
-          li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
-            a.app-breadcrumb__link(href='company-'+link+'.html')= name
+        if pageTitle == 'COMPANY'
+          each name, link in {'about':'회사소개', 'business':'사업분야', 'performance':'사업실적'}
+            li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
+              a.app-breadcrumb__link(href='company-'+link+'.html')= name
 
-      if pageTitle == 'SERVICE'
-        each name, link in {'chinese-ocr':'고문헌 한자 OCR', 'archaic-images':'고문헌 한자 이미지 검색', 'ocr-api':'OCR API', 'jahyung':'한자 자형 검색', 'nuri-input':'누리한자입력기'}
-          li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
-            a.app-breadcrumb__link(href='service-'+link+'.html')= name
+        if pageTitle == 'SERVICE'
+          each name, link in {'chinese-ocr':'고문헌 한자 OCR', 'archaic-images':'고문헌 한자 이미지 검색', 'ocr-api':'OCR API', 'jahyung':'한자 자형 검색', 'input-chinese':'누리한자입력기'}
+            li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
+              a.app-breadcrumb__link(href='service-'+link+'.html')= name
 
-      if pageTitle == 'SOLUTION'
-        each name, link in {'nah':'NAH', 'nit':'NIT’S30', 'npm':'NPM', 'ncm':'NCM', 'nnt':'NNT', 'nlm':'NLM'}
-          li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
-            a.app-breadcrumb__link(href='solution-'+link+'.html')= name
+        if pageTitle == 'SOLUTION'
+          each name, link in {'nah':'NAH', 'nit':'NIT’S30', 'npm':'NPM', 'ncm':'NCM', 'nnt':'NNT', 'nlm':'NLM'}
+            li.app-breadcrumb__item(class= seoTitle=== name ? 'is-active':undefined)
+              a.app-breadcrumb__link(href='solution-'+link+'.html')= name

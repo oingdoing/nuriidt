@@ -18,9 +18,9 @@ header#header.app-header
           a(href="service-chinese-ocr.html")
             span SERVICE 
           ul.depth2
-            each name, link in {'chinese-ocr':'고문헌 한자 OCR', 'archaic-images':'고문헌 한자 이미지 검색', 'ocr-api':'OCR API', 'jahyung':'한자 자형 검색', 'nuri-input':'누리한자입력기'}
+            each name, link in {'chinese-ocr':'고문헌 한자 OCR', 'archaic-images':'고문헌 한자 이미지 검색', 'ocr-api':'OCR API', 'jahyung':'한자 자형 검색', 'input-chinese':'누리한자입력기'}
               li 
-                a(href='business-'+link+'.html')= name
+                a(href='service-'+link+'.html')= name
         li.app-header__gnb-item(class= pageTitle=== 'SOLUTION' ? 'is-active':undefined)
           a(href="solution-nah.html")
             span SOLUTION 

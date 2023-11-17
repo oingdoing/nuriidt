@@ -1,7 +1,7 @@
 .gitignore.txt
 /node_modules
 /dist
-/build
+# /build
 .DS_Store
 # .vscode/settings.json
 sources/front/static/pc/scss/sprite

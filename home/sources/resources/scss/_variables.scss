@@ -1,11 +1,10 @@
 //Device
-$bp-pc: 1441px;
-$bp-pc__min: 1440px;
-$bp-nb: 1366px;
-$bp-nb__min: 1200px;
-$bp-tab: 1023px;
-$bp-mob: 768px;
-
+:root{
+	--minwidth: 1200px;
+	@media screen and (max-width:767px) {
+		--minwidth: 100%;
+	}
+}
 $sqrt_2: 1.41421356237;
 
 // SIZE (xl > lg > md > sm > xs)

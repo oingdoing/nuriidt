@@ -1,5 +1,6 @@
 let $body = $('body');
 let $window = $(window);
+let windowWd = $window.width();
 let windowHt = $window.outerHeight();
 let $app = $('.app');
 let $header = $('.app-header');
@@ -9,26 +10,51 @@ let $article = $('.app-article');
 
 
 $( function(){
-  main.set();
-  $window.on('scroll', function(){
-    var scrolltop = $window.scrollTop();
-    util.gnb(scrolltop);
-    util.counting(scrolltop); 
-  });
+  util.nav();
+  $window
+    .on('load', function(){
+      if(windowWd < 768){
+        $body.addClass('is-mobile');
+        util.navMob();
+      }else{
+        $body.removeClass('is-mobile');
+      }
+    })
+    .on('resize', function(){
+      let re_windowWd = $(window).width();
+      if(re_windowWd < 768){
+        $body.addClass('is-mobile');
+        util.navMob();
+      }else{
+        $body.removeClass('is-mobile');
+      }
+    })
+    .on('scroll', function(){
+      var scrolltop = $window.scrollTop();
+      util.gnbSticky(scrolltop);
+      util.counting(scrolltop); 
+    });
 });
 
 
-let main = {
-  set: function(){
-  },
-}
 let util = {
-  gnb: function(st){
+  gnbSticky: function(st){
     if(st > ($header.height()/2)){
       $header.addClass('is-sticky');
     }else{
       $header.removeClass('is-sticky');
     }
+  },
+  nav: function() {
+    $header.on('click', '.app-header__menu-btn', function () {
+      $(this).closest($header).toggleClass('is-active');
+      $body.toggleClass('is-hidden');
+    })
+  },
+  navMob: function(){
+    $nav.on('click', '.app-header__gnb-main', function(e){
+      e.preventDefault()
+    });
   },
   counting: function(st){
     var $countEl = $('.counting-box');

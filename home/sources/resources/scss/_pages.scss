@@ -6,6 +6,12 @@
     &__tit{font-size:34px;text-align:center}
     &.article-intro{padding:0}
   }
+  @media screen and (max-width:767px) {
+    .app-article{padding:40px 0;
+      &__tit{margin-bottom:30px;font-size:24px}
+      &.theme-dark{padding:50px 0}
+    }
+  }
 }
 .article-intro{width:100%;min-width:100%;padding:0;
   &__visual{position:relative;@include flex-center;;min-height:420px;background:url(../images/page/main-intro__bg.jpg) center no-repeat;background-size:cover;
@@ -22,12 +28,35 @@
       &::before{position:absolute;top:0;left:calc(50% - 50px);content:'';display:block;width:100px;height:1px;background-color:#adadad}
     }
   }
+  @media screen and (max-width:767px) {
+    &__visual{min-height:300px;
+      .visual-tit{padding:0 20px;font-size:24px}
+    }
+    &__desc{padding:30px 15px;
+      blockquote{padding:10px;
+        strong{margin-bottom:10px;font-size:20px;}
+        span{font-size:16px}
+        p{margin-top:25px;font-size:14px}
+      }
+      > p{margin-top:10px;padding:20px 20px  0;font-size:14px;line-height:1.7;
+        &::before{left:calc(50% - 25px);width:50px}
+      }
+    }
+  }
 }
 .article-clients{
   .clients-list{display:grid;grid-template-columns:repeat(4, 1fr);grid-gap:0 40px;text-align:center;}
+  @media screen and (max-width:767px) {
+    .clients-list{grid-template-columns:repeat(2, 1fr);grid-gap:0 20px;padding:0 16px;
+      &__item{padding:10px 15px}
+    }
+  }
 }
 .article-inquiry{background-color:$color-bg;
   .app-article__item{text-align:center}
+  @media screen and (max-width:767px) {
+    &.app-article{padding:50px 0 70px;}
+  }
 }
 
 /******************************************/
@@ -46,6 +75,9 @@
     &__item{flex:1;font-size:50px;color:#fff;
       figure{text-align:center}
     }
+  }
+  @media screen and (max-width:767px) {
+    
   }
 }
 .article-history{
@@ -77,6 +109,24 @@
       &__add{color:#fff;font-weight:400}
     }
   }
+  @media screen and (max-width:767px) {
+    .article-history{max-width:100%;}
+    .history-year{padding:0 16px;
+      &__item{display:block;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #DADADA;
+        &:last-child{margin-bottom:0}
+      }
+      &__tit{display:block;width:100%;height:auto;margin-bottom:20px;padding:15px 10px;line-height:1;font-size:18px}
+    }
+    .history-detail{padding-left:30px;
+      &__item{margin-bottom:20px;font-size:16px;line-height:1.6}
+      &__add{font-size:15px}
+    }
+    &.theme-dark{
+      .history-year{
+        &__tit{width:100%;text-align:center;font-size:26px}
+      }
+    }
+  }
 }
 /****** 사업실적 ******/
 .article-data-visual{
@@ -98,6 +148,24 @@
     }
   }
   &.theme-dark{background-image:none}
+  @media screen and (max-width:767px) {
+    .img-type{
+      .detail-info{padding:0 10px;
+        dl{margin-top:30px}
+        dt{margin-bottom:10px;font-size:18px}
+        dd{margin-bottom:35px;font-size:15px;color:#d1d1d1}
+      }
+    }
+    .list-type{margin-top:80px;
+      .app-article__desc{margin-bottom:40px;padding:0 20px;font-size:16px}
+      .about-solution{display:block;padding:0 20px;
+        dl{margin-bottom:20px;padding:30px 10px;
+          dt{margin-bottom:10px;font-size:16px}
+          dd{color:$color-gr__47}
+        }
+      }
+    }
+  }
 }
 .article-counting-info{
   .app-article{
@@ -116,9 +184,25 @@
       }
     }
   }
+  @media screen and (max-width:767px) {
+    .app-article{
+      &__tit{
+        > span{font-size:18px}
+        strong{font-size:30px}
+      }
+      &__item{margin-top:30px;
+        ul{display:block;
+          .counting-val{font-size:40px}
+        }
+      }
+    }
+  }
 }
 .article-why-idt{
   .app-article__tit.type-h2{margin-bottom:100px}
+  @media screen and (max-width:767px) {
+    
+  }
 }
 .article-contact-info{
   .app-article__item-tit{margin-top:45px;padding-top:10px;border-top:1px solid #e0e0e0;
@@ -127,6 +211,9 @@
   .step-grid__item .item-link{padding:20px;
     .type-circle{@include flex-center;margin:0 auto 15px;padding:20px;border-radius:50%;background-color:$color-bg;}
     strong{font-size:14px;color:$color-point}
+  }
+  @media screen and (max-width:767px) {
+    
   }
 }
 .article-map{padding-top:0;
@@ -144,6 +231,9 @@
       }
     }
   }
+  @media screen and (max-width:767px) {
+    
+  }
 }
 
 .article-privacy{
@@ -159,5 +249,7 @@
       dl{display:grid;grid-template-columns:auto 1fr;grid-gap:0 10px}
     }
   }
-
+  @media screen and (max-width:767px) {
+    
+  }
 }

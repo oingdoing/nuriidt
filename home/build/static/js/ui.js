@@ -8,23 +8,20 @@ var $app = $('.app');
 var $header = $('.app-header');
 var $footer = $('.app-footer');
 var $nav = $('.app-header__gnb');
+var $bcrmb = $('.app-breadcrumb');
 var $article = $('.app-article');
 $(function () {
   util.nav();
   $window.on('load', function () {
     if (windowWd < 768) {
-      $body.addClass('is-mobile');
       util.navMob();
-    } else {
-      $body.removeClass('is-mobile');
+      util.posBrcrmb(windowWd);
     }
   }).on('resize', function () {
     var re_windowWd = $(window).width();
     if (re_windowWd < 768) {
-      $body.addClass('is-mobile');
       util.navMob();
-    } else {
-      $body.removeClass('is-mobile');
+      util.posBrcrmb(windowWd);
     }
   }).on('scroll', function () {
     var scrolltop = $window.scrollTop();
@@ -52,6 +49,14 @@ var util = {
       e.preventDefault();
       $(this).parent().addClass('is-active').siblings().removeClass('is-active');
     });
+  },
+  posBrcrmb: function posBrcrmb(windowwidth) {
+    var baseWd = $bcrmb.find('.app-breadcrumb__list').width();
+    if ($bcrmb.length > 0 && windowwidth < baseWd) {
+      var targetPos = Math.floor($bcrmb.find('.app-breadcrumb__item.is-active').offset().left);
+      var $setPosEl = $bcrmb.find('.app-breadcrumb__box');
+      $setPosEl.scrollLeft(targetPos);
+    }
   },
   counting: function counting(st) {
     var $countEl = $('.counting-box');

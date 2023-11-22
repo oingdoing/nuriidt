@@ -45,7 +45,7 @@
   }
 }
 .article-clients{
-  .clients-list{display:grid;grid-template-columns:repeat(4, 1fr);grid-gap:0 40px;text-align:center;}
+  .clients-list{display:grid;grid-template-columns:repeat(5, 1fr);grid-gap:10px 35px;text-align:center;}
   @media screen and (max-width:767px) {
     .clients-list{grid-template-columns:repeat(2, 1fr);grid-gap:0 20px;@include mobpadding;
       &__item{padding:10px 15px}

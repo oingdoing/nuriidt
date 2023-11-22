@@ -265,6 +265,7 @@ body.is-hidden {overflow:hidden}
 }
 .app-button{display:inline-flex;align-items:center;justify-content:center;padding:15px 40px 15px 40px;box-sizing:border-box;border-radius:3px;transition:all 0.3s;
   .button-content{font-size:15px;line-height:1;}
+  &.disabled{pointer-events:none}
 }
 .txt-button{font-size:16px;font-weight:400;
   &:hover{text-decoration:underline}
@@ -273,9 +274,7 @@ body.is-hidden {overflow:hidden}
   &.round{border-radius:4px}
   &:hover{background-color:#454545}
 }
-.line-button{@extend .app-button;color:$color-point;fill:$color-point;border:2px solid $color-point;
-  &:not(.is-ready):hover{color:#fff;background-color:$color-point}
-}
+.line-button{@extend .app-button;color:$color-point;fill:$color-point;border:2px solid $color-point}
 a:not(.app-button):hover{text-decoration:underline}
 @media screen and (max-width:767px) {
 	.app-button{padding:10px 30px;

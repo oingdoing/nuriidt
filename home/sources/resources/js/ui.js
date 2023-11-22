@@ -52,8 +52,10 @@ let util = {
     })
   },
   navMob: function(){
+    $nav.find('a').unbind('mouseenter mouseleave');
     $nav.on('click', '.app-header__gnb-main', function(e){
       e.preventDefault()
+      $(this).parent().addClass('is-active').siblings().removeClass('is-active');
     });
   },
   counting: function(st){

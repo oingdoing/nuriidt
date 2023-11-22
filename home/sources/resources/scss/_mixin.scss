@@ -132,3 +132,13 @@
 @mixin gradient ($from, $to) {
   background:linear-gradient(90deg, $from 0%, $to 100%);-webkit-background-clip:text;-webkit-text-fill-color: transparent;
 }
+
+// * -------------------------------
+// * mobile
+// * -------------------------------
+@mixin mobpadding {
+  padding-left:16px;padding-right:16px;
+}
+@mixin mobpadding_wide {
+  padding-left:20px;padding-right:20px;
+}

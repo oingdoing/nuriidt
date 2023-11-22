@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(주)누리idt &#8211; 지능형 데이터 전문 기업</title>
+    <style>
+        /* RESET */
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            font-size: inherit;
+            color: inherit;
+            box-sizing: border-box
+        }
+
+        dl,
+        ul,
+        ol,
+        menu,
+        li {
+            list-style: none
+        }
+
+        fieldset,
+        img {
+            border: 0 none;
+            box-sizing: border-box
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            box-sizing: border-box
+        }
+
+        button {
+            border: 0 none;
+            background-color: transparent;
+            cursor: pointer;
+            box-sizing: border-box
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        var {
+            font-style: normal;
+            font-weight: 400;
+            box-sizing: border-box
+        }
+
+        input,
+        textarea,
+        img {
+            max-width: 100%
+        }
+
+        a,
+        a:hover,
+        a:visited,
+        a:active {
+            text-decoration: none
+        }
+
+        sup {
+            font-size: small;
+            vertical-align: text-top
+        }
+
+        sub {
+            font-size: small;
+            vertical-align: text-bottom
+        }
+
+        button,
+        select {
+            -webkit-appearance: none;
+            appearance: none
+        }
+
+        select::-ms-expand {
+            display: none
+        }
+
+        /* Hide Native Arrow IE 10, 11 */
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        table caption {
+            overflow: hidden;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            clip: rect(1px, 1px, 1px, 1px)
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        /* HTML5 for older browsers */
+        section,
+        main {
+            display: block
+        }
+
+        img {
+            vertical-align: top
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        em,
+        strong {
+            font-weight: 600
+        }
+
+        /* IPHONE */
+        input:disabled,
+        textarea:disabled {
+            opacity: 1;
+            -webkit-text-fill-color: inherit
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        :lang(ko) {
+            word-break: keep-all
+        }
+
+        :lang(ko),
+        :lang(zh) {
+            font-style: normal
+        }
+
+        :before,
+        :after {
+            box-sizing: border-box;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .path-route {
+            width: 100%;
+            height: 100vh;
+            background-color: #222
+        }
+
+        .path-route::before {
+            position: fixed;
+            top: 0;
+            left: 0;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(./static/images/common/bg-index.png) center no-repeat;
+            background-size: cover;
+            opacity: 0.05
+        }
+
+        .path-route__content {
+            position: relative;
+            ;
+            width: 100%;
+            height: 100%
+        }
+
+        .path-route h1 {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            width: 900px;
+            font-size: 70px;
+            line-height: 1;
+            color: #fff;
+            font-weight: 400
+        }
+
+        .path-route .version {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            padding: 10px 15px;
+            background-color: #444;
+            border-top-left-radius: 20px;
+            color: #fff;
+            font-size: 12px;
+            color: #bbff00
+        }
+
+        .path-list {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 100px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 30px;
+            text-align: center;
+        }
+
+        .path-list__item {
+            flex: 1;
+            aspect-ratio: 1/1
+        }
+
+        .path-list__item--link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border: 4px solid #ddd;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-size: 66px;
+            color: #ddd;
+            line-height: 1;
+            transition: all 0.6s ease
+        }
+
+        .path-list__item--link strong {
+            position: absolute;
+            right: -5px;
+            bottom: -10px
+        }
+
+        .path-list__item--link:hover {
+            background-color: #000;
+            color: #f1f1f1;
+            border-color: #000
+        }
+    </style>
+</head>
+
+<body>
+    <div class="path-route">
+        <div class="path-route__content">
+            <h1>누리 IDT <br />홈페이지 재구축</h1>
+            <ul class="path-list">
+                <li class="path-list__item">
+                    <a class="path-list__item--link" href="__path/path-web.html" target="_blank">
+                        <strong>PC</strong>
+                    </a>
+                </li>
+                <li class="path-list__item">
+                    <a class="path-list__item--link" href="__path/path-mobile.html" target="_blank">
+                        <strong>Mobile</strong>
+                    </a>
+                </li>
+            </ul>
+            <div class="version">version.01 / 2023-11-22</div>
+        </div>
+    </div>
+</body>
+
+</html>

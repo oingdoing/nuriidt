@@ -262,7 +262,7 @@ const live = {
       port: 5001,
       open: 'ui',
       browser: ['chrome'],
-      startPath: 'index.html',
+      startPath: '__path/index.html',
       server: {
         baseDir: 'dist/',
         directory: true,
